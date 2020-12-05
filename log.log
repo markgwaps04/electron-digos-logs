@@ -1,0 +1,162 @@
+[2020-12-04 17:05:13.335] [info] Checking for update
+[2020-12-04 17:05:15.555] [info] Generated new staging user ID: e172b51f-f8c4-51a3-8915-be660669fd81
+[2020-12-04 17:05:17.856] [info] Update for version 1.0.0 is not available (latest version: 1.0.0, downgrade is disallowed).
+[2020-12-04 17:05:17.857] [error] Error: ReferenceError: alert is not defined
+    at NsisUpdater.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\main.js:47:9)
+    at NsisUpdater.emit (events.js:315:20)
+    at NsisUpdater.doCheckForUpdates (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\electron-updater\out\AppUpdater.js:522:12)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-12-04 17:06:33.002] [info] Checking for update
+[2020-12-04 17:06:36.254] [info] Update for version 1.0.0 is not available (latest version: 1.0.0, downgrade is disallowed).
+[2020-12-04 17:08:17.726] [info] Checking for update
+[2020-12-04 17:08:18.965] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
+[2020-12-04 17:08:35.154] [info] Checking for update
+[2020-12-04 17:08:38.340] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:08:38.342] [error] Error: ReferenceError: alert is not defined
+    at NsisUpdater.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\main.js:43:9)
+    at NsisUpdater.emit (events.js:315:20)
+    at NsisUpdater.onUpdateAvailable (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\electron-updater\out\AppUpdater.js:544:10)
+    at NsisUpdater.doCheckForUpdates (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\electron-updater\out\AppUpdater.js:530:10)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[2020-12-04 17:09:03.283] [info] Checking for update
+[2020-12-04 17:09:06.514] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:09:06.516] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:09:06.519] [error] Error: Error: ENOENT: no such file or directory, open 'C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\dev-app-update.yml'
+[2020-12-04 17:11:06.600] [info] Checking for update
+[2020-12-04 17:11:09.874] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:11:09.878] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:11:09.885] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:11:09.929] [info] Download block maps (old: "http://localhost:98/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", new: http://localhost:98/dist/LOG-SYSTEM-Setup-1.0.1.exe.blockmap)
+[2020-12-04 17:11:09.939] [error] Cannot download differentially, fallback to full download: Error: Cannot download "http://localhost/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", status 404: Not Found
+    at ClientRequest.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\builder-util-runtime\out\httpExecutor.js:280:26)
+    at ClientRequest.emit (events.js:315:20)
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6254)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2020-12-04 17:11:09.945] [error] Error: Error: Cannot download "http://localhost/dist/LOG-SYSTEM-Setup-1.0.1.exe", status 404: Not Found
+    at ClientRequest.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\builder-util-runtime\out\httpExecutor.js:280:26)
+    at ClientRequest.emit (events.js:315:20)
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6254)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2020-12-04 17:12:20.179] [info] Checking for update
+[2020-12-04 17:12:21.366] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:12:21.367] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:12:21.370] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:12:21.376] [info] Download block maps (old: "http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", new: http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.1.exe.blockmap)
+[2020-12-04 17:12:21.380] [error] Cannot download differentially, fallback to full download: Error: Cannot download "http://10.0.0.252/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", status 404: Not Found
+    at ClientRequest.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\builder-util-runtime\out\httpExecutor.js:280:26)
+    at ClientRequest.emit (events.js:315:20)
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6254)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2020-12-04 17:12:21.385] [error] Error: Error: Cannot download "http://10.0.0.252/dist/LOG-SYSTEM-Setup-1.0.1.exe", status 404: Not Found
+    at ClientRequest.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\builder-util-runtime\out\httpExecutor.js:280:26)
+    at ClientRequest.emit (events.js:315:20)
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6254)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2020-12-04 17:37:13.679] [info] Checking for update
+[2020-12-04 17:37:16.882] [info] Update for version 1.0.0 is not available (latest version: 1.0.0, downgrade is disallowed).
+[2020-12-04 17:37:48.225] [info] Checking for update
+[2020-12-04 17:37:51.496] [info] Update for version 1.0.1 is not available (latest version: 1.0.0, downgrade is disallowed).
+[2020-12-04 17:39:14.426] [info] Checking for update
+[2020-12-04 17:39:17.692] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
+[2020-12-04 17:39:36.898] [info] Checking for update
+[2020-12-04 17:39:40.129] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:39:40.136] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:39:40.140] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:39:40.153] [info] Download block maps (old: "http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", new: http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.1.exe.blockmap)
+[2020-12-04 17:39:40.284] [info] File has 38 changed blocks
+[2020-12-04 17:39:40.697] [info] Full: 55,403.32 KB, To download: 741.06 KB (1%)
+[2020-12-04 17:39:40.701] [error] Cannot download differentially, fallback to full download: Error: ENOENT: no such file or directory, open 'C:\Users\WebDev\AppData\Local\LOG-SYSTEM\installer.exe'
+[2020-12-04 17:39:41.007] [info] New version 1.0.1 has been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:39:41.025] [info] Install on explicit quitAndInstall
+[2020-12-04 17:39:41.027] [info] Install: isSilent: false, isForceRunAfter: true
+[2020-12-04 17:39:42.718] [info] Update installer has already been triggered. Quitting application.
+[2020-12-04 17:46:49.417] [info] Checking for update
+[2020-12-04 17:46:50.842] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:46:50.873] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:46:50.922] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:46:51.223] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:46:51.224] [info] Install on explicit quitAndInstall
+[2020-12-04 17:46:51.232] [info] Install: isSilent: false, isForceRunAfter: true
+[2020-12-04 17:46:52.117] [info] Update installer has already been triggered. Quitting application.
+[2020-12-04 17:47:18.027] [info] Checking for update
+[2020-12-04 17:47:19.703] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:47:19.710] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:47:19.749] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:47:20.184] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:48:14.968] [info] Checking for update
+[2020-12-04 17:48:16.109] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:48:16.116] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:48:16.122] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:48:17.478] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:49:53.241] [info] Checking for update
+[2020-12-04 17:49:54.378] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:49:54.384] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:49:54.392] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:49:54.880] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:52:10.924] [info] Checking for update
+[2020-12-04 17:52:13.880] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:52:13.889] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:52:13.899] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:52:14.107] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:52:23.989] [info] Auto install update on quit
+[2020-12-04 17:52:23.996] [info] Install: isSilent: true, isForceRunAfter: false
+[2020-12-04 17:59:21.851] [info] Checking for update
+[2020-12-04 17:59:22.989] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 17:59:22.994] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 17:59:23.081] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 17:59:23.280] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 17:59:23.281] [info] Install on explicit quitAndInstall
+[2020-12-04 17:59:23.282] [info] Install: isSilent: false, isForceRunAfter: true
+[2020-12-04 17:59:23.302] [info] Update installer has already been triggered. Quitting application.
+[2020-12-04 18:01:40.691] [info] Checking for update
+[2020-12-04 18:01:40.697] [error] Error: Error: Please check update first
+    at NsisUpdater.downloadUpdate (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\node_modules\electron-updater\out\AppUpdater.js:556:21)
+    at BrowserWindow.<anonymous> (C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\main.js:37:31)
+    at Object.onceWrapper (events.js:421:28)
+    at BrowserWindow.emit (events.js:315:20)
+    at electron/js2c/browser_init.js:157:11454
+    at processTicksAndRejections (internal/process/task_queues.js:79:11)
+[2020-12-04 18:01:41.936] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 18:01:41.942] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 18:01:41.950] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 18:02:11.449] [info] Update has already been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe).
+[2020-12-04 18:02:17.815] [info] Auto install update on quit
+[2020-12-04 18:02:17.816] [info] Install: isSilent: true, isForceRunAfter: false
+[2020-12-04 18:02:17.826] [info] Cannot run installer: error code: ENOENT, error message: "spawn C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe ENOENT", will be executed again using elevate if EACCES"
+[2020-12-04 18:02:17.827] [error] Error: Error: spawn C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:267:19)
+    at onErrorNT (internal/child_process.js:469:16)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2020-12-04 18:02:36.282] [info] Checking for update
+[2020-12-04 18:02:37.644] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-04 18:02:37.651] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-04 18:02:37.658] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-04 18:02:37.669] [info] Download block maps (old: "http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", new: http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.1.exe.blockmap)
+[2020-12-04 18:02:37.724] [info] File has 38 changed blocks
+[2020-12-04 18:02:37.739] [info] Full: 55,403.32 KB, To download: 741.06 KB (1%)
+[2020-12-04 18:02:37.742] [error] Cannot download differentially, fallback to full download: Error: ENOENT: no such file or directory, open 'C:\Users\WebDev\AppData\Local\LOG-SYSTEM\installer.exe'
+[2020-12-04 18:02:38.039] [info] New version 1.0.1 has been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-05 11:39:41.017] [info] Auto install update on quit
+[2020-12-05 11:39:43.050] [info] Install: isSilent: true, isForceRunAfter: false
+[2020-12-05 11:39:47.210] [info] Cannot run installer: error code: ENOENT, error message: "spawn C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe ENOENT", will be executed again using elevate if EACCES"
+[2020-12-05 11:39:47.508] [error] Error: Error: spawn C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:267:19)
+    at onErrorNT (internal/child_process.js:469:16)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2020-12-05 17:47:43.584] [info] Checking for update
+[2020-12-05 17:47:46.441] [info] Found version 1.0.1 (url: LOG-SYSTEM-Setup-1.0.1.exe)
+[2020-12-05 17:47:46.447] [info] Downloading update from LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-05 17:47:46.453] [error] updaterCacheDirName is not specified in app-update.yml Was app build using at least electron-builder 20.34.0?
+[2020-12-05 17:47:46.596] [info] Download block maps (old: "http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.0.exe.blockmap", new: http://10.0.0.252:98/dist/LOG-SYSTEM-Setup-1.0.1.exe.blockmap)
+[2020-12-05 17:47:46.917] [info] File has 38 changed blocks
+[2020-12-05 17:47:47.580] [info] Full: 55,403.32 KB, To download: 741.06 KB (1%)
+[2020-12-05 17:47:47.584] [error] Cannot download differentially, fallback to full download: Error: ENOENT: no such file or directory, open 'C:\Users\WebDev\AppData\Local\LOG-SYSTEM\installer.exe'
+[2020-12-05 17:48:16.944] [info] New version 1.0.1 has been downloaded to C:\Users\WebDev\AppData\Local\LOG-SYSTEM\pending\LOG-SYSTEM-Setup-1.0.1.exe
+[2020-12-05 17:49:58.636] [info] Checking for update
+[2020-12-05 17:49:59.777] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
+[2020-12-05 20:31:35.705] [info] Checking for update
+[2020-12-05 20:31:38.984] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
+[2020-12-05 20:54:23.323] [info] Checking for update
+[2020-12-05 20:54:24.697] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
+[2020-12-05 20:58:55.729] [info] Checking for update
+[2020-12-05 20:58:56.867] [info] Update for version 1.0.1 is not available (latest version: 1.0.1, downgrade is disallowed).
