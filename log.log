@@ -1081,3 +1081,7 @@ Headers: {
 [2021-01-10 19:11:53.989] [error] Error: Error: net::ERR_CONNECTION_TIMED_OUT
     at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6497)
     at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2021-01-10 20:39:35.399] [info] Checking for update
+[2021-01-10 20:39:59.114] [error] Error: Error: net::ERR_CONNECTION_TIMED_OUT
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6497)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
