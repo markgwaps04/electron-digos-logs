@@ -1,0 +1,61 @@
+{
+  "name": "LOG-SYSTEM",
+  "version": "1.0.4",
+  "main": "main.js",
+  "author": "marklibres345@gmail.com",
+  "description": "ICT PORTAL OF CITY GOVERNMENT OF DIGOS",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consolidate": "^0.16.0",
+    "electron-log": "^4.3.0",
+    "electron-updater": "^4.3.5",
+    "express": "^4.17.1",
+    "html-pdf": "^2.2.0",
+    "html2canvas": "^1.0.0-rc.7",
+    "jquery": "^3.5.1",
+    "knex": "^0.21.12",
+    "lodash": "^4.17.20",
+    "mysql2": "^2.2.5",
+    "pdfjs-dist": "^2.5.207",
+    "pdfobject": "^2.2.4",
+    "puppeteer": "^5.5.0",
+    "qr-image": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgwaps04/electron-digos-logs.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "build",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "token": "02d0b706a53a169f5fc53782b8ea9d6fcfbe0666"
+      }
+    ],
+    "win": {
+      "asar": true,
+      "target": "nsis",
+      "icon": "static/images/digos-icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "installerIcon": "static/images/digos-icon.ico",
+      "installerHeaderIcon": "static/images/digos-icon.ico",
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}
