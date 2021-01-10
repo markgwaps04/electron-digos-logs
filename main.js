@@ -10,39 +10,75 @@ const fs = require("fs");
 const updater = require('electron-updater');
 const autoUpdater = updater.autoUpdater;
 const process = require("process");
+const ipc = electron.ipcMain;
+const hive = require("./static/misc/page_hive.js");
+const express = require('express')
+const express_app = express()
+var ejs = require('ejs');
+var bodyParser = require('body-parser')
+const globalShortcut = electron.globalShortcut;
 
 const log = require('electron-log');
 log.transports.file.file = process.cwd() + '/log.log';
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'info';
-//autoUpdater.setFeedURL('http://10.0.0.252:98/dist');
+autoUpdater.setFeedURL('http://10.0.0.252:98/dist');
+const port = 1010
+
+autoUpdater.autoDownload = false;
+
+express_app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
+
+express_app.use(bodyParser.json());
+express_app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    limit : "10000000000000",
+    extended: true
+}));
+
+express_app.use(express.static(path.join(app.getAppPath(), 'static')));
+express_app.engine('html', ejs.renderFile);
+express_app.set('view engine', 'html');
+express_app.set('views', path.join(app.getAppPath(), 'view'))
+
 
 function createWindow()
 {
 
     win = new BrowserWindow({
         title : "ICT PORTAL v" + app.getVersion(),
-        icon: './static/images/raffle_draw.ico',
+        icon: './static/images/digos-icon.ico',
         width: "100%",
         height : "100%%",
         webPreferences : {
             nodeIntegration : true,
-            enableRemoteModule: true
+            enableRemoteModule: true,
+            nativeWindowOpen : true
         }
     });
+
+    win.express = express_app;
+
     win.maximize();
 
     win.once('ready-to-show', () => {
         autoUpdater.checkForUpdates();
-        // const a = autoUpdater.downloadUpdate()
-        // a.then(function (b) {
-        //     //Path
-        //     console.log(b);
-        // });
     });
 
     autoUpdater.on('update-downloaded', () => {
-       // autoUpdater.quitAndInstall()
+
+        win.webContents.send("download-progress", {
+            "progress_percent": 100,
+            "download_per_second": 0,
+            "total": 100
+        });
+
+        setTimeout(function () {
+           autoUpdater.quitAndInstall()
+        },5000);
+
+   
     });
 
     autoUpdater.on('update-available', (ev, info) => {
@@ -64,8 +100,12 @@ function createWindow()
         });
     });
 
+
+    ipc.on("access_download_new_release", function (event, data) {
+        autoUpdater.downloadUpdate()
+    });
+
     const main_page = win.loadURL("http://10.0.0.252:99");
-    console.log(main_page);
 
     // win.webContents.openDevTools();
 
@@ -80,6 +120,36 @@ function createWindow()
 
     });
 
+
+    win.webContents.on("did-fail-load", function () {
+        win.loadFile(path.join(__dirname, 'view/server_error.html'))
+    });
+
+    const template = [
+        {
+            label: "File"
+        },
+        {
+            label: "Pages",
+            id: 'menu_pages',
+        }
+    ]
+
+    hive.pages(template[1], win);
+
+
+    const menu_template = menu.buildFromTemplate(template);
+    menu.setApplicationMenu(menu_template);
+
+
+    globalShortcut.register('Shift+Esc', () => {
+        win.webContents.openDevTools();
+    });
+
+
+    globalShortcut.register('Shift+Esc', () => {
+        win.webContents.openDevTools();
+    })
 
 
     return win;

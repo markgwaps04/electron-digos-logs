@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="666f22be-a464-46e6-aa7e-8305d0eae164" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/LOG-SYSTEM/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/LOG-SYSTEM/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-app-update (2).yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-app-update.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dev-app-update.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/eadmin/update_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/eadmin/update_helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/update_helper.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/update_helper.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,21 +45,26 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CCTS_ID_TRACKER" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\static\eadmin" />
-      <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\view" />
-      <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM" />
+      <recent name="C:\Users\Yuan.x\PycharmProjects\LOG-SYSTEM\static\fonts" />
+      <recent name="C:\Users\Yuan.x\PycharmProjects\LOG-SYSTEM\static\images" />
+      <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\static" />
       <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\static\images" />
+      <recent name="C:\Users\WebDev\WebstormProjects\LOG-SYSTEM\static\eadmin" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="666f22be-a464-46e6-aa7e-8305d0eae164" name="Default Changelist" comment="" />
@@ -60,6 +76,7 @@
       <workItem from="1606980709260" duration="15952000" />
       <workItem from="1607159544993" duration="755000" />
       <workItem from="1607171401217" duration="626000" />
+      <workItem from="1608330375662" duration="1000" />
     </task>
     <servers />
   </component>
@@ -67,9 +84,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1607171422031">
+    <state x="534" y="92" key="FileChooserDialogImpl" timestamp="1609919216298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607171422031" />
+    <state x="534" y="92" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609919216298" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1610274490838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1610274490838" />
   </component>
 </project>

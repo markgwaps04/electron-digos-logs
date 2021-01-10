@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="eadmin/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="static/eadmin/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="eadmin/theme.css" rel="stylesheet">
+    <link type="text/css" href="eadmin/custom.css" rel="stylesheet">
+    <link type="text/css" href="plugins/jsgrid/dist/jsgrid.css" rel="stylesheet">
+    <link type="text/css" href="plugins/jsgrid/dist/jsgrid-theme.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+          rel='stylesheet'>
+ 
+</head>
+
+
+<style>
+
+    .center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type='file'] {
+        height: 44px;
+    }
+
+    .bg-green, .bg-success {
+        background-color: #3ac47d !important;
+    }
+
+    .bg-success {
+        color: #fff
+    }
+
+    .module-head:not(.cus) {
+        padding: 22px 15px
+    }
+
+    .module-head h3 {
+        font-size: 22px;
+        display: inline-block;
+    }
+
+    .right-action {
+        float: right
+    }
+
+    .control-label, .controls input {
+        font-size: 16px
+    }
+
+    .docs-example:after {
+        display: none
+    }
+
+    .docs-example {
+        padding: 19px 19px 14px;
+        margin-bottom: 18px;
+    }
+
+    select {
+        color: #777 !important;
+        font-size: 16px;
+    }
+
+        select option:not([disabled]) {
+            color: black !important;
+            font-size: 18px;
+        }
+
+    @media only screen and (max-width: 995px) {
+        .hide_mobile {
+            display: none;
+        }
+    }
+
+
+    .fullscreen .module-body {
+        height: 629px;
+        overflow-y: scroll;
+    }
+
+    .module-login input {
+        height: 40px
+    }
+
+    .nav_action.nav > li > a {
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: 900;
+        color: black;
+    }
+
+    .main_container {
+        position: relative;
+    }
+
+
+    .modal-lg {
+        width: 80%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .actions
+    {
+        margin-bottom : 5px;
+    }
+    form.cus .input-prepend .add-on
+    {
+        text-shadow: none;
+    }
+
+    /* Hiding the checkbox, but allowing it to be focused */
+    .badgebox {
+        opacity: 0;
+    }
+
+    .pdfobject-container {
+        width: 100%;
+        height: 70vh;
+    }
+
+        .badgebox + .badge {
+            /* Move the check mark away when unchecked */
+            text-indent: -999999px;
+            /* Makes the badge's width stay the same checked and unchecked */
+            width: 27px;
+            top: 0px;
+        }
+
+        .badgebox:focus + .badge {
+            /* Set something to make the badge looks focused */
+            /* This really depends on the application, in my case it was: */
+            /* Adding a light border */
+            box-shadow: inset 0px 0px 5px;
+            /* Taking the difference out of the padding */
+        }
+
+        .badgebox:checked + .badge {
+            /* Move the check mark back when checked */
+            text-indent: 0;
+        }
+
+@font-face { font-family: "OCR A EXTENDED"; src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot"); /* IE9*/ src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff2") format("woff2"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff") format("woff"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.svg#OCR A Extended") format("svg"); /* iOS 4.1- */ }
+
+</style>
+
+
+<body>
+
+    <div class="content-ui">
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner bg-green">
+                <div class="container">
+
+                    <a class="brand">
+                        ICT PORTAL
+                    </a>
+
+
+                </div>
+            </div><!-- /navbar-inner -->
+        </div>
+
+        <div class="wrapper">
+
+            <div class="container">
+
+                <div class="row">
+
+
+                    <div class="span10 center main_container">
+
+                        <div class="overlay-spinner">
+                            <div class="icon">
+                                <i class="fa-spin fa fa-spinner"></i>
+                            </div>
+                        </div>
+
+                        <div class="content">
+
+                            <div class="module fullscreen-container">
+
+                                <div class="module-head bg-green">
+                                    <h3>Welcome to Digos Hive</h3>
+                                    <div class="right-action hide_mobile">
+                                        <button type="submit" class="btn btn-large btn-zoom-in">
+                                            <b>Zoom In</b>
+                                        </button>
+                                        <button type="submit" class="btn btn-large btn-zoom-reset">
+                                            <b>Reset Zoom</b>
+                                        </button>
+                                        <button type="submit" class="btn btn-large btn-fullscreen">
+                                            <b>Full screen</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="module-body fullscreen-content">
+
+                                    <div class="actions">
+
+                                        <button class="btn btn-success btn-large" id="print">Print official id</button>
+                                        <button class="btn btn-success btn-large" id="print_temporary">Print temporary id</button>
+                                        <button class="btn btn-large btn-primary" id="remove_all">Remove all</button>
+
+                                    </div>
+
+
+                                    <div id="jsGrid"></div>
+
+                                </div>
+                            </div>
+
+                        </div><!--/.content-->
+                    </div><!--/.span9-->
+                </div>
+            </div><!--/.container-->
+        </div><!--/.wrapper-->
+
+        <div class="footer">
+            <div class="container">
+                <b class="copyright">&copy; 2020 ICT Portal </b> All rights reserved.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header bg-green">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Issue official hugpong id </h3>
+        </div>
+        <div class="modal-body" style="height: auto;max-height: 100%">
+            
+            <form class="form-inline cus" id="filter_settings">
+
+                <div style="margin-bottom: 5px">
+
+                    <div class="input-prepend">
+                        <span class="add-on bg-green">Pages Limit</span>
+                        <input class="span2" name="page_limit" id="prependedInput" type="number" min="1" placeholder="Pages limit" value="10">
+                    </div>
+                    <div class="input-prepend">
+                        <span class="add-on bg-green">State</span>
+                        <select class="span2" name="state">
+                            <option value="0">Not printed</option>
+                            <option value="1">Printed</option>
+                            <option value="2" selected>Show all</option>
+                        </select>
+                    </div>
+                    <label type="button" class="btn btn-success">
+                        Multiple Selections
+                        <input name="is_multiple_selections" type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span>
+                    </label>
+                    <label type="button" class="btn btn-primary hide" id="select_all">
+                        Select all
+                        <input name="select_all" type="checkbox" id="default" class="badgebox"><span class="badge">&check;</span>
+                    </label>
+                    <button type="reset" class="btn btn-success" id="reset_filter">
+                        Reset
+                    </button>
+                </div>
+
+                <div style="margin-bottom: 5px">
+                    
+                </div>
+            </form>
+
+            <br />
+
+            <div id="add_que_list"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" id="modal_save" disabled>Save changes</button>
+        </div>
+    </div>
+
+
+    <div id="print_modal" class="modal hide fade modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-header bg-green">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3>Ready to print...</h3>
+        </div>
+        <div class="modal-body" style="height: auto;max-height: 100%">
+
+            <div id="print_window"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+
+    <script src="eadmin/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="eadmin/bootstrap.min.js" type="text/javascript"></script>
+    <script src="eadmin/index.js" type="text/javascript"></script>
+    <script src="plugins/jsgrid/dist/jsgrid.js" type="text/javascript"></script>
+    <script src="plugins/lodash/lodash.js" type="text/javascript"></script>
+
+    <script id="jsgrid_no_data_main_table" type="text/template">
+
+        <div style="padding:20px">
+            <h4 style="margin-bottom:2px">Nothing to print</h4>
+            <p><a href="#myModal" role="button" data-toggle="modal" style="margin:0">Click here to add que</a></p>
+        </div>
+
+    </script>
+
+    <script id="jsgrid_no_data_add_que_list" type="text/template">
+
+        <div style="padding:20px">
+            <h4 style="margin-bottom:2px">Nothing to show</h4>
+        </div>
+
+    </script>
+
+    <script id="id_card_template" type="text/template">
+
+        <html>
+        <head></head>
+
+
+        </html>
+
+    </script>
+
+
+    <script type="text/template">
+
+        jq.fn.barangays = [];
+
+    </script>
+
+    <script src="misc/scripts/hive.js" type="text/javascript"></script>
+
+
+
+</body>

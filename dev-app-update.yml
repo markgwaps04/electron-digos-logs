@@ -1,5 +1,4 @@
 owner: markgwaps04
 repo: ICT_LOGS
-provider: github
-token: f510ac65118db694df09962bda95d0e1f6ca53e7
-updaterCacheDirName: ICT_LOGS
+provider: generic
+url: http://10.0.0.252:98/dist
