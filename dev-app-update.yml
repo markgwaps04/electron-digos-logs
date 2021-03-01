@@ -1,4 +1,5 @@
 owner: markgwaps04
-repo: ICT_LOGS
-provider: generic
-url: http://10.0.0.252:98/dist
+repo: electron-digos-logs
+provider: github
+token: 17e050725081f8ebf9d2406a49c1924581ffd8e0
+updaterCacheDirName: electron-digos-logs

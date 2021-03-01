@@ -344,6 +344,7 @@ $.fn.restore_fullscreen = function() {
         $btn_zoom_reset.on("click", zoom_reset);
 
     }
+	if(jq(".fullscreen-container").length <= 0) return;
     jq(".fullscreen-container").zoom_content();
 
 })(jQuery);

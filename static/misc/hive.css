@@ -1,0 +1,166 @@
+.overlay-spinner.overlay-fixed
+{
+    position: fixed !important;
+}
+.dropdown-menu button {
+
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: inherit;
+    background: inherit;
+
+}
+.widget-menu>li ul li 
+{
+	background-color: white;
+}
+
+.add-on.cus {
+	text-shadow : none !important;
+}
+
+.dropdown-menu button:hover {
+    background: #3cbc8d52;
+}
+.label.bg-success
+{
+	background: #36a97f;
+}
+.widget-menu li.active a {
+        background-color: #28262c;
+        color: #fafafa;
+    }
+    .widget-menu li.active {
+        border-left: 10px solid #3ac47d;
+    }
+    .center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type='file'] {
+        height: 44px;
+    }
+
+    .bg-green, .bg-success {
+        background-color: #3ac47d !important;
+    }
+
+    .bg-success {
+        color: #fff
+    }
+
+    .module-head:not(.cus) {
+        padding: 22px 15px
+    }
+
+    .module-head h3 {
+        font-size: 22px;
+        display: inline-block;
+    }
+
+    .right-action {
+        float: right
+    }
+
+    .control-label, .controls input {
+        font-size: 16px
+    }
+
+    .docs-example:after {
+        display: none
+    }
+
+    .docs-example {
+        padding: 19px 19px 14px;
+        margin-bottom: 18px;
+    }
+
+    select {
+        color: #777 !important;
+        font-size: 16px;
+    }
+
+        select option:not([disabled]) {
+            color: black !important;
+            font-size: 18px;
+        }
+
+    @media only screen and (max-width: 995px) {
+        .hide_mobile {
+            display: none;
+        }
+    }
+
+
+    .fullscreen .module-body {
+        height: 629px;
+        overflow-y: scroll;
+    }
+
+    .module-login input {
+        height: 40px
+    }
+
+    .nav_action.nav > li > a {
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: 900;
+        color: black;
+    }
+
+    .main_container {
+        position: relative;
+    }
+
+
+    .modal-lg {
+        width: 80%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .actions
+    {
+        margin-bottom : 5px;
+    }
+    form.cus .input-prepend .add-on
+    {
+        text-shadow: none;
+    }
+
+    /* Hiding the checkbox, but allowing it to be focused */
+    .badgebox {
+        opacity: 0;
+    }
+
+    .pdfobject-container {
+        width: 100%;
+        height: 70vh;
+    }
+
+        .badgebox + .badge {
+            /* Move the check mark away when unchecked */
+            text-indent: -999999px;
+            /* Makes the badge's width stay the same checked and unchecked */
+            width: 27px;
+            top: 0px;
+        }
+
+        .badgebox:focus + .badge {
+            /* Set something to make the badge looks focused */
+            /* This really depends on the application, in my case it was: */
+            /* Adding a light border */
+            box-shadow: inset 0px 0px 5px;
+            /* Taking the difference out of the padding */
+        }
+
+        .badgebox:checked + .badge {
+            /* Move the check mark back when checked */
+            text-indent: 0;
+        }
+
+@font-face { font-family: "OCR A EXTENDED"; src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot"); /* IE9*/ src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff2") format("woff2"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff") format("woff"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.svg#OCR A Extended") format("svg"); /* iOS 4.1- */ }

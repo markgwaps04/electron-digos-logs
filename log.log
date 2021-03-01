@@ -1085,3 +1085,2482 @@ Headers: {
 [2021-01-10 20:39:59.114] [error] Error: Error: net::ERR_CONNECTION_TIMED_OUT
     at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6497)
     at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2021-01-10 20:43:10.515] [info] Checking for update
+[2021-01-10 20:43:33.046] [error] Error: Error: net::ERR_CONNECTION_TIMED_OUT
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6497)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2021-01-10 22:27:16.615] [info] Checking for update
+[2021-01-10 22:27:22.037] [info] Update for version 1.0.5 is not available (latest version: 1.0.2, downgrade is disallowed).
+[2021-01-11 00:37:21.162] [info] Checking for update
+[2021-01-11 00:37:28.721] [info] Found version 1.0.6 (url: ICT_PORTAL-Setup-1.0.6.exe)
+[2021-01-11 00:43:10.286] [info] Checking for update
+[2021-01-11 00:43:13.950] [info] Found version 1.0.6 (url: ICT_PORTAL-Setup-1.0.6.exe)
+[2021-01-11 00:43:15.808] [info] Downloading update from ICT_PORTAL-Setup-1.0.6.exe
+[2021-01-11 00:43:15.931] [info] Download block maps (old: "https://api.github.com/repos/markgwaps04/electron-digos-logs/releases/assets/30516820.blockmap", new: https://api.github.com/repos/markgwaps04/electron-digos-logs/releases/assets/30516820.blockmap)
+[2021-01-11 00:43:16.939] [error] Cannot download differentially, fallback to full download: Error: Maximum allowed size is 50 MB
+    at Object.responseHandler (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:241:26)
+    at ClientRequest.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:303:17)
+    at ClientRequest.emit (events.js:315:20)
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6254)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
+[2021-01-11 01:52:19.946] [info] Checking for update
+[2021-01-11 01:52:27.628] [info] Found version 1.0.6 (url: ICT_PORTAL-Setup-1.0.6.exe)
+[2021-01-11 02:36:43.735] [info] Checking for update
+[2021-01-11 02:36:50.310] [info] Update for version 1.0.6 is not available (latest version: 1.0.6, downgrade is disallowed).
+[2021-01-11 05:56:42.275] [info] Checking for update
+[2021-01-11 05:56:47.641] [info] Update for version 1.0.6 is not available (latest version: 1.0.6, downgrade is disallowed).
+[2021-01-11 07:30:24.809] [info] Checking for update
+[2021-01-11 07:30:31.581] [info] Update for version 1.0.8 is not available (latest version: 1.0.7, downgrade is disallowed).
+[2021-01-13 05:52:58.132] [info] Checking for update
+[2021-01-13 05:53:06.313] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-19 18:41:47.037] [info] Checking for update
+[2021-01-19 18:41:54.931] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-19 18:48:05.092] [info] Checking for update
+[2021-01-19 18:48:09.294] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-19 18:54:43.229] [info] Checking for update
+[2021-01-19 18:54:47.436] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-20 08:27:17.632] [info] Checking for update
+[2021-01-20 08:27:23.859] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-20 21:56:24.223] [info] Checking for update
+[2021-01-20 21:56:35.638] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:47:13.220] [info] Checking for update
+[2021-01-21 00:47:17.868] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:53:00.101] [info] Checking for update
+[2021-01-21 00:53:03.860] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:55:09.603] [info] Checking for update
+[2021-01-21 00:55:13.381] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:57:04.180] [info] Checking for update
+[2021-01-21 00:57:07.797] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:57:39.020] [info] Checking for update
+[2021-01-21 00:57:42.485] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 00:58:16.896] [info] Checking for update
+[2021-01-21 00:58:20.431] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:00:27.488] [info] Checking for update
+[2021-01-21 01:00:31.216] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:02:01.889] [info] Checking for update
+[2021-01-21 01:03:09.983] [info] Checking for update
+[2021-01-21 01:03:13.662] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:03:49.239] [info] Checking for update
+[2021-01-21 01:10:19.265] [info] Checking for update
+[2021-01-21 01:10:22.888] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:11:35.348] [info] Checking for update
+[2021-01-21 01:11:39.011] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:15:11.648] [info] Checking for update
+[2021-01-21 01:15:15.374] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:15:47.109] [info] Checking for update
+[2021-01-21 01:15:50.642] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:17:12.354] [info] Checking for update
+[2021-01-21 01:17:16.070] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:22:52.250] [info] Checking for update
+[2021-01-21 01:22:56.594] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:26:01.821] [info] Checking for update
+[2021-01-21 01:26:05.476] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:27:32.929] [info] Checking for update
+[2021-01-21 01:27:36.625] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:30:11.933] [info] Checking for update
+[2021-01-21 01:30:15.572] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:31:10.678] [info] Checking for update
+[2021-01-21 01:31:14.957] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:32:27.810] [info] Checking for update
+[2021-01-21 01:32:31.394] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:33:18.564] [info] Checking for update
+[2021-01-21 01:33:21.936] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:40:39.960] [info] Checking for update
+[2021-01-21 01:40:43.636] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:47:15.327] [info] Checking for update
+[2021-01-21 01:47:18.981] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:49:15.773] [info] Checking for update
+[2021-01-21 01:49:19.303] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:49:54.668] [info] Checking for update
+[2021-01-21 01:49:58.021] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:51:57.320] [info] Checking for update
+[2021-01-21 01:52:00.872] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:53:16.445] [info] Checking for update
+[2021-01-21 01:53:22.009] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:56:40.852] [info] Checking for update
+[2021-01-21 01:56:44.221] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:57:35.888] [info] Checking for update
+[2021-01-21 01:57:39.199] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 01:59:56.003] [info] Checking for update
+[2021-01-21 01:59:59.482] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:04:14.348] [info] Checking for update
+[2021-01-21 02:04:17.772] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:06:57.370] [info] Checking for update
+[2021-01-21 02:07:00.949] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:16:33.963] [info] Checking for update
+[2021-01-21 02:16:37.542] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:18:03.213] [info] Checking for update
+[2021-01-21 02:18:06.718] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:20:47.214] [info] Checking for update
+[2021-01-21 02:20:50.745] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:21:54.576] [info] Checking for update
+[2021-01-21 02:21:57.974] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:22:40.551] [info] Checking for update
+[2021-01-21 02:22:43.892] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:24:49.257] [info] Checking for update
+[2021-01-21 02:24:53.341] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:25:57.691] [info] Checking for update
+[2021-01-21 02:26:01.185] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:27:54.035] [info] Checking for update
+[2021-01-21 02:27:57.474] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:29:40.231] [info] Checking for update
+[2021-01-21 02:29:43.723] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:30:38.331] [info] Checking for update
+[2021-01-21 02:30:41.660] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:31:33.497] [info] Checking for update
+[2021-01-21 02:31:38.187] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:33:25.636] [info] Checking for update
+[2021-01-21 02:33:29.128] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:36:29.404] [info] Checking for update
+[2021-01-21 02:36:32.841] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:39:42.310] [info] Checking for update
+[2021-01-21 02:39:45.840] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:43:23.959] [info] Checking for update
+[2021-01-21 02:43:27.380] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:57:46.300] [info] Checking for update
+[2021-01-21 02:57:49.730] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 02:58:55.134] [info] Checking for update
+[2021-01-21 02:58:58.601] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 03:00:48.395] [info] Checking for update
+[2021-01-21 03:00:51.899] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 03:05:44.955] [info] Checking for update
+[2021-01-21 03:05:48.381] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 03:07:15.832] [info] Checking for update
+[2021-01-21 03:07:19.244] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 03:11:12.589] [info] Checking for update
+[2021-01-21 03:11:16.109] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:24:08.048] [info] Checking for update
+[2021-01-21 05:24:13.920] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:26:45.598] [info] Checking for update
+[2021-01-21 05:26:52.505] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:28:55.342] [info] Checking for update
+[2021-01-21 05:29:02.663] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:31:44.348] [info] Checking for update
+[2021-01-21 05:31:50.386] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:32:34.013] [info] Checking for update
+[2021-01-21 05:32:39.152] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:35:28.546] [info] Checking for update
+[2021-01-21 05:35:32.000] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:36:59.949] [info] Checking for update
+[2021-01-21 05:37:03.519] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:37:59.827] [info] Checking for update
+[2021-01-21 05:38:03.389] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:39:05.437] [info] Checking for update
+[2021-01-21 05:39:08.879] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:41:30.148] [info] Checking for update
+[2021-01-21 05:41:33.652] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:43:23.399] [info] Checking for update
+[2021-01-21 05:43:27.041] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:44:07.743] [info] Checking for update
+[2021-01-21 05:44:11.246] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:45:21.732] [info] Checking for update
+[2021-01-21 05:45:25.294] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:53:58.383] [info] Checking for update
+[2021-01-21 05:54:01.876] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 05:57:04.066] [info] Checking for update
+[2021-01-21 05:57:07.678] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:28:01.554] [info] Checking for update
+[2021-01-21 06:28:08.555] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:29:47.210] [info] Checking for update
+[2021-01-21 06:29:50.921] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:34:20.019] [info] Checking for update
+[2021-01-21 06:34:23.631] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:35:41.138] [info] Checking for update
+[2021-01-21 06:35:44.584] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:38:39.210] [info] Checking for update
+[2021-01-21 06:38:42.781] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:43:23.875] [info] Checking for update
+[2021-01-21 06:43:31.780] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:48:03.922] [info] Checking for update
+[2021-01-21 06:48:08.273] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:49:30.498] [info] Checking for update
+[2021-01-21 06:49:34.040] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:54:32.223] [info] Checking for update
+[2021-01-21 06:54:36.796] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 06:58:09.369] [info] Checking for update
+[2021-01-21 06:58:13.367] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-21 07:03:01.619] [info] Checking for update
+[2021-01-21 07:03:05.148] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:38:18.434] [info] Checking for update
+[2021-01-22 00:38:24.227] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:40:06.815] [info] Checking for update
+[2021-01-22 00:40:10.408] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:41:15.491] [info] Checking for update
+[2021-01-22 00:41:19.043] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:42:05.769] [info] Checking for update
+[2021-01-22 00:42:09.274] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:43:37.422] [info] Checking for update
+[2021-01-22 00:43:40.973] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 00:44:20.720] [info] Checking for update
+[2021-01-22 00:44:24.287] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:20:22.829] [info] Checking for update
+[2021-01-22 01:20:27.714] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:30:25.971] [info] Checking for update
+[2021-01-22 01:30:29.680] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:32:46.967] [info] Checking for update
+[2021-01-22 01:32:50.351] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:36:57.614] [info] Checking for update
+[2021-01-22 01:37:01.534] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:48:37.356] [info] Checking for update
+[2021-01-22 01:48:41.501] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:50:33.650] [info] Checking for update
+[2021-01-22 01:50:37.489] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:51:54.343] [info] Checking for update
+[2021-01-22 01:51:57.985] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:52:39.438] [info] Checking for update
+[2021-01-22 01:52:42.785] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:53:46.706] [info] Checking for update
+[2021-01-22 01:53:50.299] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 01:54:55.367] [info] Checking for update
+[2021-01-22 01:54:58.830] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:02:02.532] [info] Checking for update
+[2021-01-22 02:02:06.210] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:02:36.703] [info] Checking for update
+[2021-01-22 02:02:40.223] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:05:07.629] [info] Checking for update
+[2021-01-22 02:05:11.262] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:06:10.207] [info] Checking for update
+[2021-01-22 02:06:13.634] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:08:56.382] [info] Checking for update
+[2021-01-22 02:08:59.908] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:11:19.620] [info] Checking for update
+[2021-01-22 02:11:23.117] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:12:21.656] [info] Checking for update
+[2021-01-22 02:12:25.206] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:14:46.838] [info] Checking for update
+[2021-01-22 02:14:50.331] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:16:57.351] [info] Checking for update
+[2021-01-22 02:17:00.876] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:19:26.305] [info] Checking for update
+[2021-01-22 02:19:29.774] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:21:19.992] [info] Checking for update
+[2021-01-22 02:21:23.473] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:22:51.344] [info] Checking for update
+[2021-01-22 02:22:54.737] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:24:06.566] [info] Checking for update
+[2021-01-22 02:24:10.140] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:32:10.616] [info] Checking for update
+[2021-01-22 02:32:14.994] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:33:43.111] [info] Checking for update
+[2021-01-22 02:33:46.718] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:35:24.150] [info] Checking for update
+[2021-01-22 02:35:27.744] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:39:17.468] [info] Checking for update
+[2021-01-22 02:39:21.122] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:58:10.478] [info] Checking for update
+[2021-01-22 02:58:14.911] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:59:04.303] [info] Checking for update
+[2021-01-22 02:59:07.779] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 02:59:37.394] [info] Checking for update
+[2021-01-22 02:59:41.239] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 03:01:34.800] [info] Checking for update
+[2021-01-22 03:03:12.642] [info] Checking for update
+[2021-01-22 03:03:16.065] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 03:06:21.282] [info] Checking for update
+[2021-01-22 03:06:24.823] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 03:09:36.704] [info] Checking for update
+[2021-01-22 03:09:40.232] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 03:10:10.865] [info] Checking for update
+[2021-01-22 03:10:14.466] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 03:19:01.283] [info] Checking for update
+[2021-01-22 03:19:04.812] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 04:09:14.155] [info] Checking for update
+[2021-01-22 04:09:18.625] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 04:32:50.571] [info] Checking for update
+[2021-01-22 04:32:54.083] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 04:41:53.137] [info] Checking for update
+[2021-01-22 04:41:57.159] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 04:47:30.586] [info] Checking for update
+[2021-01-22 04:47:34.191] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 06:46:22.317] [info] Checking for update
+[2021-01-22 06:46:27.696] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 07:04:02.285] [info] Checking for update
+[2021-01-22 07:04:06.582] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 07:46:08.431] [info] Checking for update
+[2021-01-22 07:46:14.183] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 07:52:10.902] [info] Checking for update
+[2021-01-22 07:52:14.413] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 08:26:51.178] [info] Checking for update
+[2021-01-22 08:26:57.716] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 08:33:19.930] [info] Checking for update
+[2021-01-22 08:33:24.416] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 08:35:24.749] [info] Checking for update
+[2021-01-22 08:35:29.898] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 08:36:16.528] [info] Checking for update
+[2021-01-22 08:36:20.274] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 08:41:34.017] [info] Checking for update
+[2021-01-22 08:41:43.510] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 09:39:26.290] [info] Checking for update
+[2021-01-22 09:39:33.111] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 09:47:42.252] [info] Checking for update
+[2021-01-22 09:47:46.704] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 09:50:04.349] [info] Checking for update
+[2021-01-22 09:50:07.920] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 09:54:46.082] [info] Checking for update
+[2021-01-22 09:54:49.590] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 09:56:49.323] [info] Checking for update
+[2021-01-22 09:56:52.780] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 10:35:08.295] [info] Checking for update
+[2021-01-22 10:35:18.161] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 10:55:17.166] [info] Checking for update
+[2021-01-22 10:55:23.784] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:05:05.912] [info] Checking for update
+[2021-01-22 11:05:10.232] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:05:45.226] [info] Checking for update
+[2021-01-22 11:05:48.769] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:07:59.491] [info] Checking for update
+[2021-01-22 11:08:03.546] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:09:27.010] [info] Checking for update
+[2021-01-22 11:09:30.526] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:12:54.492] [info] Checking for update
+[2021-01-22 11:12:58.337] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:13:46.340] [info] Checking for update
+[2021-01-22 11:13:49.867] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:15:04.032] [info] Checking for update
+[2021-01-22 11:15:07.773] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 11:46:48.822] [info] Checking for update
+[2021-01-22 11:46:54.882] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 12:03:27.401] [info] Checking for update
+[2021-01-22 12:03:31.543] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 12:49:49.066] [info] Checking for update
+[2021-01-22 12:49:53.028] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:12:17.088] [info] Checking for update
+[2021-01-22 13:12:20.705] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:14:17.635] [info] Checking for update
+[2021-01-22 13:14:21.295] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:15:38.406] [info] Checking for update
+[2021-01-22 13:15:42.046] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:18:22.572] [info] Checking for update
+[2021-01-22 13:18:26.117] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:20:09.806] [info] Checking for update
+[2021-01-22 13:20:13.478] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:25:48.879] [info] Checking for update
+[2021-01-22 13:25:52.372] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:39:52.397] [info] Checking for update
+[2021-01-22 13:39:55.833] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:40:50.908] [info] Checking for update
+[2021-01-22 13:40:54.450] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:58:17.707] [info] Checking for update
+[2021-01-22 13:58:22.665] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-22 13:59:56.412] [info] Checking for update
+[2021-01-22 13:59:59.938] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-23 00:38:04.194] [info] Checking for update
+[2021-01-23 00:38:12.308] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-23 22:49:58.316] [info] Checking for update
+[2021-01-23 22:50:05.567] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-24 08:02:51.434] [info] Checking for update
+[2021-01-24 08:02:58.068] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-24 08:06:28.243] [info] Checking for update
+[2021-01-24 08:06:31.723] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-24 08:19:33.430] [info] Checking for update
+[2021-01-24 08:19:37.358] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 08:51:03.649] [info] Checking for update
+[2021-01-25 08:51:22.963] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 09:33:47.628] [info] Checking for update
+[2021-01-25 09:33:53.687] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 09:35:32.196] [info] Checking for update
+[2021-01-25 09:35:35.758] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 09:43:04.439] [info] Checking for update
+[2021-01-25 09:43:08.777] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 09:46:54.157] [info] Checking for update
+[2021-01-25 09:46:57.651] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 10:11:54.289] [info] Checking for update
+[2021-01-25 10:12:03.797] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 10:27:55.956] [info] Checking for update
+[2021-01-25 10:27:59.406] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 10:39:49.963] [info] Checking for update
+[2021-01-25 10:39:56.502] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-25 11:27:13.104] [info] Checking for update
+[2021-01-25 11:27:17.671] [info] Update for version 1.0.8 is not available (latest version: 1.0.8, downgrade is disallowed).
+[2021-01-27 08:53:21.423] [info] Checking for update
+[2021-01-27 08:53:31.619] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-27 15:31:09.402] [info] Checking for update
+[2021-01-27 15:31:49.043] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-27 15:33:45.294] [info] Checking for update
+[2021-01-27 15:34:27.708] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-27 15:36:30.576] [info] Checking for update
+[2021-01-27 15:36:35.995] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-27 16:17:15.501] [info] Checking for update
+[2021-01-27 16:17:20.389] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-27 17:58:15.790] [info] Checking for update
+[2021-01-27 17:58:21.455] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-28 08:19:47.037] [info] Checking for update
+[2021-01-28 08:19:55.256] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-28 08:21:41.771] [info] Checking for update
+[2021-01-28 08:21:45.558] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-28 08:26:16.305] [info] Checking for update
+[2021-01-28 08:26:20.124] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-01-28 08:27:47.777] [info] Checking for update
+[2021-01-28 08:27:51.376] [info] Update for version 1.0.10 is not available (latest version: 1.0.10, downgrade is disallowed).
+[2021-02-15 10:55:09.105] [info] Checking for update
+[2021-02-15 10:55:19.176] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>4704C6D758173DEA</RequestId><HostId>pAqmU2OY5APByCwbaxOkV5bSF+WeHsO34p/UwBTL4jpdqVCiwHIolvi7m8MpTHJ1yE7GU/y0ztA=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4704C6D758173DEA",
+  "x-amz-id-2": "pAqmU2OY5APByCwbaxOkV5bSF+WeHsO34p/UwBTL4jpdqVCiwHIolvi7m8MpTHJ1yE7GU/y0ztA=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 02:54:43 GMT",
+  "x-served-by": "cache-dca17771-DCA, cache-sin18035-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "0015f7e5c6a8fba97d50ac0c1b4c4c135d24452d"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:00:56.022] [info] Checking for update
+[2021-02-15 11:00:58.804] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>EA6988AA11365E3F</RequestId><HostId>47AbvJMhHV+xbdYIYkA7vtaGcuZDG2xAnuxcb87WD/fqC98Slnv9a8Qwm3o6gjXrEt6N1+xVbDU=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "EA6988AA11365E3F",
+  "x-amz-id-2": "47AbvJMhHV+xbdYIYkA7vtaGcuZDG2xAnuxcb87WD/fqC98Slnv9a8Qwm3o6gjXrEt6N1+xVbDU=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:00:23 GMT",
+  "x-served-by": "cache-dca17769-DCA, cache-sin18022-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "6738616ff21d17ba1209f59de73d0548145b84bd"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:08:28.112] [info] Checking for update
+[2021-02-15 11:08:30.846] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>A95C6C3F2CF9C4CB</RequestId><HostId>2Bu/VLp0eCG4Ik2AekKV+DGfaQmI3B2Z+0z3rtBbTihVaf9mwEqr4+gTMXsG+pAfCAocOWtdmdo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "A95C6C3F2CF9C4CB",
+  "x-amz-id-2": "2Bu/VLp0eCG4Ik2AekKV+DGfaQmI3B2Z+0z3rtBbTihVaf9mwEqr4+gTMXsG+pAfCAocOWtdmdo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:07:55 GMT",
+  "x-served-by": "cache-dca17775-DCA, cache-sin18026-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "6c695cd82fd898dd5f50de838af3f43f5b208edb"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:10:34.906] [info] Checking for update
+[2021-02-15 11:10:37.795] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>EYFX8G8S6Q4Y7N6P</RequestId><HostId>CDgxw1WVt/nVAqVEjfAtZx4NvaOpoL19j4h1iVsb/hK0EiV8pNcR80RlhaEw1WYls92P6H01mtU=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "EYFX8G8S6Q4Y7N6P",
+  "x-amz-id-2": "CDgxw1WVt/nVAqVEjfAtZx4NvaOpoL19j4h1iVsb/hK0EiV8pNcR80RlhaEw1WYls92P6H01mtU=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:10:02 GMT",
+  "x-served-by": "cache-dca17738-DCA, cache-sin18039-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "b2f184c4c293056168f06cae2e7a198aad6f37ec"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:12:40.326] [info] Checking for update
+[2021-02-15 11:12:43.139] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>3BD7B10950525E3A</RequestId><HostId>v4AZf/7x/rN527G8Sgy7r1IENLAFJaN1+lF6rY7Vpkfx4Jo/eax0Ad/UPR6v03Fx+DT7L+0eJks=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "3BD7B10950525E3A",
+  "x-amz-id-2": "v4AZf/7x/rN527G8Sgy7r1IENLAFJaN1+lF6rY7Vpkfx4Jo/eax0Ad/UPR6v03Fx+DT7L+0eJks=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:12:07 GMT",
+  "x-served-by": "cache-dca17732-DCA, cache-sin18038-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "f0de60010fb49f4c96b15b5392e5d39bcc6e38e9"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:46:16.281] [info] Checking for update
+[2021-02-15 11:46:19.895] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>F3FAD0F9CCAAA77B</RequestId><HostId>nDEYGnnyUP9oixKlyGkYj2kOFHr3//Skg6PpvnyniMfpvRO08hnGn34vIladesEOCHLC+T6prpA=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F3FAD0F9CCAAA77B",
+  "x-amz-id-2": "nDEYGnnyUP9oixKlyGkYj2kOFHr3//Skg6PpvnyniMfpvRO08hnGn34vIladesEOCHLC+T6prpA=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:45:44 GMT",
+  "x-served-by": "cache-dca12925-DCA, cache-sin18050-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "e87f242f88838f0232091dd36e74d91d5ca07689"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:48:12.021] [info] Checking for update
+[2021-02-15 11:48:14.854] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>4CC7A06A32DF6FE9</RequestId><HostId>FK7Jja4gwG+qBy9LixZnmqifBiSiBtctlA+RxLf6353VjgID+eEl8B7ovqAvttsVgjcrQdMmC4A=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4CC7A06A32DF6FE9",
+  "x-amz-id-2": "FK7Jja4gwG+qBy9LixZnmqifBiSiBtctlA+RxLf6353VjgID+eEl8B7ovqAvttsVgjcrQdMmC4A=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:47:39 GMT",
+  "x-served-by": "cache-dca17756-DCA, cache-sin18031-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "d4f66d379eb17c4c8a34a4511d56dece4014254e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:50:04.730] [info] Checking for update
+[2021-02-15 11:50:07.547] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>8495B6CEF9F58A5E</RequestId><HostId>aTOpbpQwi17lU28OG8yMcTioGG5w57/+QKAxvpgLb/fBnUj5su553M9EBLuYGA7EGzvYbEgweaE=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "8495B6CEF9F58A5E",
+  "x-amz-id-2": "aTOpbpQwi17lU28OG8yMcTioGG5w57/+QKAxvpgLb/fBnUj5su553M9EBLuYGA7EGzvYbEgweaE=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:49:32 GMT",
+  "x-served-by": "cache-dca17754-DCA, cache-sin18022-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "d18269d17845ede6adcb70165bac6796be9876bb"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 11:51:32.953] [info] Checking for update
+[2021-02-15 11:51:35.699] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>0TEYENDZBQ8P4K9W</RequestId><HostId>hs8JBUFaLCphzA0/17pTSMaK0nn8b2B/+VFw2qfHL1E398AY9NPb2OH3T4KYVdv1C3wCtC9IlJY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "0TEYENDZBQ8P4K9W",
+  "x-amz-id-2": "hs8JBUFaLCphzA0/17pTSMaK0nn8b2B/+VFw2qfHL1E398AY9NPb2OH3T4KYVdv1C3wCtC9IlJY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 03:51:00 GMT",
+  "x-served-by": "cache-dca17758-DCA, cache-sin18039-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "b368f7b74908a6cea781071db4fd7d3b8d991e53"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:43:12.597] [info] Checking for update
+[2021-02-15 12:43:15.394] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>4027EA7C4FE8B0EB</RequestId><HostId>OCsAqrNugihsVl6qGp0HY4vfrtgzJvQ1PJdRqwGR0o0LXfFAnetNUfFAFydQCL3fLPzKFHbm9oY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4027EA7C4FE8B0EB",
+  "x-amz-id-2": "OCsAqrNugihsVl6qGp0HY4vfrtgzJvQ1PJdRqwGR0o0LXfFAnetNUfFAFydQCL3fLPzKFHbm9oY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:42:39 GMT",
+  "x-served-by": "cache-dca17735-DCA, cache-sin18039-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "877db8a3628187db7657333a74694d09e2a7ab54"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:45:35.845] [info] Checking for update
+[2021-02-15 12:45:38.713] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>34F301348F7FDC4F</RequestId><HostId>6j3Dk5HuZuhyPoRVb85/lUdnm7wceJEkZr5Ec7YLsIYfpy3EkT2vf/zKOklxdf1hW9AHDZOpYTk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "34F301348F7FDC4F",
+  "x-amz-id-2": "6j3Dk5HuZuhyPoRVb85/lUdnm7wceJEkZr5Ec7YLsIYfpy3EkT2vf/zKOklxdf1hW9AHDZOpYTk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:45:02 GMT",
+  "x-served-by": "cache-dca17749-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ed8e464f8f6f1c50ee5b888ba6ce386674ba3777"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:47:04.934] [info] Checking for update
+[2021-02-15 12:47:07.665] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>3ED04FA184510C9D</RequestId><HostId>gXVQoNg5GwvhZwg3/F0UeuorEISp5ABt8cNReeoPLW+QLaeGjIiqzCQdO/x+cFnOCWOSTpcl40Q=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "3ED04FA184510C9D",
+  "x-amz-id-2": "gXVQoNg5GwvhZwg3/F0UeuorEISp5ABt8cNReeoPLW+QLaeGjIiqzCQdO/x+cFnOCWOSTpcl40Q=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:46:31 GMT",
+  "x-served-by": "cache-dca17744-DCA, cache-sin18035-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "6ee6bc044aa478c864e255728cd1b1fd224c7151"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:50:00.534] [info] Checking for update
+[2021-02-15 12:50:03.404] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>9AB4B95534C57456</RequestId><HostId>VCAwQKryNDMnieq826MxPmTtSfMrdJzCWrvESrl8EOi4r84Go53H0aQmhqVz2mra24CzDpvwXVs=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "9AB4B95534C57456",
+  "x-amz-id-2": "VCAwQKryNDMnieq826MxPmTtSfMrdJzCWrvESrl8EOi4r84Go53H0aQmhqVz2mra24CzDpvwXVs=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:49:27 GMT",
+  "x-served-by": "cache-dca17733-DCA, cache-sin18034-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "941bab71c652f34ffec167b7d398dce66a692dc3"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:53:29.098] [info] Checking for update
+[2021-02-15 12:53:31.857] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>4B50BB1DC9CC4599</RequestId><HostId>PtaOLcOfXxiQGa45N7lWBnVODeBO9AHnhs/lguZvOu3DwPRdJMGiGr0yjy3+exmqbAYLiF3hOrc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4B50BB1DC9CC4599",
+  "x-amz-id-2": "PtaOLcOfXxiQGa45N7lWBnVODeBO9AHnhs/lguZvOu3DwPRdJMGiGr0yjy3+exmqbAYLiF3hOrc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:52:55 GMT",
+  "x-served-by": "cache-dca17739-DCA, cache-sin18045-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "f2ca9e73e59c8ede9ecfece0d20ff45fdc7230f9"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:56:42.533] [info] Checking for update
+[2021-02-15 12:56:45.475] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>09DCC52D235E871A</RequestId><HostId>jI4416EwBcTpft5EIByTFPyupiuB6KW7ZhxqK0HcBZHYSwFnITB0gBWXQo2M7CZppmEGXpUkxKY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "09DCC52D235E871A",
+  "x-amz-id-2": "jI4416EwBcTpft5EIByTFPyupiuB6KW7ZhxqK0HcBZHYSwFnITB0gBWXQo2M7CZppmEGXpUkxKY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:56:09 GMT",
+  "x-served-by": "cache-dca17729-DCA, cache-sin18046-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "3118894444e386a69daf3b9ea8e1f73859b614f5"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 12:59:13.658] [info] Checking for update
+[2021-02-15 12:59:16.619] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>D03DD252DCDD8B38</RequestId><HostId>5coslkwxkuqAIqiPTY2cta5bgfrzZEbU/I18E4T5SDEaYLs1CPSL0o+jI0ScdSMMYVbuuBX1Bcc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "D03DD252DCDD8B38",
+  "x-amz-id-2": "5coslkwxkuqAIqiPTY2cta5bgfrzZEbU/I18E4T5SDEaYLs1CPSL0o+jI0ScdSMMYVbuuBX1Bcc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 04:58:40 GMT",
+  "x-served-by": "cache-dca17770-DCA, cache-sin18040-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "c2d33c8f623c24a9ead1eb2090c2874ce6e28aad"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:00:45.533] [info] Checking for update
+[2021-02-15 13:00:48.324] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>96EBEDE6764E232E</RequestId><HostId>orQGcq8czqgG6MeaAyS5GPUWgoPclYL1cKEKP1Re2FJ30Gq60I2wY9Wub6CTC+9pHs5lpda6y7o=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "96EBEDE6764E232E",
+  "x-amz-id-2": "orQGcq8czqgG6MeaAyS5GPUWgoPclYL1cKEKP1Re2FJ30Gq60I2wY9Wub6CTC+9pHs5lpda6y7o=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:00:12 GMT",
+  "x-served-by": "cache-dca17764-DCA, cache-sin18022-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "4cdb17584739dfe74704fcfb3b1f017fa68d00e8"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:04:25.009] [info] Checking for update
+[2021-02-15 13:04:27.988] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>5D8D8697D0294947</RequestId><HostId>k6rHUEzvRUnBp2fp4SGDOCC2P+RdT8wpEliw7pkubjlxDKKKCJd61eIfcoB1W/3i0H8tsFUYPEs=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5D8D8697D0294947",
+  "x-amz-id-2": "k6rHUEzvRUnBp2fp4SGDOCC2P+RdT8wpEliw7pkubjlxDKKKCJd61eIfcoB1W/3i0H8tsFUYPEs=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:03:52 GMT",
+  "x-served-by": "cache-dca12926-DCA, cache-sin18025-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "c0f6bdd47a8f39ee60d7787bd2af2bfecd3dd52e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:09:30.677] [info] Checking for update
+[2021-02-15 13:09:33.568] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>7VAH7V9P8PEW2J2J</RequestId><HostId>7Qe12IfqtAHQ/kboYQKUtyOVpU7VRq6NCulq3giRLR9TPkmAAup7xDI8SVBWm3M6V55Q2Xzr2mw=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "7VAH7V9P8PEW2J2J",
+  "x-amz-id-2": "7Qe12IfqtAHQ/kboYQKUtyOVpU7VRq6NCulq3giRLR9TPkmAAup7xDI8SVBWm3M6V55Q2Xzr2mw=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:08:57 GMT",
+  "x-served-by": "cache-dca17761-DCA, cache-sin18040-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "13688c70eaafd32f99a1f2db3c45ff41ca4f5a7f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:11:35.592] [info] Checking for update
+[2021-02-15 13:11:38.237] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>70C1E3356AA4B576</RequestId><HostId>2PmpM9pvnf1j8lRWVpGg31sYzgiocIBgzJBYdByYbtOSadVlqILP+sJagth3Tb6PchBn0F6kpkY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "70C1E3356AA4B576",
+  "x-amz-id-2": "2PmpM9pvnf1j8lRWVpGg31sYzgiocIBgzJBYdByYbtOSadVlqILP+sJagth3Tb6PchBn0F6kpkY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:11:02 GMT",
+  "x-served-by": "cache-dca17745-DCA, cache-sin18032-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "30e30db7b1348176dc306edb65eafa38ae5e0a7d"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:56:04.924] [info] Checking for update
+[2021-02-15 13:56:07.855] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>0AF70F1F1E0DA35C</RequestId><HostId>nIUP5rE2VV0THiv2rClIiFIXSXQWUMKZwlqWGUFeT6bcUW6SXIvIRYJhRtDWmEVuvVNamw//rlE=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "0AF70F1F1E0DA35C",
+  "x-amz-id-2": "nIUP5rE2VV0THiv2rClIiFIXSXQWUMKZwlqWGUFeT6bcUW6SXIvIRYJhRtDWmEVuvVNamw//rlE=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:55:32 GMT",
+  "x-served-by": "cache-dca17772-DCA, cache-sin18043-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "df4450b97a45591d1e423dac7f4a0a926afac9a8"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 13:58:34.947] [info] Checking for update
+[2021-02-15 13:58:37.831] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>16491B1DB28DCD09</RequestId><HostId>ZKoU/JkKKnH0am406MD5MiZ5A/zvKQuO1GlB/5yaAQf/JAXJXUKgsPv2NwG9wYxsVnYSGjseifE=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "16491B1DB28DCD09",
+  "x-amz-id-2": "ZKoU/JkKKnH0am406MD5MiZ5A/zvKQuO1GlB/5yaAQf/JAXJXUKgsPv2NwG9wYxsVnYSGjseifE=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 05:58:02 GMT",
+  "x-served-by": "cache-dca17745-DCA, cache-sin18045-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "2abd168525976f290a1df71a3768e2da863ae6ae"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:02:02.730] [info] Checking for update
+[2021-02-15 14:02:05.711] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>5C9658CEA4C15BE0</RequestId><HostId>v+tmOGY22tgvyu1ADHETIZCoTPz8Za47c39f4Sg0kRow+rG9uoahiBOaTt86B2LpVLCgya1gW1g=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5C9658CEA4C15BE0",
+  "x-amz-id-2": "v+tmOGY22tgvyu1ADHETIZCoTPz8Za47c39f4Sg0kRow+rG9uoahiBOaTt86B2LpVLCgya1gW1g=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:01:29 GMT",
+  "x-served-by": "cache-dca17759-DCA, cache-sin18042-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "afd072df01294d449689106124570d216f09bd4f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:07:46.671] [info] Checking for update
+[2021-02-15 14:07:49.488] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>52935C9E93B703D2</RequestId><HostId>VLtLUInUyxpvw5X9lnV/QJsvqmkxPEk1u1thnjZ8VyQmRX5roOgY4FXYE452Bh2EPi1hT3yI3bo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "52935C9E93B703D2",
+  "x-amz-id-2": "VLtLUInUyxpvw5X9lnV/QJsvqmkxPEk1u1thnjZ8VyQmRX5roOgY4FXYE452Bh2EPi1hT3yI3bo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:07:13 GMT",
+  "x-served-by": "cache-dca17765-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "e2d0b70bf55615f1088d1a038a6b5c6540a66e5a"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:09:01.515] [info] Checking for update
+[2021-02-15 14:09:05.215] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>32C924E0EA66B06F</RequestId><HostId>q3u//Z3dZAc3QVuLeLhbiK4WlrvVtLbE+Gz1smibnepPRLsulGsOMDY6jWDCueM4VJasLsO17so=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "32C924E0EA66B06F",
+  "x-amz-id-2": "q3u//Z3dZAc3QVuLeLhbiK4WlrvVtLbE+Gz1smibnepPRLsulGsOMDY6jWDCueM4VJasLsO17so=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:08:29 GMT",
+  "x-served-by": "cache-dca17760-DCA, cache-sin18023-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "67203e88d24ba818ad82ce848f190f5ab837cf80"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:10:20.339] [info] Checking for update
+[2021-02-15 14:10:23.201] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>5K0R0Q6ZBH3V7Y2W</RequestId><HostId>9kgTFAQ7ZrT77OPqqoNlHY6xhFqZRV9zEQPdSRSXEc/cEEbqyekg1j1Sf5XMXoETn3+dAdA4c+c=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5K0R0Q6ZBH3V7Y2W",
+  "x-amz-id-2": "9kgTFAQ7ZrT77OPqqoNlHY6xhFqZRV9zEQPdSRSXEc/cEEbqyekg1j1Sf5XMXoETn3+dAdA4c+c=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:09:47 GMT",
+  "x-served-by": "cache-dca17750-DCA, cache-sin18027-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "3afefb21fd4432457e638edf48a7f5ba2346d947"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:16:07.593] [info] Checking for update
+[2021-02-15 14:16:10.598] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>B5421EFED7E8C1A5</RequestId><HostId>5zSjEbghuTfCysXKwFC1rFFoks1ps1IthFZaWaJL3maSAuCiOV58xO8og9qvnxk7rReEKzUCOJc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B5421EFED7E8C1A5",
+  "x-amz-id-2": "5zSjEbghuTfCysXKwFC1rFFoks1ps1IthFZaWaJL3maSAuCiOV58xO8og9qvnxk7rReEKzUCOJc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:15:34 GMT",
+  "x-served-by": "cache-dca17770-DCA, cache-sin18042-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "a21dc5fca0e1421cf66a1d6ce7f9ec316e4b9219"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:20:17.752] [info] Checking for update
+[2021-02-15 14:20:20.550] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>5B2879E7E1BB0BB1</RequestId><HostId>bSJ9hcCUWfYVNCTqLCbKWCaeign3NXp8YW+Q9ciOPm4lF2JcP+/yqXTneKnbsODFXXSgRWNbwd8=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5B2879E7E1BB0BB1",
+  "x-amz-id-2": "bSJ9hcCUWfYVNCTqLCbKWCaeign3NXp8YW+Q9ciOPm4lF2JcP+/yqXTneKnbsODFXXSgRWNbwd8=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:19:44 GMT",
+  "x-served-by": "cache-dca17778-DCA, cache-sin18025-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "949dced7153acb549f42c5bec509e0a4eda3a5fa"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:24:56.887] [info] Checking for update
+[2021-02-15 14:24:59.616] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>2P3Y6R4H0Q9T0Q8T</RequestId><HostId>aK1Wq5/ssRKfxwNXFvq5Qtj8wumdLAaL28/ebsDhea+0cEYHu61Zpv/LEeepKby6ekEKInaRXis=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "2P3Y6R4H0Q9T0Q8T",
+  "x-amz-id-2": "aK1Wq5/ssRKfxwNXFvq5Qtj8wumdLAaL28/ebsDhea+0cEYHu61Zpv/LEeepKby6ekEKInaRXis=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:24:23 GMT",
+  "x-served-by": "cache-dca17779-DCA, cache-sin18025-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "338f349d36f65e265c4db8cb412051c9a48b96b5"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:26:59.390] [info] Checking for update
+[2021-02-15 14:27:02.110] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>081C25CD7F06E530</RequestId><HostId>li2xtXDQTLk7FyveLe+b5JHIesjPnFQdRtDL+L3osanFzxy20pBA/gD2yI8MChjY7yi29Q618BM=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "081C25CD7F06E530",
+  "x-amz-id-2": "li2xtXDQTLk7FyveLe+b5JHIesjPnFQdRtDL+L3osanFzxy20pBA/gD2yI8MChjY7yi29Q618BM=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:26:26 GMT",
+  "x-served-by": "cache-dca12920-DCA, cache-sin18043-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "5123d6484bf9e7994f2ca907215441a5c04c562f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:41:25.060] [info] Checking for update
+[2021-02-15 14:41:27.892] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>90A86D60F1273D14</RequestId><HostId>o2SUzTdPVjrMmDgrF8zCnTenjhMnb5ZGkMdRtXpSyg/nJIj4MLruCIJnIn8t6slJkzeaqACG/Lg=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "90A86D60F1273D14",
+  "x-amz-id-2": "o2SUzTdPVjrMmDgrF8zCnTenjhMnb5ZGkMdRtXpSyg/nJIj4MLruCIJnIn8t6slJkzeaqACG/Lg=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:40:52 GMT",
+  "x-served-by": "cache-dca17757-DCA, cache-sin18033-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "27967ee3b1d6a19635bb5ba50cc14a2310d9a1da"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:43:25.273] [info] Checking for update
+[2021-02-15 14:43:28.169] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>093D46754903E527</RequestId><HostId>Vg4SfYrXJlGuzAQKbc27PB9hscRga8zy7oPg5RMJ3afpkHevFwchoGMgYj2c6HSD4AnlyG44QEg=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "093D46754903E527",
+  "x-amz-id-2": "Vg4SfYrXJlGuzAQKbc27PB9hscRga8zy7oPg5RMJ3afpkHevFwchoGMgYj2c6HSD4AnlyG44QEg=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:42:52 GMT",
+  "x-served-by": "cache-dca17768-DCA, cache-sin18042-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "a17185870e26fcad2493e521f70ad3994b6e18c1"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:45:40.477] [info] Checking for update
+[2021-02-15 14:45:43.254] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>F03A3868418E47EB</RequestId><HostId>h065ocutcPDi/5u+c5cF0LIp/auJjPnHta0/wQLIeggGuJ9Sn7+JiGLed+pTO77WR4KeIY6bX6Y=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F03A3868418E47EB",
+  "x-amz-id-2": "h065ocutcPDi/5u+c5cF0LIp/auJjPnHta0/wQLIeggGuJ9Sn7+JiGLed+pTO77WR4KeIY6bX6Y=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:45:07 GMT",
+  "x-served-by": "cache-dca17726-DCA, cache-sin18025-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "647ab07d37fa43999f828c3c7b7fa6318a809bbc"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 14:47:20.829] [info] Checking for update
+[2021-02-15 14:47:23.835] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>5356420551AFFD63</RequestId><HostId>ijIOK2sUgyg+KJYbYlHBAOnzMy9eIyUaRAfPpsOftWMbKiQElWzCFi1pf/KKbOLDW8IUrIs/anQ=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5356420551AFFD63",
+  "x-amz-id-2": "ijIOK2sUgyg+KJYbYlHBAOnzMy9eIyUaRAfPpsOftWMbKiQElWzCFi1pf/KKbOLDW8IUrIs/anQ=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 06:46:48 GMT",
+  "x-served-by": "cache-dca17781-DCA, cache-sin18044-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "73b049db4e3de6e735b15372288a5161bc97a010"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:15:16.611] [info] Checking for update
+[2021-02-15 15:15:19.670] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>431427D178A18673</RequestId><HostId>UQ1lruPihzZKDfwBdcJAZ7jAdHTIC9Wc7qWak+4AWXzeCSXF+OQ6n6MswTJxMhXGILz4cLrzd1Q=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "431427D178A18673",
+  "x-amz-id-2": "UQ1lruPihzZKDfwBdcJAZ7jAdHTIC9Wc7qWak+4AWXzeCSXF+OQ6n6MswTJxMhXGILz4cLrzd1Q=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:14:43 GMT",
+  "x-served-by": "cache-dca17760-DCA, cache-sin18027-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "7df2e10925175366c4e6e9f0e7c30862b4b50117"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:25:13.803] [info] Checking for update
+[2021-02-15 15:25:16.686] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>1TCGEMAM9S7P0HDG</RequestId><HostId>s2MfQIvrVI6vTHsVYfi/TLHeEuSXEIJmCUeHl6eoCuS2YToubop0CRKUAkTADFz/2Pn7dGcSLlk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "1TCGEMAM9S7P0HDG",
+  "x-amz-id-2": "s2MfQIvrVI6vTHsVYfi/TLHeEuSXEIJmCUeHl6eoCuS2YToubop0CRKUAkTADFz/2Pn7dGcSLlk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:24:41 GMT",
+  "x-served-by": "cache-dca17737-DCA, cache-sin18021-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "b74278032feddef0ab8a112a0e335c34d846587e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:33:45.658] [info] Checking for update
+[2021-02-15 15:33:48.504] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>2C15BF588895B21D</RequestId><HostId>MLND1TWrEbwx0Rxrt01hSPVGlLK+b4EiQExYmeo9qCKR7+E8K2vDvFoaFPJW8ao4jBcWH/fWK+g=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "2C15BF588895B21D",
+  "x-amz-id-2": "MLND1TWrEbwx0Rxrt01hSPVGlLK+b4EiQExYmeo9qCKR7+E8K2vDvFoaFPJW8ao4jBcWH/fWK+g=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:33:12 GMT",
+  "x-served-by": "cache-dca17751-DCA, cache-sin18023-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "3a1228896c545b68d6c755a591c78c49da5a637e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:34:54.916] [info] Checking for update
+[2021-02-15 15:34:57.725] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>472C90FC59C8A751</RequestId><HostId>e2dUSGWWnL+nv38AfBbqLVxdUbrTlINN42hHklqlfzIAps8ZlRqdjwP9L3uW6Op6aFdvAhr+QZk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "472C90FC59C8A751",
+  "x-amz-id-2": "e2dUSGWWnL+nv38AfBbqLVxdUbrTlINN42hHklqlfzIAps8ZlRqdjwP9L3uW6Op6aFdvAhr+QZk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:34:22 GMT",
+  "x-served-by": "cache-dca17756-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "2d86ead4dc6f2eb76fd8e6e6aa77e56ab65e91e9"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:36:34.527] [info] Checking for update
+[2021-02-15 15:36:37.343] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>B5EFA7BBDF0675AC</RequestId><HostId>OmBFhzP9mXIONcUESt0yR0b6RbWrAlEh+XXk/HrjK8J1huuGF3KIim3SrJPCKExdtM1Pj+QKwJc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B5EFA7BBDF0675AC",
+  "x-amz-id-2": "OmBFhzP9mXIONcUESt0yR0b6RbWrAlEh+XXk/HrjK8J1huuGF3KIim3SrJPCKExdtM1Pj+QKwJc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:36:01 GMT",
+  "x-served-by": "cache-dca17777-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "577a25565a8bca48113dfb5efb66d80fbf1ff76a"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:38:05.606] [info] Checking for update
+[2021-02-15 15:38:08.448] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>E9A67D3CE97175F7</RequestId><HostId>f85dEqL647hwcn8PKzNQhILhstNo/Aw0L/VDdFtZBsu52sLbXKznizOUTu8HiIqTX2Xg9Fr835A=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "E9A67D3CE97175F7",
+  "x-amz-id-2": "f85dEqL647hwcn8PKzNQhILhstNo/Aw0L/VDdFtZBsu52sLbXKznizOUTu8HiIqTX2Xg9Fr835A=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:37:32 GMT",
+  "x-served-by": "cache-dca17748-DCA, cache-sin18023-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "35d56a52015c60d556629a50fe9888f8a7a5b98a"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:40:05.757] [info] Checking for update
+[2021-02-15 15:40:08.553] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>541389370D32E097</RequestId><HostId>5ei55kKcpd+5c01jTCosKH3tyOV6WA3m27mPlJv/LVzJxPiVK3MlWPzmfBGouDuon++/bztmizc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "541389370D32E097",
+  "x-amz-id-2": "5ei55kKcpd+5c01jTCosKH3tyOV6WA3m27mPlJv/LVzJxPiVK3MlWPzmfBGouDuon++/bztmizc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:39:32 GMT",
+  "x-served-by": "cache-dca17756-DCA, cache-sin18025-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "0d85f8bf22376cd439fd35e5115ad504bdefedda"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:43:01.740] [info] Checking for update
+[2021-02-15 15:43:04.511] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>9AFEFB11E9566025</RequestId><HostId>s46tn0UNkrpbAPx3yaTnp+8/on81CFEw5Xg5TQGPjzV3d6ISQEsU73iP25gGcdg7By9fJTEb3po=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "9AFEFB11E9566025",
+  "x-amz-id-2": "s46tn0UNkrpbAPx3yaTnp+8/on81CFEw5Xg5TQGPjzV3d6ISQEsU73iP25gGcdg7By9fJTEb3po=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:42:28 GMT",
+  "x-served-by": "cache-dca17740-DCA, cache-sin18021-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "7173b46f911f24932564398986f91835f14e89e7"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:44:11.934] [info] Checking for update
+[2021-02-15 15:44:14.667] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>654ECE73C8042448</RequestId><HostId>nL9p18V1O/7rl0DtKJHKtpvTXBSjMSCTLA2AaK/Nrx4QtoIC8zJDrn44Az8Kzb9mXoo08iA75OQ=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "654ECE73C8042448",
+  "x-amz-id-2": "nL9p18V1O/7rl0DtKJHKtpvTXBSjMSCTLA2AaK/Nrx4QtoIC8zJDrn44Az8Kzb9mXoo08iA75OQ=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:43:39 GMT",
+  "x-served-by": "cache-dca17760-DCA, cache-sin18047-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "e174e19d50868807646b1865d8dd5b1f9ce480a6"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:50:18.270] [info] Checking for update
+[2021-02-15 15:50:24.667] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>D97D1D727A9A6861</RequestId><HostId>WHP1PGD+QEr7QMy8+VMr0zNJVa0UTQQPSYvRkIEBZi9MnWGNaz+DvXjgSUdNaPw4WJk04EpsWaQ=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "D97D1D727A9A6861",
+  "x-amz-id-2": "WHP1PGD+QEr7QMy8+VMr0zNJVa0UTQQPSYvRkIEBZi9MnWGNaz+DvXjgSUdNaPw4WJk04EpsWaQ=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:49:48 GMT",
+  "x-served-by": "cache-dca17763-DCA, cache-sin18040-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "2f83354498630d231cd5f40145c2b1ca3490d709"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:53:19.151] [info] Checking for update
+[2021-02-15 15:53:23.172] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>4626B991F775E7B4</RequestId><HostId>JsKDgKhalK7G9Rlts8YzsiAV+e/A+IKOefxtKzErT4Z3/YuZZRTsngQEcefwQ+Ol1JQOJ3sOe2g=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4626B991F775E7B4",
+  "x-amz-id-2": "JsKDgKhalK7G9Rlts8YzsiAV+e/A+IKOefxtKzErT4Z3/YuZZRTsngQEcefwQ+Ol1JQOJ3sOe2g=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:52:47 GMT",
+  "x-served-by": "cache-dca12927-DCA, cache-sin18028-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "61dd24357872a433cd797c74729246433f3f0a6e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-15 15:55:08.190] [info] Checking for update
+[2021-02-15 15:55:11.068] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token b18a136cd87f942ea1dc1489b949dd30b0541b0a</ArgumentValue><RequestId>9D19E1DD43699B26</RequestId><HostId>iIOXfa2UtBpMJA7EeqFhPKWdAYTxyyj9IuR0/LHgn2swKf2iWsiguFc5U1KSZOngnNKdb4kd13k=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "9D19E1DD43699B26",
+  "x-amz-id-2": "iIOXfa2UtBpMJA7EeqFhPKWdAYTxyyj9IuR0/LHgn2swKf2iWsiguFc5U1KSZOngnNKdb4kd13k=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Mon, 15 Feb 2021 07:54:35 GMT",
+  "x-served-by": "cache-dca17781-DCA, cache-sin18021-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ab616b42015775f0ca6f5c6f15e95ee40730ac69"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-16 18:12:45.881] [info] Checking for update
+[2021-02-16 18:12:53.927] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 20d1178164bfdd94e904c6ece7168f1a0dbd083b</ArgumentValue><RequestId>9M5P3ZAJ7N5T9R9Y</RequestId><HostId>gJiTNRhJTHdZTCHnlcxbl/t/NkYRiB+B+4DMzskPlXmMWHQucc6mD5pvppw/zXokgkmP+AUrDz8=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "9M5P3ZAJ7N5T9R9Y",
+  "x-amz-id-2": "gJiTNRhJTHdZTCHnlcxbl/t/NkYRiB+B+4DMzskPlXmMWHQucc6mD5pvppw/zXokgkmP+AUrDz8=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 10:12:16 GMT",
+  "x-served-by": "cache-dca17737-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "37c988fd0f49cf16f11b229eb6d3eadfa36619fd"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-16 19:10:04.887] [info] Checking for update
+[2021-02-16 19:10:11.947] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 20d1178164bfdd94e904c6ece7168f1a0dbd083b</ArgumentValue><RequestId>2D9B0B80C80F882F</RequestId><HostId>yI9BuHCrr/e5klvh+fMROMRT2fvovhOAvZuvUBNQb43hRaJvF6ALo3Bc0yCRBCMEROb1O2wVN8Y=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "2D9B0B80C80F882F",
+  "x-amz-id-2": "yI9BuHCrr/e5klvh+fMROMRT2fvovhOAvZuvUBNQb43hRaJvF6ALo3Bc0yCRBCMEROb1O2wVN8Y=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 11:09:34 GMT",
+  "x-served-by": "cache-dca17744-DCA, cache-sin18038-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "d0874d21523046762f414c35e0250710fb703670"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 02:59:47.979] [info] Checking for update
+[2021-02-17 02:59:53.219] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>5254A0C6C186E2E9</RequestId><HostId>oUrXEiTiMI9ZhWILhFl0eZ6uObxpJt8x44Bx9zPgEtcNeCWxqXCJnv/MtgasaxdQm3Co8Plm21s=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5254A0C6C186E2E9",
+  "x-amz-id-2": "oUrXEiTiMI9ZhWILhFl0eZ6uObxpJt8x44Bx9zPgEtcNeCWxqXCJnv/MtgasaxdQm3Co8Plm21s=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 18:59:14 GMT",
+  "x-served-by": "cache-dca12925-DCA, cache-sin18034-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "4942d801c026caca5ee008192b4f5d4f33b313f0"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:13:52.012] [info] Checking for update
+[2021-02-17 03:13:55.931] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>7C6076C86454CA3F</RequestId><HostId>9fbHdVcyADx7dPuINefRBLzMKfdhMy7hH3N3j3qzz30VnOiGpDAOp3VCcsaFDJU7JYKLFCS3ptM=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "7C6076C86454CA3F",
+  "x-amz-id-2": "9fbHdVcyADx7dPuINefRBLzMKfdhMy7hH3N3j3qzz30VnOiGpDAOp3VCcsaFDJU7JYKLFCS3ptM=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:13:17 GMT",
+  "x-served-by": "cache-dca17743-DCA, cache-sin18028-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "7626edb905df2333bf3767fcc340a3917fff6dad"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:15:56.059] [info] Checking for update
+[2021-02-17 03:15:58.793] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>75ABDAF6D1422801</RequestId><HostId>7VcZy6tAZTDuoBE8kgq6WVEff39s1h5dKubScj/TmIgTO1NmifOSv2SAxidRgkGdV5S/4DOgbw4=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "75ABDAF6D1422801",
+  "x-amz-id-2": "7VcZy6tAZTDuoBE8kgq6WVEff39s1h5dKubScj/TmIgTO1NmifOSv2SAxidRgkGdV5S/4DOgbw4=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:15:20 GMT",
+  "x-served-by": "cache-dca17724-DCA, cache-sin18037-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "4874eb959051fdb0e35a958367d79e8e9f026b5f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:25:37.663] [info] Checking for update
+[2021-02-17 03:25:41.289] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>35D2805ADC922CF3</RequestId><HostId>1TVdV7B27Ws2YE4QrBXn6htEXDJRuWrscW2i72973FbHIEHnSHAzuEAS42kTBopcGl+UPAEgN4A=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "35D2805ADC922CF3",
+  "x-amz-id-2": "1TVdV7B27Ws2YE4QrBXn6htEXDJRuWrscW2i72973FbHIEHnSHAzuEAS42kTBopcGl+UPAEgN4A=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:25:02 GMT",
+  "x-served-by": "cache-dca12923-DCA, cache-sin18030-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "6bd0d4b12446d1cc92514c0282fe76f8cf0dde1f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:31:33.811] [info] Checking for update
+[2021-02-17 03:31:36.633] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>4BA53E2DA2495BE1</RequestId><HostId>rMEZBXdg2yIiVP2HhTzgsWJlVX3YogiR8PWkfNXq6ZMAEQwEJZQ7zxbpODgDbiNztc/l8TdfAzg=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "4BA53E2DA2495BE1",
+  "x-amz-id-2": "rMEZBXdg2yIiVP2HhTzgsWJlVX3YogiR8PWkfNXq6ZMAEQwEJZQ7zxbpODgDbiNztc/l8TdfAzg=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:30:58 GMT",
+  "x-served-by": "cache-dca17727-DCA, cache-sin18051-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "9a1f239621e9708bdc8c013b6ffbef4c617c451f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:40:14.900] [info] Checking for update
+[2021-02-17 03:40:17.938] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>7F245D14AE6E91A6</RequestId><HostId>Wv2dJyGzZeNqKULtFK2y295TRB9l1Rfb5KLP/mPN4kNBW+2QhaTQ6U0nddWBqSDP1HHMZnaYs9E=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "7F245D14AE6E91A6",
+  "x-amz-id-2": "Wv2dJyGzZeNqKULtFK2y295TRB9l1Rfb5KLP/mPN4kNBW+2QhaTQ6U0nddWBqSDP1HHMZnaYs9E=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:39:39 GMT",
+  "x-served-by": "cache-dca17767-DCA, cache-sin18022-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "0f638da6cd94add42238fe26c8888165be7d0bdc"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 03:52:57.249] [info] Checking for update
+[2021-02-17 03:53:01.632] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>25775C37103F714D</RequestId><HostId>H75sbBO1qfAiSVFI8B/HaewSk7B+j21eJM3tUyYMVo70Nwe/qK4QMEOLscM4aJTeLpSWqaByFAM=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "25775C37103F714D",
+  "x-amz-id-2": "H75sbBO1qfAiSVFI8B/HaewSk7B+j21eJM3tUyYMVo70Nwe/qK4QMEOLscM4aJTeLpSWqaByFAM=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 19:52:23 GMT",
+  "x-served-by": "cache-dca17728-DCA, cache-sin18026-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "766db3999b886b3f21e9b8fe0b5dd7759897d284"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:11:13.663] [info] Checking for update
+[2021-02-17 04:11:17.355] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B0002F2456171100</RequestId><HostId>BEJIUgSw67ad/rIDYFoqAaM2JtXZ3fMgqLJIa++FeTdSsWacfEYRlxxbg9ZStfIbZFxNvi8lpvo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B0002F2456171100",
+  "x-amz-id-2": "BEJIUgSw67ad/rIDYFoqAaM2JtXZ3fMgqLJIa++FeTdSsWacfEYRlxxbg9ZStfIbZFxNvi8lpvo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:10:38 GMT",
+  "x-served-by": "cache-dca17731-DCA, cache-sin18039-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ebd47ee64fa77714f729f084437df5ae98b2864f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:13:19.998] [info] Checking for update
+[2021-02-17 04:13:22.925] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>8AC42F9EF16DC16D</RequestId><HostId>zCfxx6YwRYs90DOCBLJQ8AAqGMvb1eCTCcPegrX8G9+wxhVm0xpU6FsyHAhQHMfat0NDL+vRQlE=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "8AC42F9EF16DC16D",
+  "x-amz-id-2": "zCfxx6YwRYs90DOCBLJQ8AAqGMvb1eCTCcPegrX8G9+wxhVm0xpU6FsyHAhQHMfat0NDL+vRQlE=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:12:44 GMT",
+  "x-served-by": "cache-dca17766-DCA, cache-sin18044-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "1ebcacbd78beac4d4634733124ab70883c354ec4"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:14:41.455] [info] Checking for update
+[2021-02-17 04:14:44.355] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>C615FB5CE8CEA7FA</RequestId><HostId>kA27oqqnPzbQyk4VMrLnL0bMOqPRl3cDo3I+sNflj3Qh/D5oMjAaJILbaEzGZAyUMyfIJspwnR0=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "C615FB5CE8CEA7FA",
+  "x-amz-id-2": "kA27oqqnPzbQyk4VMrLnL0bMOqPRl3cDo3I+sNflj3Qh/D5oMjAaJILbaEzGZAyUMyfIJspwnR0=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:14:05 GMT",
+  "x-served-by": "cache-dca17754-DCA, cache-sin18047-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "d0053861b86fc477b1500ee3f7ed367ba71e7d80"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:16:45.852] [info] Checking for update
+[2021-02-17 04:16:48.700] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>6185E048F680478E</RequestId><HostId>iLlBCN86pwQKuu0BG44U9Qr+BzDKxIVmHh2wHplz906Vir+55wpC5+gGxEYDGS3dEePSo4RWr+Q=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "6185E048F680478E",
+  "x-amz-id-2": "iLlBCN86pwQKuu0BG44U9Qr+BzDKxIVmHh2wHplz906Vir+55wpC5+gGxEYDGS3dEePSo4RWr+Q=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:16:10 GMT",
+  "x-served-by": "cache-dca17753-DCA, cache-sin18040-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "d5e11adf5cb5b8c730a80bf78488525b01d815e1"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:18:09.156] [info] Checking for update
+[2021-02-17 04:18:11.996] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>EC19768F93447B1F</RequestId><HostId>rjlgBhq1YCaInailliTVfNhewdeRNMgkUREogx5mCTYVjMfdsFy9Cdh/laKDV9Nv9xTY14L3Cec=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "EC19768F93447B1F",
+  "x-amz-id-2": "rjlgBhq1YCaInailliTVfNhewdeRNMgkUREogx5mCTYVjMfdsFy9Cdh/laKDV9Nv9xTY14L3Cec=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:17:33 GMT",
+  "x-served-by": "cache-dca17738-DCA, cache-sin18027-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "e0ab17f496aad65aa8ef4d63c6f755e8835ba427"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:44:00.211] [info] Checking for update
+[2021-02-17 04:44:05.842] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>ACE94F6A9714D1C7</RequestId><HostId>Uv2gjILWE7UX9jrJvmf82ymCb+/wVADRLxtK11MrPsxiaN0mDGip12Aniq+SKnbRQKQFuHhjslM=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "ACE94F6A9714D1C7",
+  "x-amz-id-2": "Uv2gjILWE7UX9jrJvmf82ymCb+/wVADRLxtK11MrPsxiaN0mDGip12Aniq+SKnbRQKQFuHhjslM=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:43:27 GMT",
+  "x-served-by": "cache-dca17767-DCA, cache-sin18035-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "094868171da46a37515723aa15d757dad192087c"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 04:48:06.695] [info] Checking for update
+[2021-02-17 04:48:09.673] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>5779EFB7AAA81CC0</RequestId><HostId>TDOsF/51IMN6w4f1sQiPM/c+rdGTlLo8rHXXT573IfRH0d4qRsBYcr6bbYsCWq+k3lkMFpzhmW4=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "5779EFB7AAA81CC0",
+  "x-amz-id-2": "TDOsF/51IMN6w4f1sQiPM/c+rdGTlLo8rHXXT573IfRH0d4qRsBYcr6bbYsCWq+k3lkMFpzhmW4=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 20:47:31 GMT",
+  "x-served-by": "cache-dca17759-DCA, cache-sin18038-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "fd7f2bfad088073b3a9235685a911b029a964cf6"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:14:27.825] [info] Checking for update
+[2021-02-17 06:14:31.964] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>F6910A830B7E98D9</RequestId><HostId>Z4BZMiCKeoN2WS+bKoCa1ZkgeWtenJUXDOcmc6qfgSJ7RXi1qioDE7qXqON6peQsKPrd1QS5JwY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F6910A830B7E98D9",
+  "x-amz-id-2": "Z4BZMiCKeoN2WS+bKoCa1ZkgeWtenJUXDOcmc6qfgSJ7RXi1qioDE7qXqON6peQsKPrd1QS5JwY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:13:53 GMT",
+  "x-served-by": "cache-dca12923-DCA, cache-sin18033-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "36f7fa37be5393afea50c810764cf3124029c0f1"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:15:33.168] [info] Checking for update
+[2021-02-17 06:15:35.967] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>FMBR8V6P9JDXCTCP</RequestId><HostId>fxWxZB8IpSccglMrRwSBcjxE/B5WUUbGR4+nsIqIuy+GSsCz7lzxyH10QZfPU2jRFhuLTt6jSW8=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "FMBR8V6P9JDXCTCP",
+  "x-amz-id-2": "fxWxZB8IpSccglMrRwSBcjxE/B5WUUbGR4+nsIqIuy+GSsCz7lzxyH10QZfPU2jRFhuLTt6jSW8=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:14:57 GMT",
+  "x-served-by": "cache-dca17762-DCA, cache-sin18050-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "2f203a0d4b8b2698c4183c3f8fb5947714a3557c"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:17:21.976] [info] Checking for update
+[2021-02-17 06:17:24.765] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>3CD320EACB6A752F</RequestId><HostId>rLog8/D3hV0RD8jsgCSHbT63CMWLpShM7edQHTOkYm+kzL/5Fmne8kEHAxYs/rS73c15PR8aEM8=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "3CD320EACB6A752F",
+  "x-amz-id-2": "rLog8/D3hV0RD8jsgCSHbT63CMWLpShM7edQHTOkYm+kzL/5Fmne8kEHAxYs/rS73c15PR8aEM8=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:16:46 GMT",
+  "x-served-by": "cache-dca17753-DCA, cache-sin18041-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "7a8a07df7dc51fe760cf58a6428a5f142f7b084a"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:19:13.940] [info] Checking for update
+[2021-02-17 06:19:16.758] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>3F4106E671916119</RequestId><HostId>XRQNVO6EeipvYSgEVaFngmqEUmYsg5s8cGk8+qzrdc1w+r2S+6+0J7MmvcMR++MF/pCZ0fLsG30=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "3F4106E671916119",
+  "x-amz-id-2": "XRQNVO6EeipvYSgEVaFngmqEUmYsg5s8cGk8+qzrdc1w+r2S+6+0J7MmvcMR++MF/pCZ0fLsG30=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:18:38 GMT",
+  "x-served-by": "cache-dca17765-DCA, cache-sin18021-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "92ad0bc6d6c3f6a4b0e428b42408391deaf7bfd3"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:20:04.103] [info] Checking for update
+[2021-02-17 06:20:06.853] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>D5FE7F35B0595968</RequestId><HostId>B+wETvSJtCur+dowfeOH1KATjPlOlVZoCrKjRySI2CnUCTaPyxOhbGbrsseqTG5cOuMVPSOk6Is=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "D5FE7F35B0595968",
+  "x-amz-id-2": "B+wETvSJtCur+dowfeOH1KATjPlOlVZoCrKjRySI2CnUCTaPyxOhbGbrsseqTG5cOuMVPSOk6Is=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:19:28 GMT",
+  "x-served-by": "cache-dca17760-DCA, cache-sin18041-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "578accdbce3af24b38de8c49022a87a6f668e133"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:33:42.973] [info] Checking for update
+[2021-02-17 06:33:45.764] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>47EB96019A625CF0</RequestId><HostId>PvmgzIzID4O9B4J1raCptfY8KnMW4KivfpE4liK1i99Zy8GI4oPgd2JolSeeZYO3vs4Ov4x5a24=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "47EB96019A625CF0",
+  "x-amz-id-2": "PvmgzIzID4O9B4J1raCptfY8KnMW4KivfpE4liK1i99Zy8GI4oPgd2JolSeeZYO3vs4Ov4x5a24=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:33:07 GMT",
+  "x-served-by": "cache-dca17762-DCA, cache-sin18020-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "b9974829779f68db9983defdc1e1b92f0b5af84f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:45:13.162] [info] Checking for update
+[2021-02-17 06:45:15.919] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>E0DE0F0270E56A02</RequestId><HostId>bB4DjiYlYbs2/sRgYk8xyegS1tIMetgSHTW6RhkoYwKyuMY8oRu16RRe5z47V6mLSWAzC2nJT3w=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "E0DE0F0270E56A02",
+  "x-amz-id-2": "bB4DjiYlYbs2/sRgYk8xyegS1tIMetgSHTW6RhkoYwKyuMY8oRu16RRe5z47V6mLSWAzC2nJT3w=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:44:37 GMT",
+  "x-served-by": "cache-dca17731-DCA, cache-sin18033-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "c9b79e946bb68ee51b81e8fb99d8cbed3ab5da1e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:57:45.995] [info] Checking for update
+[2021-02-17 06:57:49.812] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>EMAV6JFTEXFN0N3M</RequestId><HostId>P6VZreaSuj++BFU2PsPr812OucEwDAnzW4W21jPJebl3BDHYMRzlzO9h6g/+nN2UGCqGmhvDZxs=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "EMAV6JFTEXFN0N3M",
+  "x-amz-id-2": "P6VZreaSuj++BFU2PsPr812OucEwDAnzW4W21jPJebl3BDHYMRzlzO9h6g/+nN2UGCqGmhvDZxs=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:57:11 GMT",
+  "x-served-by": "cache-dca17726-DCA, cache-sin18030-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "4bbf10c024663e60a0041f5ba6923f40704c9fcc"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 06:59:12.563] [info] Checking for update
+[2021-02-17 06:59:15.395] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B31FDC7DAE6F36DA</RequestId><HostId>+zyLJNZrTM/lFsBF7m+9G7DF4Bed8FLSWCWsO7pOTb4C4iNuAPcrM2jHqPleQdT6NxtgJV7z8T4=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B31FDC7DAE6F36DA",
+  "x-amz-id-2": "+zyLJNZrTM/lFsBF7m+9G7DF4Bed8FLSWCWsO7pOTb4C4iNuAPcrM2jHqPleQdT6NxtgJV7z8T4=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Tue, 16 Feb 2021 22:58:37 GMT",
+  "x-served-by": "cache-dca17721-DCA, cache-sin18028-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "bf97bba05ae27b2ec6e34e0bf3126c20e29ab5b0"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 08:20:08.277] [info] Checking for update
+[2021-02-17 08:20:18.523] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>F8F6B1BAA240899B</RequestId><HostId>p2TO/ktjqR1s9D3HqQof0cHLQ68qiqybM6THbutvBB6+vGSzGkyedHWpKLHCzBL3G76OPjfzBBY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F8F6B1BAA240899B",
+  "x-amz-id-2": "p2TO/ktjqR1s9D3HqQof0cHLQ68qiqybM6THbutvBB6+vGSzGkyedHWpKLHCzBL3G76OPjfzBBY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 00:19:40 GMT",
+  "x-served-by": "cache-dca17720-DCA, cache-sin18021-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "2ff3f0800369c1171bc28b0072a5cc66dc45da5c"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 08:45:16.750] [info] Checking for update
+[2021-02-17 08:45:20.513] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>831E26194470AA7C</RequestId><HostId>LLsmPqILgo0Xg55dN9eiUOEUYCifdbAUs/0Mt1goMkDyF63ucwX9ns2yc8boaaYDPMtk7IXIaQc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "831E26194470AA7C",
+  "x-amz-id-2": "LLsmPqILgo0Xg55dN9eiUOEUYCifdbAUs/0Mt1goMkDyF63ucwX9ns2yc8boaaYDPMtk7IXIaQc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 00:44:42 GMT",
+  "x-served-by": "cache-dca17761-DCA, cache-sin18032-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "fd4ab4ee9c899a7a23f6033978c220a100628c34"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 08:54:47.811] [info] Checking for update
+[2021-02-17 08:54:50.785] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B6044955A886AC50</RequestId><HostId>ICSaGuwXDmjWv/l0fnuGYkxHde+yc0hPz2G+90SJB6mUSHsSHX+KFOut7aI3Lq+BPNdKHGNveVo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B6044955A886AC50",
+  "x-amz-id-2": "ICSaGuwXDmjWv/l0fnuGYkxHde+yc0hPz2G+90SJB6mUSHsSHX+KFOut7aI3Lq+BPNdKHGNveVo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 00:54:12 GMT",
+  "x-served-by": "cache-dca17731-DCA, cache-sin18045-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "b72526baa2637fd4b9f841e62e49da6b8761dc3f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 08:59:30.508] [info] Checking for update
+[2021-02-17 08:59:33.386] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>E9F34F418CFB1DB9</RequestId><HostId>v2Uzwwkk4ZzW5csoXIwZwmDJKxpXJcbUVzIV5lYSyRzgzihbFynKj0DJpYvkwH3sTKzn8g4gYDE=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "E9F34F418CFB1DB9",
+  "x-amz-id-2": "v2Uzwwkk4ZzW5csoXIwZwmDJKxpXJcbUVzIV5lYSyRzgzihbFynKj0DJpYvkwH3sTKzn8g4gYDE=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 00:58:55 GMT",
+  "x-served-by": "cache-dca17743-DCA, cache-sin18038-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "a3ebc8cfc3799658deb47f09e1d9636cff8175d2"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:02:48.240] [info] Checking for update
+[2021-02-17 09:02:51.157] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>F2D6D2F48C401E94</RequestId><HostId>QS1GEWLgchB6opFTEutb482yKtSbbvftaLaINyiuL0eHSfJIdEcroZqtviaFFLLDKqOBDyXMYBI=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F2D6D2F48C401E94",
+  "x-amz-id-2": "QS1GEWLgchB6opFTEutb482yKtSbbvftaLaINyiuL0eHSfJIdEcroZqtviaFFLLDKqOBDyXMYBI=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:02:12 GMT",
+  "x-served-by": "cache-dca17775-DCA, cache-sin18038-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "fb52b3f505f84f8f1f9f5f9f4a755e1423865075"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:17:15.800] [info] Checking for update
+[2021-02-17 09:17:18.720] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>58949A3784B0A44C</RequestId><HostId>JjxjL/1/LyQjbaK9jBVTLhnGaA/uEz3Pt1kCsIGE8u/lFhJWos1g7PxDXu7cVsvIOnOk8ipls30=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "58949A3784B0A44C",
+  "x-amz-id-2": "JjxjL/1/LyQjbaK9jBVTLhnGaA/uEz3Pt1kCsIGE8u/lFhJWos1g7PxDXu7cVsvIOnOk8ipls30=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:16:40 GMT",
+  "x-served-by": "cache-dca17732-DCA, cache-sin18026-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "dda8fd07c586f48a54c07dd85de93a2a46041f9a"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:20:37.474] [info] Checking for update
+[2021-02-17 09:20:40.556] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>745427783212809A</RequestId><HostId>3NG5wpMQgZ+00JANtdlNZdbRvEXKQqDDfvnaY2fdJFgMg7IMuO9G/cnruehllQCWwXPyEnJ4jRg=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "745427783212809A",
+  "x-amz-id-2": "3NG5wpMQgZ+00JANtdlNZdbRvEXKQqDDfvnaY2fdJFgMg7IMuO9G/cnruehllQCWwXPyEnJ4jRg=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:20:02 GMT",
+  "x-served-by": "cache-dca17760-DCA, cache-sin18041-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "3ad02a894c6e613b838a8ef38637bdc01a84a2a0"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:28:42.080] [info] Checking for update
+[2021-02-17 09:28:44.974] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>57F88EDC2E74A67A</RequestId><HostId>0CxyEypzWXqICPBXUC4j+e+yQ6+7jNpUS9FecJvwbDFUrGAn9eGkx87YbgcoO3FUNRh4IW/Gbf4=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "57F88EDC2E74A67A",
+  "x-amz-id-2": "0CxyEypzWXqICPBXUC4j+e+yQ6+7jNpUS9FecJvwbDFUrGAn9eGkx87YbgcoO3FUNRh4IW/Gbf4=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:28:06 GMT",
+  "x-served-by": "cache-dca17738-DCA, cache-sin18031-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "cd7d4d5180a09b53038598af257c1fc29b605f03"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:31:56.505] [info] Checking for update
+[2021-02-17 09:31:59.397] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B597E6700A1491FB</RequestId><HostId>SVv3dB7SucPz7ru/HLPBQxpqDiAPXCp4xDE0wS8refvdRvST7ugsVF+ynRPUX/4rAnnCRfDl6X0=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B597E6700A1491FB",
+  "x-amz-id-2": "SVv3dB7SucPz7ru/HLPBQxpqDiAPXCp4xDE0wS8refvdRvST7ugsVF+ynRPUX/4rAnnCRfDl6X0=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:31:21 GMT",
+  "x-served-by": "cache-dca17745-DCA, cache-sin18048-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ece02efbd3f10cbd36b7894f7193d695f686e29f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-17 09:40:13.329] [info] Checking for update
+[2021-02-17 09:40:16.205] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B184B6EE4017DC25</RequestId><HostId>APr/mCFSwhsTRj6SavirW2bsVVPqvO4GXlrklEHHfIrx3wmP2686z7HZKLfb+hkRY6kQGnFkHTI=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B184B6EE4017DC25",
+  "x-amz-id-2": "APr/mCFSwhsTRj6SavirW2bsVVPqvO4GXlrklEHHfIrx3wmP2686z7HZKLfb+hkRY6kQGnFkHTI=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 01:39:37 GMT",
+  "x-served-by": "cache-dca17754-DCA, cache-sin18034-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "581d6caae03a5cbee95fca45ff960b65cf966dd4"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 05:14:19.967] [info] Checking for update
+[2021-02-18 05:14:26.147] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>250E2CF02C5CF844</RequestId><HostId>aVOUGwWBsoZcJeICIdG+ImGiohODw/1B7F+q9wQBN8BnDSrAWU7xESj0EbQPB+yB9x10kV4luV0=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "250E2CF02C5CF844",
+  "x-amz-id-2": "aVOUGwWBsoZcJeICIdG+ImGiohODw/1B7F+q9wQBN8BnDSrAWU7xESj0EbQPB+yB9x10kV4luV0=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 21:13:46 GMT",
+  "x-served-by": "cache-dca17733-DCA, cache-sin18043-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "eff3586578344d567c62283986dd38a3267bc28f"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 05:19:43.937] [info] Checking for update
+[2021-02-18 05:19:46.714] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>607E91FA87B5961F</RequestId><HostId>iDHKp7a5OsYVSi3mzhQ14xy7/8oPuP5l+kHQdlEKDcIJrblkxCFyBxh2J+36MeXTEhmTXyek4Vc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "607E91FA87B5961F",
+  "x-amz-id-2": "iDHKp7a5OsYVSi3mzhQ14xy7/8oPuP5l+kHQdlEKDcIJrblkxCFyBxh2J+36MeXTEhmTXyek4Vc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 21:19:07 GMT",
+  "x-served-by": "cache-dca12924-DCA, cache-sin18028-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "84f71c38ef9ecd59608b0c6e509472c62428fab5"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 05:28:11.617] [info] Checking for update
+[2021-02-18 05:28:14.350] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>3E4682C8B5C623AD</RequestId><HostId>2VX+vbFRaip4FB9W3DedYFrmVFnwdWrUDbt55AP+4U4E8QbaO32/a2j1ySJR/42xD1MMMobvuM8=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "3E4682C8B5C623AD",
+  "x-amz-id-2": "2VX+vbFRaip4FB9W3DedYFrmVFnwdWrUDbt55AP+4U4E8QbaO32/a2j1ySJR/42xD1MMMobvuM8=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 21:27:34 GMT",
+  "x-served-by": "cache-dca17749-DCA, cache-sin18039-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "24f40cc39cdc1dfab72c33275984e986c68c4809"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 05:35:57.162] [info] Checking for update
+[2021-02-18 05:35:59.980] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>F1816B9713D2F3B7</RequestId><HostId>8Kgwesjk9rejxad8G4xugAXANFIH7UOFgeXI2I5R3/JwNJ/rCm7yU1XBqdWCtnneSD0rmojOUzA=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "F1816B9713D2F3B7",
+  "x-amz-id-2": "8Kgwesjk9rejxad8G4xugAXANFIH7UOFgeXI2I5R3/JwNJ/rCm7yU1XBqdWCtnneSD0rmojOUzA=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 21:35:20 GMT",
+  "x-served-by": "cache-dca12928-DCA, cache-sin18023-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "00000fb4a27115f175d7bd0131302d365159d5bd"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 06:18:52.031] [info] Checking for update
+[2021-02-18 06:18:54.855] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>B45F4E9616F16A92</RequestId><HostId>hGYjqauVxJvhBDV0A15VHPrqVFFk7Qkpva1FKpm0OoosyrPlGrf944n+Y0ugr4w6WPZOIKidRuQ=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "B45F4E9616F16A92",
+  "x-amz-id-2": "hGYjqauVxJvhBDV0A15VHPrqVFFk7Qkpva1FKpm0OoosyrPlGrf944n+Y0ugr4w6WPZOIKidRuQ=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 22:18:15 GMT",
+  "x-served-by": "cache-dca17722-DCA, cache-sin18051-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "794319db022f69523cf4fad2fdade17d7c5bedf4"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 06:20:49.279] [info] Checking for update
+[2021-02-18 06:20:52.057] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>7DE3BFEC61C5D9F7</RequestId><HostId>aQLLP5mBdZ9p5J9Fd9CMZYB4VYJBDMWw9he6y8AmxnJbRCQpe1/IKCaB6v8JhWW7rSnqv9fL7mo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "7DE3BFEC61C5D9F7",
+  "x-amz-id-2": "aQLLP5mBdZ9p5J9Fd9CMZYB4VYJBDMWw9he6y8AmxnJbRCQpe1/IKCaB6v8JhWW7rSnqv9fL7mo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 22:20:12 GMT",
+  "x-served-by": "cache-dca17759-DCA, cache-sin18027-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "149381fc51309a76c4f7b49909cd78056d862c31"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 06:22:06.662] [info] Checking for update
+[2021-02-18 06:22:09.678] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>74B3C8C11FA969D5</RequestId><HostId>uS+CB2wVAGjJNlc4Gnq0RDJcjgXtL+XIhu2mVK2j3PvaHKPxiFDrrncBEBrQ/VONmeT/iVIz8Sk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "74B3C8C11FA969D5",
+  "x-amz-id-2": "uS+CB2wVAGjJNlc4Gnq0RDJcjgXtL+XIhu2mVK2j3PvaHKPxiFDrrncBEBrQ/VONmeT/iVIz8Sk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 22:21:30 GMT",
+  "x-served-by": "cache-dca17751-DCA, cache-sin18049-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "7ad84eaf3b8ffce87d5fac5a5e778c107a377b36"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 06:23:39.257] [info] Checking for update
+[2021-02-18 06:23:42.210] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>A274F07A7AF06561</RequestId><HostId>qIY68xwW0GtIKYADt4CfGdPhHCNGSCHPfIwa/3mG6z1OInHgJKox8Si3aYZfMNAUBFgRfinQ6Tk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "A274F07A7AF06561",
+  "x-amz-id-2": "qIY68xwW0GtIKYADt4CfGdPhHCNGSCHPfIwa/3mG6z1OInHgJKox8Si3aYZfMNAUBFgRfinQ6Tk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 22:23:02 GMT",
+  "x-served-by": "cache-dca12924-DCA, cache-sin18045-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "636700b7ec06c3c1bbc91ea987cf54cac00b1fc2"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 06:25:00.162] [info] Checking for update
+[2021-02-18 06:25:03.276] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>8F9AE6F6E7F6C141</RequestId><HostId>LggbEmiN4sYOl+TZ4u+UnQWdCO241qeh3CiYzMep2S+J9NKlcOFTqBUTAxjEohU2qNL9CBUntBY=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "8F9AE6F6E7F6C141",
+  "x-amz-id-2": "LggbEmiN4sYOl+TZ4u+UnQWdCO241qeh3CiYzMep2S+J9NKlcOFTqBUTAxjEohU2qNL9CBUntBY=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Wed, 17 Feb 2021 22:24:23 GMT",
+  "x-served-by": "cache-dca17759-DCA, cache-sin18026-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "8b54e79028a91a7fb6725b447d29e734fa3e3e33"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 08:24:34.787] [info] Checking for update
+[2021-02-18 08:24:39.492] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>D869DF30A38B9339</RequestId><HostId>szKWOtF+T3s5yG8aZ57y2d5OwWHuAEYOvUvfXxd7RwKeP9KZLQFIb/zwKQsNWAE9s+sGOpaWGVk=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "D869DF30A38B9339",
+  "x-amz-id-2": "szKWOtF+T3s5yG8aZ57y2d5OwWHuAEYOvUvfXxd7RwKeP9KZLQFIb/zwKQsNWAE9s+sGOpaWGVk=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Thu, 18 Feb 2021 00:24:00 GMT",
+  "x-served-by": "cache-dca17722-DCA, cache-sin18028-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "404afcb44cfe6a7675dc625912f99c6b07b1bfae"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 12:44:27.776] [info] Checking for update
+[2021-02-18 12:44:33.568] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>06B833F8892B0837</RequestId><HostId>pMFdwoS3krc8RPQdaMoVg1h6M/R3wk2idzZSm/ik3gIIByLAv4cnwzN8aGvO6TUWFGqKaGqQKTo=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "06B833F8892B0837",
+  "x-amz-id-2": "pMFdwoS3krc8RPQdaMoVg1h6M/R3wk2idzZSm/ik3gIIByLAv4cnwzN8aGvO6TUWFGqKaGqQKTo=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Thu, 18 Feb 2021 04:43:53 GMT",
+  "x-served-by": "cache-dca17740-DCA, cache-sin18030-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "f9d37cf4360b732b0dc1bab717868f5364ea3971"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 13:27:18.183] [info] Checking for update
+[2021-02-18 13:27:25.843] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>9FFB68B09A4D7BB5</RequestId><HostId>0JUDMRaOCaF0+QEVQD3Ae4y8SrjG2HnItcaAmsHSwl6Z3RSnXPFDLt0JUEYYZ5UvYHdJNIDpkmc=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "9FFB68B09A4D7BB5",
+  "x-amz-id-2": "0JUDMRaOCaF0+QEVQD3Ae4y8SrjG2HnItcaAmsHSwl6Z3RSnXPFDLt0JUEYYZ5UvYHdJNIDpkmc=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Thu, 18 Feb 2021 05:26:46 GMT",
+  "x-served-by": "cache-dca17781-DCA, cache-sin18051-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ced2b71d951cf22507dc8120ebd2bc529a55f3e1"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-18 13:44:12.766] [info] Checking for update
+[2021-02-18 13:44:20.784] [error] Error: HttpError: 400 
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>InvalidArgument</Code><Message>Only one auth mechanism allowed; only the X-Amz-Algorithm query parameter, Signature query string parameter or the Authorization header should be specified</Message><ArgumentName>Authorization</ArgumentName><ArgumentValue>token 17e050725081f8ebf9d2406a49c1924581ffd8e0</ArgumentValue><RequestId>2A2602F816D06DAD</RequestId><HostId>BYOLBiy8aKnGZMwMgGQZyw7Db1bunbcUn0Y+J4meOt0GYEOimQerEq/7snFriX2w8cX412afbL4=</HostId></Error>"
+Headers: {
+  "x-amz-request-id": "2A2602F816D06DAD",
+  "x-amz-id-2": "BYOLBiy8aKnGZMwMgGQZyw7Db1bunbcUn0Y+J4meOt0GYEOimQerEq/7snFriX2w8cX412afbL4=",
+  "content-type": "application/xml",
+  "server": "AmazonS3",
+  "accept-ranges": "bytes",
+  "via": "1.1 varnish, 1.1 varnish",
+  "date": "Thu, 18 Feb 2021 05:43:41 GMT",
+  "x-served-by": "cache-dca17759-DCA, cache-sin18050-SIN",
+  "x-cache": "MISS, MISS",
+  "x-cache-hits": "0, 0",
+  "strict-transport-security": "max-age=31536000",
+  "x-fastly-request-id": "ccabc581d52e2f2ca90d2881cbc39189e3ee497e"
+}
+    at createHttpError (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:84:10)
+    at IncomingMessage.<anonymous> (C:\Users\Yuan.x\PycharmProjects\ICT_PORTAL\node_modules\builder-util-runtime\out\httpExecutor.js:201:18)
+    at IncomingMessage.emit (events.js:315:20)
+    at endReadableNT (_stream_readable.js:1220:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[2021-02-19 20:21:13.307] [info] Checking for update
+[2021-02-19 20:21:41.846] [info] Update for version 1.1.4 is not available (latest version: 1.1.3, downgrade is disallowed).
+[2021-03-02 01:26:11.964] [info] Checking for update
+[2021-03-02 01:26:30.793] [info] Update for version 1.1.4 is not available (latest version: 1.1.3, downgrade is disallowed).

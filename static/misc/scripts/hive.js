@@ -1,12 +1,20 @@
+const misc = require("electron-dir-solved-ict-portal");
 const electron = require("electron");
+const remote = electron.remote;
 const ipc = electron.ipcRenderer;
-const puppeteer = require("puppeteer");
 const http = require("http");
+const path = require("path");
 const qr = require('qr-image');
+const process = require("process");
 const pdfjs = require('pdfobject');
+const puppeteer = require("puppeteer");
 const html2canvas = require('html2canvas');
-
-console.log(html2canvas);
+const moment = require('moment')
+const moment_tz = require('moment-timezone');
+const { generate_id_front } = require(path.join(
+    misc.parent_dir,
+    "/static/misc/scripts/hive_global.js"
+));
 
 function delay(callback, ms) {
     var timer = 0;
@@ -45,13 +53,16 @@ function delay(callback, ms) {
     misc.then(function (misc_desc) {
 
         const jsgrid_no_data_main_table = jq("#jsgrid_no_data_main_table").html();
-        const jsgrid_no_data_add_que_list = jq("#jsgrid_no_data_add_que_list").html()
+        const jsgrid_no_data_add_que_list = jq("#jsgrid_no_data_add_que_list").html();
+
+        const modal_to_print = jQuery("#print_modal");
 
         const main_table = $("#jsGrid").jsGrid({
             width: "100%",
             height: "auto",
 
             filtering: false,
+            pageCount : 5, pageCount : 5,
             sorting: false,
             paging: false,
             inserting: false,
@@ -59,17 +70,40 @@ function delay(callback, ms) {
             noDataContent: jsgrid_no_data_main_table,
 
             data: [],
-            onItemInserting: function (args) {
+            onItemInserting: function (args, data) {
+				
                 const already_added_data = args.grid.data;
                 const group_by_db_id = _.groupBy(already_added_data, "db_id");
                 const is_already_exists = group_by_db_id.hasOwnProperty(args.item.db_id);
 
+				
                 if (is_already_exists) {
                     args.cancel = true;
                     return alert('The selected row is already exists');
                 }
             },
-
+			onItemInserted : function(args, data) {
+				
+				if(args.item.is_ready) return;
+				
+				const badge = jq("<b>");
+				badge.addClass("label bg-success");
+				badge.text("ALREADY SET");
+				
+				const load_misc = jQuery.ajax({
+					url : "/hive/get_image",
+					method : "POST",
+					data: { "db_id" : args.item.db_id},
+						dataType : "json"
+				});
+								
+				load_misc.done(function(misc) {
+					args.item.db_mem_pic = misc[0].db_mem_pic;
+					args.item.is_ready = true;			
+					args.item.pending_element.replaceWith(badge);
+				});
+				
+			},
             fields: [
                 {
                     title: "NAME",
@@ -102,6 +136,52 @@ function delay(callback, ms) {
                     type: "text",
                     width: 100,
                 },
+				
+				{
+                    title: "STATE",
+                    type: "text",
+                    width: 100,
+					itemTemplate: function (value, item) {
+						         
+						const hasImage =  (function() {
+							
+								if (!item.db_image_pic_length)
+									return false;
+							
+								if (Number(item.db_image_pic_length) <= 0)
+									return false;
+							
+								return true;
+							
+						})();
+						
+						const badge = jq("<b>");
+						badge.addClass("label bg-success");
+						badge.text("ALREADY SET");
+						
+						if(item.is_ready) return badge;
+						item.is_ready = true;
+						
+						if(hasImage)
+						{
+							item.is_ready = false;
+							const inner_badge = jq("<b>");
+							inner_badge.addClass("label orange");
+							inner_badge.html('<i class="fas fa-spinner fa-spin"></i> &nbsp; PENDING ');
+							
+							item.pending_element = inner_badge;
+							
+							return inner_badge;
+							
+						}
+						
+
+						return badge;
+						
+						
+							
+                    }
+                },
                 {
                     type: "control",
                     editButton: true,
@@ -112,7 +192,7 @@ function delay(callback, ms) {
                         const button = jq("<button>");
                         button.addClass("btn btn-success");
                         button.text("Add");
-                        button.attr("href", "#myModal");
+                        button.attr("href", "#modal_que_list");
                         button.attr("data-toggle", "modal")
 
                         return button;
@@ -131,12 +211,11 @@ function delay(callback, ms) {
         }
 
 
-
-
         const add_que_list = $("#add_que_list").jsGrid({
             width: "100%",
             height: "auto",
             pageSize: 10,
+            pageCount : 5,
 
             filtering: true,
             sorting: true,
@@ -203,6 +282,74 @@ function delay(callback, ms) {
                         return item[this.name];
                     }
                 },
+				{
+						title: "Is profile set ?",
+						name: "profile_set",
+						type: "select",
+						valueField: "value",
+						textField: "name",
+						items: [
+							{ name: "" },
+							{ name: "NOT SET", value: 1 },
+							{ name: "ALREADY SET", value: 2 }
+						],
+						width: 100,
+						itemTemplate: function(value, item) {
+							
+							if (!item.db_image_pic_length)
+								return;
+							
+							if (Number(item.db_image_pic_length) <= 0)
+								return;
+							
+							const badge = jq("<b>");
+							badge.addClass("label orange");
+							badge.text("ALREADY SET");
+							return badge;
+							
+
+						}
+					},
+					
+					{
+						title: "Last POL",
+						name: "last_pol",
+						type: "select",
+						valueField: "value",
+						textField: "name",
+						items: [
+							{ name: "" },
+							{ name: "NOT PRINTED SINCE", value: 1 },
+							{ name: "ALREADY PRINTED", value: 2 }
+						],
+						width: 100,
+						itemTemplate: function(value, item) {
+							if(!item.db_last_official_printed)
+								return;
+							return moment(item.db_last_official_printed).format('MM/DD/YYYY');
+						}
+					},
+					
+					{
+						title: "Last PTL",
+						name: "last_ptl",
+						type: "select",
+						valueField: "value",
+						textField: "name",
+						items: [
+							{ name: "" },
+							{ name: "NOT PRINTED SINCE", value: 1 },
+							{ name: "ALREADY PRINTED", value: 2 }
+						],
+						width: 100,
+						itemTemplate: function(value, item) {
+							if(!item.db_last_temporary_printed)
+								return;
+							return moment(item.db_last_temporary_printed).format('MM/DD/YYYY');
+						}
+					},
+					
+					
                 {
                     type: "control",
                     editButton: false,
@@ -345,8 +492,9 @@ function delay(callback, ms) {
         jq(".modal").on("shown.bs.modal", function () {
             add_que_list.jsGrid("loadData");
         });
+
         jq(".modal").on("hide.bs.modal", function () {
-            add_que_list.jsGrid("option", "data", []);
+            add_que_list.jsGrid("loadData");
         });
 
         jq("#remove_all").click(function () {
@@ -370,15 +518,38 @@ function delay(callback, ms) {
             add_que_list.jsGrid("clearFilter");
             jQuery("#select_all").addClass("hide");
         });
+		
+		const mark_as_printed = function(str_value) {
+			
+			const data_set = main_table.jsGrid("option", "data");
+			const data_set_id = data_set.map(e => e.db_id);
+			const overlay = modal_to_print.find(".overlay-spinner");
+			
+			const update = jQuery.ajax({
+				url : "/hive/update/" + str_value,
+				method : "POST",
+				data : { value : data_set_id },
+				beforeSend : function() {
+					overlay.addClass("show");
+				}
+			});
+			
+			update.done(function() {
+			    modal_to_print.modal("hide");
+				overlay.removeClass("show");
+			});
+			
+			
+			update.error(function() {
+			    modal_to_print.modal("hide");
+				alert('Error updating details!');
+			});
+			
+		}
 
         //__________________________________________
 
-
-        jq("#print").click(function () {
-
-            jQuery(".main_container .overlay-spinner").addClass("show");
-
-            const main_data = main_table.jsGrid("option", "data");
+        const print_official = function(data) {
 
             const callback_generate = function () {
 
@@ -386,13 +557,13 @@ function delay(callback, ms) {
                 const generated_list = [];
                 const func = function (callback = new Function) {
 
-                    const details = main_data[i];
+                    const details = data[i];
 
                     const front = generate_id_front({
                         surname: details.db_lname,
                         firstname: details.db_fname,
                         middlename: details.db_mname,
-                        gender: "M",
+                        gender: details.db_gender == 0 ? "M" : "F",
                         birthdate: details.db_dbo,
                         address: details.db_address,
                         barangay: details.db_barangay,
@@ -401,48 +572,29 @@ function delay(callback, ms) {
                         img_pic : details.db_mem_pic
                     });
 
-
                     front.then(function (front_data) {
 
-                        const back = generate_id_back();
-                        back.then(function (back_data) {
+                        generated_list.push(front_data);
 
-                            generated_list.push({
-                                front: front_data,
-                                back: back_data
-                            });
+                        i += 1;
 
-                            i += 1;
-
-                            if (main_data.length > i) func(callback);
-                            else callback(generated_list)
-
-
-                        });
-
+                        if (data.length > i) func(callback);
+                        else callback(generated_list)
 
                     });
 
-
                 }
 
-                if (main_data.length > i)
-                    func(generate_print_format)
-
-
+                if (data.length > i)
+                    func(generate_print_format);
 
             }
 
-            callback_generate();
+            return callback_generate();
 
+        };
 
-        });
-
-        jq("#print_temporary").click(function() {
-
-            jQuery(".main_container .overlay-spinner").addClass("show");
-
-            const main_data = main_table.jsGrid("option", "data");
+        const print_back_official = function(data) {
 
             const callback_generate = function () {
 
@@ -450,7 +602,43 @@ function delay(callback, ms) {
                 const generated_list = [];
                 const func = function (callback = new Function) {
 
-                    const details = main_data[i];
+                    const details = data[i];
+
+                    const back = generate_id_back();
+
+                    back.then(function (back_data) {
+
+                        generated_list.push(back_data);
+
+                        i += 1;
+
+                        if (data.length > i) func(callback);
+                        else callback(generated_list)
+
+
+                    });
+
+
+                }
+
+                if (data.length > i)
+                    func(generate_print_format);
+
+            }
+
+            return callback_generate();
+
+        };
+
+        const print_temporary = function(data) {
+
+            const callback_generate = function () {
+
+                let i = 0;
+                const generated_list = [];
+                const func = function (callback = new Function) {
+
+                    const details = data[i];
 
                     const front = generate_temporary_id({
                         id : details.db_id,
@@ -458,7 +646,7 @@ function delay(callback, ms) {
                         firstname: details.db_fname,
                         middlename: details.db_mname,
                         full_name : details.db_voter_name,
-                        gender: "M",
+                        gender: details.db_gender == 0 ? "M" : "F",
                         birthdate: details.db_dbo,
                         address: details.db_address,
                         barangay: details.db_barangay,
@@ -470,47 +658,41 @@ function delay(callback, ms) {
 
                     front.then(function (front_data) {
 
-                        const back = generate_id_back();
-                        back.then(function (back_data) {
+                        generated_list.push(front_data);
 
-                            generated_list.push({
-                                front: front_data,
-                                back: back_data
-                            });
+                        i += 1;
 
-                            i += 1;
-
-                            if (main_data.length > i) func(callback);
-                            else callback(generated_list)
-
-
-                        });
-
+                        if (data.length > i) func(callback);
+                        else callback(generated_list)
 
                     });
 
 
                 }
 
-                if (main_data.length > i)
+                if (data.length > i)
                     func(generate_print_format)
 
 
             }
 
-            callback_generate();
+            return callback_generate();
 
-        })
+        }
 
-        const generate_print_format = function(set) {
+        const generate_print_format = function(of_set, is_modal_show = true) {
+			
+			const $element_print_options = jQuery("form#print_options");
+			const options = $element_print_options.serialize_form();
 
             const container = document.createElement("div");
-
+			
+			set = of_set;
             set = set.map(function (item) {
 
                const front_img = document.createElement("img");
 
-               front_img.src = item.front;
+               front_img.src = item;
                front_img.style.width = "100%";
                front_img.style.height = "206px";
 
@@ -534,7 +716,7 @@ function delay(callback, ms) {
                             table.style.borderSpacing = "30px 30px";
                             table.style.width = "100%";
                             table.style.position = "relative"
-                            table.style.top = "-30px"
+                            table.style.top = (options.content_position || "0") + "px";
 
                             table.style.pageBreakBefore = "always";
 
@@ -548,7 +730,7 @@ function delay(callback, ms) {
                                     per_row = row_per_null;
                                 }
 
-                                console.log(per_row);
+
 
                                 per_row.forEach(function (per_data) {
 
@@ -590,12 +772,6 @@ function delay(callback, ms) {
                 });
 
                 await browser.close();
-                console.log(buffer);
-
-                const print_server = http.createServer(async (req, res) => {
-                    res.writeHead(200, { "Content-Type": "application/pdf" });
-                    res.end(buffer);
-                }).listen("3055")
 
                 var file = new Blob([buffer], { type: 'application/pdf' });
 
@@ -603,42 +779,20 @@ function delay(callback, ms) {
                 const viewer = document.getElementById("print_window");
                 pdfjs.embed(fileURL, viewer);
 
-
-
             }
+			
+			const print_overlay = jQuery("#print_overlay");
+			
 
-            of_print_window().then(function() {
-                var print_modal = document.getElementById("print_modal");
-                jQuery(print_modal).modal("show");
-                jQuery(".main_container .overlay-spinner").removeClass("show");
-            });
+			of_print_window().then(function() {
+            
+				if(is_modal_show) modal_to_print.modal("show");
+                
+				jQuery(".overlay-spinner").removeClass("show");
+            
+			});
 
             return;
-
-        }
-
-        const text_newline_generator = function(str, max_length) {
-
-            const re = function(that_arr) {
-                const target = String(that_arr[max_length]).trim();
-                if(!target)
-                {
-                    that_arr.splice(max_length, 1, "<||>");
-                    const new_arr = that_arr.join("").split("<||>");
-                    return new_arr;
-                }
-
-                if(max_length <= 0) return [that_arr.join("")];
-                max_length = max_length - 1;
-                return re(that_arr);
-
-            };
-
-            if(!str || str.length < max_length)
-                return [str];
-
-            const arr = String(str).split("");
-            return re(arr);
 
         }
 
@@ -679,13 +833,12 @@ function delay(callback, ms) {
                             array_of_zero = array_of_zero.fill(0).join("");
                             array_of_zero += "" +String(params.id);
                             array_of_zero.replace(4)
-                            context.fillText("Control No., " + array_of_zero, 490,235);
+                            context.fillText("Control No.: " + array_of_zero, 490,235);
                         }
                         else
-                            context.fillText("Control No., " + String(params.id), 490,235);
+                            context.fillText("Control No.: " + String(params.id), 490,235);
 
                         const full_name_length = String(params.full_name).length;
-                        console.log(full_name_length);
 
                         if(full_name_length > 30 && full_name_length <= 35)
                             context.font = '700 43px "coresansar"';
@@ -707,7 +860,7 @@ function delay(callback, ms) {
 
                         if(String(full_address).trim().length > 0)
                         {
-                            console.log(String(full_address).trim().length);
+                            
                             if(String(full_address).trim().length > 25)
                                 context.fillText(params.barangay + ", DIGOS CITY", 490,380); //9
                             else
@@ -729,108 +882,6 @@ function delay(callback, ms) {
 
         }
 
-        const generate_id_front = function (params) {
-
-            const canvas = document.createElement("canvas");
-            canvas.width = "1000";
-            canvas.height = "600";
-            canvas.style.letterSpacing = '2px';
-            const context = canvas.getContext('2d');
-
-
-            const base_image = new Image();
-            base_image.src = 'images/front.jpg';
-
-            return new Promise(function (resolve) {
-
-                base_image.onload = function () {
-
-                    context.drawImage(base_image, 0, 0, base_image.width, base_image.height,     // source rectangle
-                        0, 0, canvas.width, canvas.height);
-
-                    var f = new FontFace('OCR A EXTENDED', 'url(fonts/ocr.ttf)');
-
-                    f.load().then(function (font) {
-
-                        document.fonts.add(font);
-
-                        context.font = '700 30px "OCR A EXTENDED"';
-                        context.fillStyle = "#28166f";
-                        context.fillText(params.surname, 460,195);
-                        context.fillText(params.firstname, 460, 242);
-                        context.fillText(params.middlename, 460, 286);
-                        context.fillText(params.gender, 460, 338);
-                        context.fillText(params.birthdate, 460, 380);
-                        const of_address = text_newline_generator(params.address,24);
-
-                        if(params.address && String(params.address).length < 15 )
-                        {
-                            context.fillText(of_address[0], 460, 421);
-                            context.fillText("-", 460, 470);
-                        }
-                        else
-                        {
-                            of_address.forEach(function(value, index) {
-                                context.fillText(value, 313, 450 + (index * 30));
-                            });
-                        }
-
-
-                        context.fillText(params.precinct_no, 460, 562)
-
-                        if(params.barangay && String(params.barangay).length >= 15)
-                            context.font = '700 23px "OCR A EXTENDED"';
-
-                        context.fillText(params.barangay, 460, 520);
-
-
-                        var qr_img_string = qr.imageSync(params.qr_code, {
-                            type: 'png',
-                            margin: 2,
-                            size : 9
-                        });
-
-                        const qr_image = new Image();
-                        qr_image.src = `data:image/png;base64,${qr_img_string.toString('base64')}`
-
-                        qr_image.onload = function () {
-
-                            context.drawImage(qr_image, 746, 320);
-
-                            const profile_pic = new Image();
-                            profile_pic.src = `images/default.png`;
-                          
-                            if (params.hasOwnProperty("img_pic") && params.img_pic) {
-                                const img_profile = Buffer.from(params.img_pic.data).toString();
-                                profile_pic.src = `data:image;base64,${img_profile}`;
-                            }
-
-                            profile_pic.width = 500;
-                            profile_pic.width = 500;
-
-                            profile_pic.onload = function () {
-
-                                context.drawImage(profile_pic, 35, 162, 249, 249);
-
-                                return resolve(canvas.toDataURL("image/jpeg"));
-
-                            }
-
-                            
-
-                        }
-
-                        
-
-                    });
-
-
-
-                }
-
-            });
-
-        }
 
         const generate_id_back = function ()
         {
@@ -856,6 +907,95 @@ function delay(callback, ms) {
             });
 
         }
+
+
+        jq("#print").click(function () {
+
+			jQuery("#mark_all_printed").off("click").on("click", e => {
+				return mark_as_printed("official")
+			});
+
+            const main_data = main_table.jsGrid("option", "data");
+			const items_state = main_data.filter(e => !e.is_ready);
+			
+			if(items_state.length > 0)
+				return alert('Please wait until the data is ready!');
+
+            if(main_data.length <= 0)
+                return alert('No data to be printed');
+
+            jQuery(".overlay-spinner.main").addClass("show");
+
+            return print_official(main_data);
+
+
+        });
+
+        jq("#print_temporary").click(function() {
+
+			jQuery("#mark_all_printed").off("click").on("click", e => {
+				return mark_as_printed("temporary")
+			});
+
+            const main_data = main_table.jsGrid("option", "data");
+
+            if(main_data.length <= 0)
+                return alert('No data to be printed');
+
+            jQuery(".overlay-spinner.main").addClass("show");
+
+            return print_temporary(main_data);
+
+
+        });
+
+        jq("#print_back").click(function() {
+
+            jQuery("#mark_all_printed").off("click").on("click", e => {
+				modal_to_print.modal("hide");
+			});
+
+            const main_data = main_table.jsGrid("option", "data");
+            if(main_data.length <= 0)
+                return alert('No data to be printed');
+
+            jQuery(".overlay-spinner.main").addClass("show");
+
+            return print_back_official(main_data);
+
+        });
+
+        jq("#issue_official_id").click(function() {
+
+            jQuery("#mark_all_printed").off("click").on("click", e => {
+				return mark_as_printed("official")
+			});
+
+            const que_data = add_que_list.jsGrid("option", "data");
+            const selected_items = que_data.filter(e => e.is_selected);
+            if(selected_items.length <= 0)
+                return alert('Please select at least one item');
+
+            jQuery("#modal_que_list .overlay-spinner").addClass("show");
+            return print_official(selected_items);
+
+        });
+
+        jq("#issue_temporary_id").click(function() {
+
+            jQuery("#mark_all_printed").off("click").on("click", e => {
+				return mark_as_printed("temporary")
+			});
+
+            const que_data = add_que_list.jsGrid("option", "data");
+            const selected_items = que_data.filter(e => e.is_selected);
+            if(selected_items.length <= 0)
+                return alert('Please select at least one item');
+
+            jQuery("#modal_que_list .overlay-spinner").addClass("show");
+            return print_temporary(selected_items);
+
+        });
 
     });
 

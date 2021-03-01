@@ -1,0 +1,17 @@
+{
+  "name": "electron-dir-solved-ict-portal",
+  "version": "1.0.7",
+  "description": "ict portal ready",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Mark Anthony Libres",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.0"
+  }
+}
