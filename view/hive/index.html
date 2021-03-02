@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="eadmin/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="eadmin/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="eadmin/theme.css" rel="stylesheet">
+    <link type="text/css" href="eadmin/custom.css" rel="stylesheet">
+    <link type="text/css" href="plugins/jsgrid/dist/jsgrid.css" rel="stylesheet">
+    <link type="text/css" href="plugins/jsgrid/dist/jsgrid-theme.css" rel="stylesheet">
+    <link type="text/css" href="plugins/date_range_picker/daterangepicker.css" rel="stylesheet">
+    <link type="text/css" href="misc/hive.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+          rel='stylesheet'>
+
+</head>
+
+
+<body>
+
+<div class="content-ui">
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner bg-green">
+            <div class="container">
+
+                <a class="brand">
+                    ICT PORTAL | HIVE
+                </a>
+
+
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="span3">
+                    <div class="sidebar">
+                        <ul class="widget widget-menu unstyled">
+                            <li class="active">
+                                <a href="/hive"><i class="menu-icon fa fa-id-card"></i>
+                                    ISSUE HUGPONG ID
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/hive/set_profile_image"><i class="menu-icon fa fa-id-badge"></i>
+                                    SET PROFILE IMAGE
+                                </a>
+                            </li>
+							
+							<li>
+							
+								<a class="" data-toggle="collapse" href="#togglePages">
+									<i class="menu-icon icon-cog"></i>
+									<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+									UPDATE
+								</a>
+							
+								<ul id="togglePages" class="unstyled collapse" >
+									<li>
+										<a href="other-login.html">
+											<i class="fa fa-file-invoice"></i> &nbsp;
+											MEMBERS INFORMATION
+										</a>
+									</li>
+									<li>
+										<a href="other-user-profile.html"> 
+											<i class="fa fa-id-card-alt"></i> &nbsp;
+											ID BACKGROUND PICTURE
+										</a>
+								</ul>
+								
+							</li>
+
+                        </ul>
+							
+							
+							
+							
+                        <!--/.widget-nav-->
+
+
+                    </div>
+                    <!--/.sidebar-->
+                </div>
+
+                <div class="span9">
+
+                    <div class="content">
+
+                        <div class="module fullscreen-container">
+
+                            <div class="overlay-spinner main overlay-fixed">
+                                <div class="icon">
+                                    <i class="fa-spin fa fa-spinner"></i>
+                                </div>
+                            </div>
+
+                            <div class="module-head bg-green">
+                                <h3>Welcome to Digos Hive</h3>
+                                <div class="right-action hide_mobile">
+                                    <button type="submit" class="btn btn-large btn-zoom-in">
+                                        <b>Zoom In</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-zoom-reset">
+                                        <b>Reset Zoom</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-fullscreen">
+                                        <b>Full screen</b>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="module-body fullscreen-content">
+
+                                <div class="actions">
+
+                                    <button class="btn btn-success btn-large" id="print">Print official id</button>
+                                    <button class="btn btn-success btn-large" id="print_temporary">
+                                        Print temporary id
+                                    </button>
+
+                                    <button class="btn btn-success btn-large" id="print_back">
+                                        Generate OB Id's
+                                    </button>
+
+                                    <button class="btn btn-large btn-primary" id="remove_all">Remove all</button>
+									
+									
+									
+									<form id="print_options" style="margin-bottom: 10px; margin-top:10px">
+										<div class="input-prepend">
+											<span class="add-on bg-green cus">Print Content Positions</span>
+											<input class="span2" id="prependedInput" type="number" name="content_position" placeholder="Input number" value="-5">
+										</div>
+									</form>
+								
+
+                                </div>
+
+
+                                <div id="jsGrid"></div>
+
+                            </div>
+
+                            <!-- Modal -->
+                            <div id="modal_que_list" class="modal hide fade modal-lg" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-header bg-green">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    </button>
+                                    <h3 id="myModalLabel">Issue official hugpong id </h3>
+                                </div>
+                                <div class="modal-body" style="height: auto;max-height: 100%">
+
+                                    <div class="overlay-spinner">
+                                        <div class="icon">
+                                            <i class="fa-spin fa fa-spinner"></i>
+                                        </div>
+                                    </div>
+
+                                    <form class="form-inline cus" id="filter_settings">
+
+                                        <div style="margin-bottom: 5px">
+
+                                            <div class="input-prepend">
+                                                <span class="add-on bg-green">BirthDate Range</span>
+                                                <input class="span2" name="birthday_range" id="birthday_range" type="text"
+                                                       min="1" placeholder="Birthdays">
+                                            </div>
+
+                                            <div class="input-prepend">
+                                                <span class="add-on bg-green">Pages Limit</span>
+                                                <input class="span2" name="page_limit" id="prependedInput" type="number"
+                                                       min="1" placeholder="Pages limit" value="10">
+                                            </div>
+                                            <label type="button" class="btn btn-success">
+                                                Multiple Selections
+                                                <input name="is_multiple_selections" type="checkbox" id="default"
+                                                       class="badgebox"><span class="badge">&check;</span>
+                                            </label>
+                                            <label type="button" class="btn btn-primary hide" id="select_all">
+                                                Select all
+                                                <input name="select_all" type="checkbox" id="default"
+                                                       class="badgebox"><span class="badge">&check;</span>
+                                            </label>
+                                            <button type="reset" class="btn btn-success" id="reset_filter">
+                                                Reset
+                                            </button>
+
+                                            <div class="btn-group">
+<!--                                                <a class="btn dropdown-toggle btn-primary" data-toggle="dropdown"-->
+<!--                                                   href="#">-->
+<!--                                                    Print as-->
+<!--                                                    <span class="caret"></span>-->
+<!--                                                </a>-->
+                                                <ul class="dropdown-menu">
+                                                    <!-- dropdown menu links -->
+                                                    <button type="button" id="issue_official_id">Issue an Official
+                                                        ID's
+                                                    </button>
+                                                    <button type="button" id="issue_temporary_id">Issue an Temporary
+                                                        ID's
+                                                    </button>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div style="margin-bottom: 5px">
+
+                                        </div>
+                                    </form>
+
+                                    <br/>
+
+                                    <div id="add_que_list"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                    <button class="btn btn-primary" id="modal_save" disabled>Save changes</button>
+                                </div>
+                            </div>
+
+                            <div id="print_modal" class="modal hide fade modal-lg" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+
+                                <div class="overlay-spinner">
+                                    <div class="icon">
+                                        <i class="fa-spin fa fa-spinner"></i>
+                                    </div>
+                                </div>
+
+                                <div class="modal-header bg-green">
+                                    <h3>Ready to print...</h3>
+                                </div>
+                                <div class="modal-body" style="height: auto;max-height: 100%">
+								
+								   <div class="overlay-spinner" id="print_overlay">
+										<div class="icon">
+											<i class="fa-spin fa fa-spinner"></i>
+										</div>
+									</div>
+									
+                                    <div id="print_window"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-large btn-success" id="mark_all_printed"> Mark all as printed
+                                        and close
+                                    </button>
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div><!--/.content-->
+                </div><!--/.span9-->
+            </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2020 ICT Portal </b> All rights reserved.
+        </div>
+    </div>
+
+</div>
+
+<script src="eadmin/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="eadmin/bootstrap.min.js" type="text/javascript"></script>
+<script src="eadmin/index.js" type="text/javascript"></script>
+<script src="plugins/jsgrid/dist/jsgrid.js" type="text/javascript"></script>
+<script src="plugins/lodash/lodash.js" type="text/javascript"></script>
+<script src="plugins/date_range_picker/daterangepicker.js" type="text/javascript"></script>
+
+<script id="filter_item_template" type="text/template">
+
+    <td colspan="5">
+        <div class="profile-head media">
+            <a href="#" class="media-avatar pull-left" style="width:81px; height:81px">
+                <img id="db_pic" style="width:80px; height:80px; margin:0px" src="images/default.png">
+            </a>
+            <div class="media-body" style="margin-top: 3px">
+                <h4 id="item_name">
+                    THIS IS SAMPLE NAME
+                </h4>
+                <p>
+                    <b class="info_label">BARANGAY : </b> <span id="item_barangay">-</span> <br>
+                    <b class="info_label">PREC NO. : </b> <span id="item_prec_no">-</span> <br>
+                    <b class="info_label">CONTACT NO.: </b> <span id="item_contact_no">-</span> <br>
+                    <b class="info_label">POSITION : </b> <span id="item_position">-</span> <br>
+                    <b class="info_label">BIRTH DATE : </b> <span id="item_birth_date">-</span> <br>
+                </p>
+
+            </div>
+        </div>
+    </td>
+
+</script>
+
+<script id="jsgrid_no_data_main_table" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to print</h4>
+        <p><a href="#myModal" role="button" data-toggle="modal" style="margin:0">Click here to add que</a></p>
+    </div>
+
+</script>
+
+<script id="jsgrid_no_data_add_que_list" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to show</h4>
+    </div>
+
+</script>
+
+<script id="id_card_template" type="text/template">
+
+    <html>
+    <head></head>
+
+
+    </html>
+
+</script>
+
+
+<script type="text/template">
+
+    jq.fn.barangays = [];
+
+</script>
+
+<script src="misc/scripts/hive.js" type="text/javascript"></script>
+
+
+</body>

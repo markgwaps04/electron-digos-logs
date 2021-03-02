@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" href="/eadmin/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="/eadmin/bootstrap-responsive.min.css" rel="stylesheet">
+	<link type="text/css" href="/eadmin/theme.css" rel="stylesheet">
+	<link type="text/css" href="/eadmin/custom.css" rel="stylesheet">
+	<link type="text/css" href="/plugins/jsgrid/dist/jsgrid.css" rel="stylesheet">
+	<link type="text/css" href="/plugins/jsgrid/dist/jsgrid-theme.css" rel="stylesheet">
+	<link type="text/css" href="/misc/hive.css" rel="stylesheet">
+	<link type="text/css" href="/plugins/jquery.steps/jquery.steps.css" rel="stylesheet">
+	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+		rel='stylesheet'>
+
+	<style>
+		#add_solo_parents .wizard>.content>.body {
+			position: relative;
+		}
+
+		.media-avatar.cus {
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+			height: 70px;
+			width: 70px;
+		}
+
+		.media-avatar.cus img {
+			border-radius: 0px;
+			-webkit-border-radius: 0px;
+			height: 70px;
+			width: 70px;
+			margin: 0px;
+		}
+
+		.profile-head.cus {
+			display: contents;
+		}
+
+		.profile-head.cus .media-avatar.cus-a img {
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+			height: 150px;
+			width: 150px;
+			margin: 0px;
+		}
+
+		.profile-head.cus .media-avatar.cus-a {
+			-webkit-border-radius: 0px;
+			border-radius: 0px;
+			height: 150px;
+			width: 150px;
+		}
+
+		.profile-brief.cus {
+			font-size: 12px;
+		}
+
+		.module-head.cus h3 {
+			font-size: 14px;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+	<div class="content-ui">
+
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner bg-green">
+				<div class="container">
+
+					<a class="brand">
+						ICT PORTAL | CSWDO
+					</a>
+
+
+				</div>
+			</div><!-- /navbar-inner -->
+		</div>
+
+		<div class="wrapper">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="span3">
+
+						<div class="content">
+							<div class="module">
+								<div class="module-body">
+									<div class="profile-head media">
+										<a href="#" class="media-avatar cus pull-left">
+											<img src="/cswdo/logo.jpg">
+										</a>
+										<div class="media-body">
+											<h3 style="margin: 0;">CSWDO</h4>
+										</div>
+										<p class="profile-brief cus">
+											City Social Welfare and Development
+										</p>
+									</div>
+								</div>
+								<!--/.module-body-->
+							</div>
+							<!--/.module-->
+						</div>
+
+						<div class="sidebar">
+							<ul class="widget widget-menu unstyled">
+								<li class="active">
+									<a href="/cswdo"><i class="menu-icon fa fa-id-card"></i>
+										SOLO PARENTS
+									</a>
+								</li>
+							</ul>
+							<!--/.widget-nav-->
+
+
+						</div>
+						<!--/.sidebar-->
+					</div>
+
+					<div class="span9">
+						<div class="content">
+
+							<div class="module message">
+								<div class="module-head cus bg-green">
+									<h3>List of Solo Parents</h3>
+								</div>
+								<div class="module-option clearfix">
+									<div class="pull-left">
+										Filter : &nbsp;
+										<div class="btn-group">
+											<button class="btn">All</button>
+											<button class="btn dropdown-toggle" data-toggle="dropdown">
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#">All</a></li>
+												<li><a href="#">In Progress</a></li>
+												<li><a href="#">Done</a></li>
+												<li class="divider"></li>
+												<li><a href="#">New task</a></li>
+												<li><a href="#">Overdue Task</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="pull-right">
+										<a href="#add_solo_parents" role="button" data-toggle="modal"
+											class="btn btn-large btn-primary">Add Parents Information</a>
+									</div>
+								</div>
+								<div class="module-body table">
+
+									<table class="table table-message">
+										<tbody>
+											<tr class="heading">
+												<td class="cell-icon"></td>
+												<td class="cell-title">Task</td>
+												<td class="cell-status hidden-phone hidden-tablet">Status</td>
+												<td class="cell-time align-right">Due Date</td>
+											</tr>
+											<tr class="task">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"><b
+														class="due">Missed</b></td>
+												<td class="cell-time align-right">Just Now</td>
+											</tr>
+											<tr class="task">
+												<td class="cell-icon"><i class="icon-checker"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"><b
+														class="due">Missed</b></td>
+												<td class="cell-time align-right">Just Now</td>
+											</tr>
+											<tr class="task">
+												<td class="cell-icon"><i class="icon-checker"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"><b
+														class="due">Missed</b></td>
+												<td class="cell-time align-right">Yesterday</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+											<tr class="task resolved">
+												<td class="cell-icon"><i class="icon-checker high"></i></td>
+												<td class="cell-title">
+													<div>Lorem ipsum dolor sit et, consectetur adipisicing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													</div>
+												</td>
+												<td class="cell-status hidden-phone hidden-tablet"></td>
+												<td class="cell-time align-right">15 July 2014</td>
+											</tr>
+										</tbody>
+									</table>
+
+
+								</div>
+								<div class="module-foot">
+								</div>
+
+								<div id="add_solo_parents" class="modal hide fade modal-lg" tabindex="-1" role="dialog"
+									aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-header bg-green">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+										</button>
+										<h3 id="myModalLabel">Add Solo Parents Information</h3>
+									</div>
+
+									<div class="modal-body" style="height: auto;max-height: 100%">
+										<div id="solo_parents_steps">
+											<h3>Identification</h3>
+											<section>
+
+												<div class="content">
+
+													<div class="module">
+														<div class="module-head cus">
+															<h3>Identifying Information</h3>
+														</div>
+														<div class="module-body">
+															</br>
+															<form class="form-horizontal row-fluid">
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Profile image
+																	</label>
+																	<div class="controls">
+																		<div class="profile-head cus media">
+																			<a href="#"
+																				class="media-avatar cus-a pull-left">
+																				<img src="/cswdo/logo.jpg">
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		First name
+																	</label>
+																	<div class="controls">
+																		<input type="text" id="basicinput"
+																			placeholder="First name" class="span8">
+																		<span class="help-inline">Minimum 5
+																			Characters</span>
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Middle name
+																	</label>
+																	<div class="controls">
+																		<input type="text" id="basicinput"
+																			placeholder="Middle name (Optional)"
+																			class="span8">
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Last name
+																	</label>
+																	<div class="controls">
+																		<input type="text" id="basicinput"
+																			placeholder="Last name" class="span8">
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Age
+																	</label>
+																	<div class="controls">
+																		<input type="number" id="basicinput"
+																			placeholder="Age (numeric)" class="span6">
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Sex
+																	</label>
+																	<div class="controls">
+																		<select tabindex="1" data-placeholder="Select here.."
+																			class="span6">
+																			<option value="">Select here..</option>
+																			<option value="0">Male
+																			</option>
+																			<option value="1">Female
+																			</option>
+																		</select>
+																	</div>
+																</div>
+
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		HE Attainment
+																	</label>
+																	<div class="controls">
+																		<select tabindex="1" data-placeholder="Select here.."
+																			class="span6">
+																			
+																			<option value="">Select here.. (Highest Education Attainment)</option>
+																			<option value="0">Elementary Graduate</option>
+																			<option value="1">Elementary (No Diploma)</option>
+																			<option value="2">High School Grad
+																			</option>
+																			<option value="3">High School Degree (No Diploma)
+																			</option>
+																			<option value="4">College Graduate
+																			</option>
+																			<option value="5">College Degree (No Diploma)
+																			</option>
+																		</select>
+																	</div>
+																</div>
+																<div class="control-group">
+																	<label class="control-label" for="basicinput">
+																		Age
+																	</label>
+																	<div class="controls">
+																		<input type="number" id="basicinput"
+																			placeholder="Age (numeric)" class="span6">
+																	</div>
+																</div>
+
+
+															</form>
+															</br>
+														</div>
+													</div>
+
+
+
+												</div>
+
+											</section>
+
+											<h3>Family Composition</h3>
+											<section>
+												<p>Wonderful transition effects.</p>
+											</section>
+										</div>
+
+									</div>
+									<div class="modal-footer">
+										<button class="btn" type="button" data-dismiss="modal" aria-hidden="true">
+											Close
+										</button>
+										<button type="submit" class="btn btn-primary" id="modal_save" disabled>Save
+											changes
+										</button>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+						<!--/.content-->
+					</div>
+
+
+				</div>
+			</div>
+			<!--/.container-->
+		</div>
+		<!--/.wrapper-->
+
+		<div class="footer">
+			<div class="container">
+				<b class="copyright">&copy; 2020 ICT Portal </b> All rights reserved.
+			</div>
+		</div>
+
+	</div>
+
+	<script src="/eadmin/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="/eadmin/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/eadmin/index.js" type="text/javascript"></script>
+	<script src="/plugins/jsgrid/dist/jsgrid.js" type="text/javascript"></script>
+	<script src="/plugins/lodash/lodash.js" type="text/javascript"></script>
+	<script src="/plugins/jquery.steps/jquery.steps.js" type="text/javascript"></script>
+	<script src="/cswdo/solo_parents.js" type="text/javascript"></script>
+
+</body>

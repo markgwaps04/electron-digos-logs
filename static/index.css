@@ -1,0 +1,9 @@
+.app-header
+{
+    display: none !important;
+}
+.app-main { padding-top: 0 !important; }
+.app-main__outer { margin: 0 0 !important; }
+
+title { display : none  }
+

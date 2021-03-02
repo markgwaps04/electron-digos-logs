@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="/eadmin/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/eadmin/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="/eadmin/theme.css" rel="stylesheet">
+    <link type="text/css" href="/eadmin/custom.css" rel="stylesheet">
+    <link type="text/css" href="/plugins/jsgrid/dist/jsgrid.css" rel="stylesheet">
+    <link type="text/css" href="/plugins/jsgrid/dist/jsgrid-theme.css" rel="stylesheet">
+    <link type="text/css" href="/misc/hive.css" rel="stylesheet">
+    <link type="text/css" href="/plugins/tui-image-editor/tui-image-editor.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+          rel='stylesheet'>
+
+</head>
+
+<style>
+    input.profile_img::-webkit-file-upload-button {
+        display:none;
+    }
+    .center
+    {
+        margin-left: auto;
+        margin-right: auto;
+        text-align : "center",
+        width : "100%";
+    }
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+
+<div class="content-ui">
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner bg-green">
+            <div class="container">
+
+                <a class="brand">
+                    ICT PORTAL | HIVE
+                </a>
+
+
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="span3">
+                    <div class="sidebar">
+                        <ul class="widget widget-menu unstyled">
+                            <li>
+                                <a href="/hive"><i class="menu-icon fa fa-id-card"></i>
+                                    ISSUE HUGPONG ID
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/hive/set_profile_image"><i class="menu-icon fa fa-id-badge"></i>
+                                    SET PROFILE IMAGE
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!--/.widget-nav-->
+
+
+                    </div>
+                    <!--/.sidebar-->
+                </div>
+
+                <div class="span9">
+
+                    <div class="overlay-spinner">
+                        <div class="icon">
+                            <i class="fa-spin fa fa-spinner"></i>
+                        </div>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="module fullscreen-container">
+
+                            <div class="module-head bg-green">
+                                <h3>Digos Hive (Set profile image)</h3>
+                                <div class="right-action hide_mobile">
+                                    <button type="submit" class="btn btn-large btn-zoom-in">
+                                        <b>Zoom In</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-zoom-reset">
+                                        <b>Reset Zoom</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-fullscreen">
+                                        <b>Full screen</b>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="module-body fullscreen-content">
+
+                                <div class="actions">
+                                </div>
+
+
+                                <div id="jsGrid"></div>
+
+                            </div>
+
+                            <!-- Modal -->
+                            <div id="update_id_modal" class="modal hide fade modal-lg" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-header bg-green">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    </button>
+                                    <h3 id="myModalLabel">Update identification card</h3>
+                                </div>
+                                <form class="form-horizontal row-fluid" id="view_id_form">
+                                    <div class="modal-body" style="height: auto;max-height: 100%">
+                                        <div style="width: 73%;margin: 0 auto">
+                                            <center>
+                                                <img id="id_card" width="600">
+                                            </center>
+                                            <div style="margin-bottom: 10px"></div>
+                                            <hr/>
+                                            <div class="control-group">
+                                                <label class="control-label">Gender</label>
+                                                <div class="controls">
+                                                    <select class="span8" name="gender">
+                                                        <option disabled selected>Please select type of gender
+                                                        </option>
+                                                        <option value="0">Male</option>
+                                                        <option value="1">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">ID. Picture</label>
+                                                <div class="controls">
+                                                    <div class="input-prepend">
+                                                            <span class="add-on span2"><i
+                                                                    class="fa fa-image"></i></span>
+                                                        <input class="span10 profile_img" accept="image/*"
+                                                               id="profile_img"
+                                                               name="profile_img"
+                                                               type="file" style="height:30px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br/>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" type="button" data-dismiss="modal" aria-hidden="true">
+                                            Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary" id="modal_save" disabled>Save
+                                            changes
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                    </div><!--/.content-->
+                </div><!--/.span9-->
+            </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2020 ICT Portal </b> All rights reserved.
+        </div>
+    </div>
+
+</div>
+
+<script src="/eadmin/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/eadmin/bootstrap.min.js" type="text/javascript"></script>
+<script src="/eadmin/index.js" type="text/javascript"></script>
+<script src="/plugins/jsgrid/dist/jsgrid.js" type="text/javascript"></script>
+<script src="/plugins/lodash/lodash.js" type="text/javascript"></script>
+
+
+<script id="jsgrid_no_data" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to show</h4>
+    </div>
+
+</script>
+
+<script type="text/template">
+
+    jq.fn.barangays = [];
+
+</script>
+
+<script src="/misc/scripts/set_profile_image.js" type="text/javascript"></script>
+
+
+</body>

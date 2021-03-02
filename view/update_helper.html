@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="../static/eadmin/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../static/eadmin/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="../static/eadmin/theme.css" rel="stylesheet">
+    <link type="text/css" href="../static/eadmin/custom.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+          rel='stylesheet'>
+</head>
+
+
+<style>
+
+    .center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type='file'] {
+        height: 44px;
+    }
+
+    .bg-green, .bg-success {
+        background-color: #3ac47d !important;
+    }
+
+    .bg-success {
+        color: #fff
+    }
+
+    .module-head:not(.cus) {
+        padding: 22px 15px
+    }
+
+    .module-head h3 {
+        font-size: 22px;
+        display: inline-block;
+    }
+
+    .right-action {
+        float: right
+    }
+
+    .control-label, .controls input {
+        font-size: 16px
+    }
+
+    .docs-example:after {
+        display: none
+    }
+
+    .docs-example {
+        padding: 19px 19px 14px;
+        margin-bottom: 18px;
+    }
+
+    select {
+        color: #777 !important;
+        font-size: 16px;
+    }
+
+    select option:not([disabled]) {
+        color: black !important;
+        font-size: 18px;
+    }
+
+    @media only screen and (max-width: 995px) {
+        .hide_mobile {
+            display: none;
+        }
+    }
+
+
+    .fullscreen .module-body {
+        height: 629px;
+        overflow-y: scroll;
+    }
+
+    .module-login input {
+        height: 40px
+    }
+
+    .nav_action.nav > li > a {
+        text-decoration: none;
+        text-shadow: none;
+        font-weight: 900;
+        color: black;
+    }
+
+    .main_container
+    {
+        position: relative;
+    }
+
+
+</style>
+
+
+<body>
+
+
+<div class="content-ui">
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner bg-green">
+            <div class="container">
+
+                <a class="brand">
+                    ICT PORTAL
+                </a>
+
+
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+
+                <div class="span9 center main_container">
+
+                    <div class="overlay-spinner">
+                        <div class="icon">
+                            <i class="fa-spin fa fa-spinner"></i>
+                        </div>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="module fullscreen-container">
+
+                            <div class="module-head bg-green">
+                                <h3>New version has been release</h3>
+                                <div class="right-action hide_mobile">
+                                    <button type="submit" class="btn btn-large btn-zoom-in">
+                                        <b>Zoom In</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-zoom-reset">
+                                        <b>Reset Zoom</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-fullscreen">
+                                        <b>Full screen</b>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="module-body fullscreen-content">
+
+                                <p>
+                                    <b>Your app is out of date</b>, click the button to install the new version of this app.
+                                </p>
+
+                                <div class="download-progress hide" style="margin-bottom: 20px">
+                                    <div class="progress progress-success progress-striped active" style="margin: 0">
+                                        <div class="bar" style="width: 0%;"></div>
+                                    </div>
+                                    <label>Downloading... <b>0%</b></label>
+                                </div>
+                                <button id="download_app_release" type="submit" class="btn btn-large btn-success">Download and Install</button>
+
+
+                            </div>
+                        </div>
+
+
+                    </div><!--/.content-->
+                </div><!--/.span9-->
+            </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2020 Covid Tracing System </b> All rights reserved.
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../static/eadmin/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="../static/eadmin/bootstrap.min.js" type="text/javascript"></script>
+<script src="../static/eadmin/index.js" type="text/javascript"></script>
+<script src="../static/eadmin/update_helper.js" type="text/javascript"></script>
+
+
+<script>
+    // require("../static/index.js")
+    // require("../static/update_helper.js")
+</script>
+
+</body>
