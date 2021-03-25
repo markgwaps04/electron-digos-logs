@@ -6,8 +6,7 @@
     const BrowserWindow = electron.BrowserWindow;
     const menu = electron.Menu;
     const dialog = electron.dialog;
-    const dotenv = require('dotenv').config();
-
+    const dotenv = require('dotenv').config({ url : "http://10.0.0.247:98/dist/.env"});
     const path = require("path");
     const url = require("url");
     const fs = require("fs");
@@ -46,7 +45,7 @@
 		});
 
 		confirmation.then(async function() {
-
+		    return app.quit();
 			const file = await dialog.showOpenDialog({
 				title : "Import settings (ICT PORTAL)",
 				message : "To continue, please import the required files to run the application",
@@ -107,10 +106,6 @@
 
 		autoUpdater.setFeedURL(`http://${env.SERVER_HOST}:${env.SERVER_PORT}/${env.SERVER_PATH}`);
 		autoUpdater.autoDownload = false;
-
-		const hive = require("./static/misc/page_hive.js");
-		const home = require("./static/misc/page_home.js");
-		const cswdo = require("./static/misc/cswdo.js");
 
         let loading = new BrowserWindow({
             title: "ICT PORTAL v" + app.getVersion(),
@@ -254,6 +249,10 @@
             console.log("did-stop-loading");
 
         });
+
+        const hive = require("./static/misc/page_hive.js");
+        const home = require("./static/misc/page_home.js");
+        const cswdo = require("./static/misc/cswdo.js");
 
         const template = [
             {
