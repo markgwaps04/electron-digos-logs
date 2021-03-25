@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <%- include('include/style.html'); %>
+</head>
+
+<body>
+
+<div class="content-ui">
+
+    <%- include('include/navbar.html'); %>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="span3">
+                    <%- include('include/sidebar.html'); %>
+                    <!--/.sidebar-->
+                </div>
+
+                <div class="span9">
+
+                    <div class="content">
+
+
+
+                    </div><!--/.content-->
+                </div><!--/.span9-->
+            </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <%- include('include/footer.html'); %>
+
+</div>
+
+<%- include('include/scripts.html'); %>
+
+<script id="filter_item_template" type="text/template">
+
+    <td colspan="6">
+        <div class="profile-head media">
+            <a href="#" class="media-avatar pull-left" style="width:81px; height:81px">
+                <img id="db_pic" style="width:80px; height:80px; margin:0px" src="images/default.png">
+            </a>
+            <div class="media-body" style="margin-top: 3px">
+                <h4 id="item_name">
+                    THIS IS SAMPLE NAME
+                </h4>
+                <p>
+                    <b class="info_label">BARANGAY : </b> <span id="item_barangay">-</span> <br>
+                    <b class="info_label">PREC NO. : </b> <span id="item_prec_no">-</span> <br>
+                    <b class="info_label">CONTACT NO.: </b> <span id="item_contact_no">-</span> <br>
+                    <b class="info_label">POSITION : </b> <span id="item_position">-</span> <br>
+                    <b class="info_label">BIRTH DATE : </b> <span id="item_birth_date">-</span> <br>
+                </p>
+
+            </div>
+        </div>
+    </td>
+
+</script>
+
+<script id="excel_table_format" type="text/template">
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Precinct No.</th>
+            <th>Municipality</th>
+            <th>Barangay</th>
+            <th>Purok/Address</th>
+            <th>Contact No.</th>
+            <th>Date of birth</th>
+        </tr>
+    </table>
+
+</script>
+
+<script id="jsgrid_no_data_main_table" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to print</h4>
+        <p><a href="#myModal" role="button" data-toggle="modal" style="margin:0">Click here to add que</a></p>
+    </div>
+
+</script>
+
+<script id="jsgrid_no_data_add_que_list" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to show</h4>
+    </div>
+
+</script>
+
+<script id="id_card_template" type="text/template">
+
+    <html>
+    <head></head>
+
+
+    </html>
+
+</script>
+
+
+<script type="text/template">
+
+    jq.fn.barangays = [];
+
+</script>
+
+<script src="misc/scripts/hive.js" type="text/javascript"></script>
+<script src="misc/scripts/hive_birthday_card_generator.js" type="text/javascript"></script>
+<script src="misc/scripts/hive_print_excel.js" type="text/javascript"></script>
+
+
+</body>

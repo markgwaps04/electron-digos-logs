@@ -711,7 +711,7 @@ textarea.form-control.parsley-error:focus
     height: 100%;
     display: block;
     background: #6c757d42;
-    position: absolute;
+    position: fixed;
     /* margin: 31px; */
     top: 0;
     left: 0;

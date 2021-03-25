@@ -1,26 +1,25 @@
 var pjson = require('../../package.json');
 const electron = require("electron");
-const menu = electron.Menu;
-const menuItem = electron.MenuItem;
-const url = require("url");
-const path = require("path");
-const {dialog} = require("electron");
 const app = electron.app;
-const {port} = require("../../main.js");
 const moment = require('moment')
 const moment_tz = require('moment-timezone');
+const dotenv = require('dotenv').config();
+const process = require("process");
+const env = process.env;
+var request = require('request');
 
 const database = require('knex')({
     client: 'mysql2',
-    acquireConnectionTimeout: 1000,
+    acquireConnectionTimeout: 10000,
     connection: {
-        host: '185.214.124.3',
-        user: 'u822707621_hive',
-        password: 'Knightf3$',
-        database: 'u822707621_hive'
+        host: env.DB_HOST_LIVE,
+        user: env.DB_USER_LIVE,
+        password: env.DB_PASSWORD_LIVE,
+        database: env.DB_DATABASE_LIVE
     },
     debug: false
 });
+
 
 const DIGOS_MUN_CODE = "112403";
 
@@ -37,70 +36,194 @@ exports.pages = function (menu_template, win) {
         }
     });
 
+    win.express.get('/hive/sms', async function (req, res) {
+
+        // const test = await database_sms("group").select("*");
+        // console.log(test);
+
+        res.render('hive/sms.html', {
+            path: app.getAppPath(),
+            sidebar: "sms",
+            page_title: "HIVE"
+        });
+
+    });
+
     win.express.get('/hive', (req, res) => {
 
         res.render('hive/index.html', {
-            path: app.getAppPath()
+            path: app.getAppPath(),
+            sidebar: "hive",
+            page_title: "HIVE"
         });
 
     });
 
 
-    win.express.post('/hive/profile_img/set', (req, res, next) => {
+    win.express.post('/hive/view/members_info', async (req, res) => {
 
-        const check_if_valid = function () {
-            return (req.body.hasOwnProperty("id") && req.body.id > -1) &&
-                (req.body.hasOwnProperty("gender") && !req.body.gender) &&
-                (req.files.hasOwnProperty("profile_img") && req.files.profile_img.size > -1) &&
-                (req.files.hasOwnProperty("profile_img") && req.files.profile_img.size > -1);
+        const data = req.body.id;
+
+        const query = await database
+            .select({
+                "hds_id": "hugpong_member.hds_mem_id",
+                // "mem_img_id" : "mem_img.hds_img_id",
+                // "mem_pic": "hugpong_member.hds_mem_id",
+                "gender": "hugpong_member.gender",
+                "db_dbo": database.raw("DATE_FORMAT(`hugpong_member`.`dob`, '%m/%d/%Y')"),
+                "db_dbo_alias": "hugpong_member.dob",
+                "db_dbo_alias1": database.raw("DATE_FORMAT(`hugpong_member`.`dob`, '%Y-%m-%d')"),
+                "voter_name": "vw_voter_pop_merge.voter_name",
+                "mun_city": "vw_voter_pop_merge.mun_city",
+                "barangay": "vw_voter_pop_merge.barangay",
+                "address": "hugpong_member.address",
+                "contact": "hugpong_member.contact",
+                "voter_id": "vw_voter_pop_merge.voter_id",
+                "prec_no": "vw_voter_pop_merge.prec_no",
+                "img_file": "hugpong_member.filename",
+                "print_official_since": "hugpong_member.print_official_since",
+                "print_temporary_since": "hugpong_member.print_temporary_since"
+            })
+            .from("hugpong_member")
+            .leftJoin(
+                'vw_voter_pop_merge',
+                'hugpong_member.mem_id',
+                'vw_voter_pop_merge.voter_id'
+            )
+            .where("hugpong_member.hds_mem_id", data)
+            .limit(1);
+
+        const details = query[0];
+
+        if (details.img_file) {
+
+            const uri = [
+                env.SITE_LIVE_URL,
+                'rest/getImage/',
+                details.img_file
+            ].join("");
+
+            const options = {url: uri, json: true};
+
+            return request.post(options, function (error, response, body) {
+
+                if (error || response.statusCode != 200) {
+                    console.log(error);
+                    details.img_file = null;
+                    return res.render('include/modal_update_info.html', details);
+                }
+
+                details.img_file = body.data;
+                return res.render('include/modal_update_info.html', details);
+
+            })
+
         }
 
-        if (!check_if_valid) {
-            var err = new Error("Invalid request");
+        res.render('include/modal_update_info.html', details);
+
+
+    });
+
+
+    win.express.post('/hive/profile_img/set', async (req, res, next) => {
+
+        const current = moment_tz().tz("Asia/Singapore").format("YYYY-MM-DD HH:mm:ss");
+
+        if (!(req.body.hasOwnProperty("hds_id") && req.body.hds_id > -1)) {
+            const err = new Error("No sumit id parameter");
             err.status = 507;
             return next(err);
         }
 
-        const image_selected = req.files.profile_img;
-        const acceptable_image_file = ["image/png", "image/jpg", "image/jpeg"];
-        const is_image = acceptable_image_file.indexOf(image_selected.mimetype) > -1;
 
-        if (!is_image) {
-            var err = new Error("The file selected is not valid image");
-            err.status = 508;
+        if (!(req.body.hasOwnProperty("gender") && req.body.gender)) {
+            const err = new Error("No gender parameter");
+            err.status = 507;
             return next(err);
         }
 
-        const base64_value = Buffer.from(image_selected.data).toString("base64");
-        const base64 = `data:${image_selected.mimetype};base64,${base64_value}`;
+        if (!(req.body.hasOwnProperty("birthday") && req.body.birthday)) {
+            const err = new Error("No birthday parameter");
+            err.status = 507;
+            return next(err);
+        }
 
-        const current = moment_tz().tz("Asia/Singapore").format("YYYY-MM-DD HH:mm:ss");
+        if (req.hasOwnProperty("files") && req.files) {
 
-        const update = database("summit_member")
-            .where('sum_mem_id', req.body.id)
+            if (!req.files.hasOwnProperty("image")) {
+                const err = new Error("File image property not exists");
+                err.status = 508;
+                return next(err);
+            }
+
+            if (req.files.image.size <= -1) {
+                const err = new Error("Invalid file size");
+                err.status = 508;
+                return next(err);
+            }
+
+            const acceptable_image_file = ["image/png", "image/jpg", "image/jpeg"];
+            const is_image = acceptable_image_file.indexOf(req.files.image.mimetype) > -1;
+
+            if (!is_image) {
+                const err = new Error("Invalid file type");
+                err.status = 508;
+                return next(err);
+            }
+
+            const image_selected = req.files.image;
+
+            const uploaded_base64_value = Buffer
+                .from(image_selected.data)
+                .toString("base64");
+
+            const data_base64 = `data:${image_selected.mimetype};base64,${uploaded_base64_value}`;
+
+            if (req.body.hasOwnProperty("mem_img_id") && req.body.mem_img_id > 0) {
+
+                const image_update = await database({'mem_img': "mem_img-x"})
+                    .where('hds_img_id', req.body.mem_img_id)
+                    .update({img: data_base64});
+
+            } else {
+
+                const image_insert = await database("mem_img-x")
+                    .insert({
+                        img: data_base64,
+                        hds_mem_id: req.body.hds_id,
+                        last_update: current
+                    });
+
+            }
+
+
+        }
+
+        const birthday = moment(req.body.birthday)
+            .format("YYYY-MM-DD")
+            .toString();
+
+        const of_update = await database("hugpong_member")
+            .where('hds_mem_id', req.body.hds_id)
             .update({
-                mem_pic: base64,
                 gender: req.body.gender,
-                update_image_since: current
+                update_image_since: current,
+                dob : birthday,
+                has_img: true
             });
 
-        update.then(function () {
-            res.end(`${req.body.id}, successfully updated `);
-        });
 
-        update.catch(function (reason) {
-            var err = new Error(reason);
-            err.status = 508;
-            return next(err);
-        })
-
+        return res.end(`${req.body.hds_id}, successfully updated `);
 
     });
 
 
     win.express.get('/hive/set_profile_image', (req, res) => {
         res.render('hive/hive_set_profile_image.html', {
-            path: app.getAppPath()
+            path: app.getAppPath(),
+            sidebar: "set_profile_image",
+            page_title: "HIVE"
         });
     });
 
@@ -109,8 +232,8 @@ exports.pages = function (menu_template, win) {
         const data = req.body.value;
         const current = moment_tz().tz("Asia/Singapore").format("YYYY-MM-DD HH:mm:ss");
 
-        const update = database("summit_member")
-            .whereIn('sum_mem_id', data)
+        const update = database("hugpong_member")
+            .whereIn('hds_mem_id', data)
             .update({"print_temporary_since": current});
 
         update.then(function (respond) {
@@ -125,8 +248,8 @@ exports.pages = function (menu_template, win) {
         const data = req.body.value;
         const current = moment_tz().tz("Asia/Singapore").format("YYYY-MM-DD HH:mm:ss");
 
-        const update = database("summit_member")
-            .whereIn('sum_mem_id', data)
+        const update = database("hugpong_member")
+            .whereIn('hds_mem_id', data)
             .update({"print_official_since": current});
 
         update.then(function (respond) {
@@ -135,9 +258,9 @@ exports.pages = function (menu_template, win) {
 
     });
 
-    win.express.post("/hive/get_image", (req, res, next) => {
+    win.express.post("/hive/get_image", async (req, res, next) => {
 
-        if (!req.body.hasOwnProperty("db_id")) {
+        if (!req.body.hasOwnProperty("db_hds_id")) {
             var err = new Error("Field for id is not found");
             err.status = 101;
             return next(err);
@@ -146,19 +269,65 @@ exports.pages = function (menu_template, win) {
         const id = req.body.db_id;
 
         const query = database.select(
-            {db_id: "summit_member.sum_mem_id"},
-            {db_mem_pic: "summit_member.mem_pic"}
+            {db_id: "mem_img.hds_img_id"},
+            {db_mem_pic: "mem_img.img"},
+
+            //can be none
+            {db_img_new: "hugpong_member.filename"},
+            {db_has_img: "hugpong_member.has_img"},
+            {db_lname: "hugpong_member.mem_lname"},
+            {db_fname: "hugpong_member.mem_fname"}
         );
 
-        query.from('summit_member');
-        query.where('summit_member.sum_mem_id', String(req.body.db_id));
-        query.limit(1)
+        query.from("hugpong_member");
+        query.leftJoin(
+            {'mem_img': "mem_img-x"},
+            "hugpong_member.hds_mem_id",
+            "mem_img.hds_mem_id"
+        );
 
-        query.then(function (respond) {
+        query.where({'hugpong_member.hds_mem_id': String(req.body.db_hds_id)});
 
-            res.json(respond);
+        query.limit(1);
 
-        });
+        const old_base = await query;
+        const has_result = Array.from(old_base).length;
+
+        if (has_result > 0) {
+
+            if (old_base[0]['db_img_new'] && !old_base[0]['db_mem_pic']) {
+
+                const uri = [
+                    env.SITE_LIVE_URL,
+                    'rest/getImage/',
+                    old_base[0]['db_img_new']
+                ].join("");
+
+                const options = {url: uri, json: true};
+
+                return request
+                    .post(options, function (error, response, body) {
+
+                        if (error || response.statusCode != 200) {
+                            console.log(error);
+                            return res.json([]);
+
+                        }
+
+                        old_base[0].db_mem_pic = body.data;
+                        old_base[0].is_img_base64 = true;
+
+                        console.log(old_base);
+                        return res.json(old_base);
+
+                    })
+
+            }
+
+        }
+
+
+        res.json(old_base);
 
 
     });
@@ -169,39 +338,40 @@ exports.pages = function (menu_template, win) {
         let pageSize = req.body.pageSize || 10;
 
         let of_test = database.select(
-            {db_id: "summit_member.sum_mem_id"},
-            {db_lname: "summit_member.mem_lname"},
-            {db_gender: "summit_member.gender"},
-            {db_fname: "summit_member.mem_fname"},
-            {db_mname: "summit_member.mem_mname"},
-            {db_id: "summit_member.sum_mem_id"},
-            {db_position: "summit_position.position_name"},
-            {db_suffix: "summit_member.mem_suffix"},
-            {db_address: "summit_member.address"},
-            {db_contact: "summit_member.contact"},
-            {db_qr_code: "summit_member.mem_code"},
-            {db_dbo: database.raw("DATE_FORMAT(`dob`, '%m/%d/%Y')")},
+            {db_id: "hugpong_member.hds_mem_id"},
+            {db_lname: "hugpong_member.mem_lname"},
+            {db_gender: "hugpong_member.gender"},
+            {db_fname: "hugpong_member.mem_fname"},
+            {db_mname: "hugpong_member.mem_mname"},
+            {db_position: "summit_member.summit_pos"},
+            {db_suffix: "hugpong_member.mem_suffix"},
+            {db_address: "hugpong_member.address"},
+            {db_contact: "hugpong_member.contact"},
+            {db_qr_code: "hugpong_member.mem_code"},
+            {db_img_file_name: "hugpong_member.filename"},
+            {db_has_image: "hugpong_member.has_img"},
+            {db_dbo: database.raw("DATE_FORMAT(`hugpong_member`.`dob`, '%m/%d/%Y')")},
+            {db_dbo_alias: "hugpong_member.dob"},
             {db_voter_name: "vw_voter_pop_merge.voter_name"},
             {db_barangay: "vw_voter_pop_merge.barangay"},
             {db_prec_no: "vw_voter_pop_merge.prec_no"},
             {db_mun_city: "vw_voter_pop_merge.mun_city"},
-            {db_last_official_printed: "summit_member.print_official_since"},
-            {db_last_temporary_printed: "summit_member.print_temporary_since"},
-            {db_updated_image_since: "summit_member.update_image_since"},
-            {db_image_pic_length: database.raw("length(mem_pic)")}
+            {db_last_official_printed: "hugpong_member.print_official_since"},
+            {db_last_temporary_printed: "hugpong_member.print_temporary_since"},
+            {db_updated_image_since: "hugpong_member.update_image_since"}
         )
-            .from('summit_member')
+            .from('hugpong_member')
             .leftJoin(
-                'summit_position',
-                'summit_member.mem_position',
-                'summit_position.summit_pos_id'
+                'summit_member',
+                'hugpong_member.hds_mem_id',
+                'summit_member.sum_mem_id'
             )
             .leftJoin(
                 'vw_voter_pop_merge',
-                'summit_member.mem_id',
+                'hugpong_member.mem_id',
                 'vw_voter_pop_merge.voter_id'
             )
-            .orderBy('summit_member.sum_mem_id', 'desc')
+            .orderBy('hugpong_member.hds_mem_id', 'desc')
 
         const of_body_data = Object
             .entries(req.body)
@@ -221,19 +391,17 @@ exports.pages = function (menu_template, win) {
             const of_splited = String(of_body_data.birthday_range).split("-");
             const mapped = of_splited.map(e => String(e).trim());
 
-            if(mapped.length >= 2)
-            {
-                const start = moment(mapped[0],'MM/DD/YYYY').format('YYYY-MM-DD');
-                const end = moment(mapped[1],'MM/DD/YYYY').format('YYYY-MM-DD');
+            if (mapped.length >= 2) {
+                const start = moment(mapped[0], 'MM/DD/YYYY').format('YYYY-MM-DD');
+                const end = moment(mapped[1], 'MM/DD/YYYY').format('YYYY-MM-DD');
                 const year = moment().format('YYYY');
 
-                of_test.whereRaw(`DATE_FORMAT(summit_member.dob,?) BETWEEN ? AND ?`,[
+                of_test.whereRaw(`DATE_FORMAT(hugpong_member.dob,?) BETWEEN ? AND ?`, [
                     String(year.toString()) + '-%m-%d',
                     start.toString(),
                     end.toString()
                 ])
 
-                console.log(of_test.toString());
             }
 
         }
@@ -256,27 +424,25 @@ exports.pages = function (menu_template, win) {
 
         if (of_body_data.hasOwnProperty("db_contact")) {
 
-            of_test.where('summit_member.contact', 'like', `%${of_body_data.db_contact}%`);
+            of_test.where('hugpong_member.contact', 'like', `%${of_body_data.db_contact}%`);
 
         }
 
 
         if (of_body_data.hasOwnProperty("db_position")) {
 
-            of_test.where('summit_position.position_name', of_body_data.db_position);
+            of_test.where('summit_member.summit_pos', of_body_data.db_position);
 
         }
 
         if (of_body_data.hasOwnProperty("last_pol")) {
-
             if (of_body_data.last_pol == 1) {
-
                 of_test.where(function () {
 
                     this
-                        .whereNull('summit_member.print_official_since')
-                        .orWhere('summit_member.print_official_since', '0000-00-00 00:00:00')
-                        .orWhere('summit_member.print_official_since', '');
+                        .whereNull('hugpong_member.print_official_since')
+                        .orWhere('hugpong_member.print_official_since', '0000-00-00 00:00:00')
+                        .orWhere('hugpong_member.print_official_since', '');
 
                 });
 
@@ -285,9 +451,9 @@ exports.pages = function (menu_template, win) {
                 of_test.where(function () {
 
                     this
-                        .whereNotNull('summit_member.print_official_since')
-                        .whereNot({'summit_member.print_official_since': "0000-00-00 00:00:00"})
-                        .whereNot('summit_member.print_official_since', '');
+                        .whereNotNull('hugpong_member.print_official_since')
+                        .whereNot({'hugpong_member.print_official_since': "0000-00-00 00:00:00"})
+                        .whereNot('hugpong_member.print_official_since', '');
 
                 });
 
@@ -303,9 +469,9 @@ exports.pages = function (menu_template, win) {
                 of_test.where(function () {
 
                     this
-                        .whereNull('summit_member.print_temporary_since')
-                        .orWhere('summit_member.print_temporary_since', '0000-00-00 00:00:00')
-                        .orWhere('summit_member.print_temporary_since', '');
+                        .whereNull('hugpong_member.print_temporary_since')
+                        .orWhere('hugpong_member.print_temporary_since', '0000-00-00 00:00:00')
+                        .orWhere('hugpong_member.print_temporary_since', '');
 
                 });
 
@@ -314,9 +480,9 @@ exports.pages = function (menu_template, win) {
                 of_test.where(function () {
 
                     this
-                        .whereNotNull('summit_member.print_temporary_since')
-                        .whereNot('summit_member.print_temporary_since', '0000-00-00 00:00:00')
-                        .whereNot('summit_member.print_temporary_since', '');
+                        .whereNotNull('hugpong_member.print_temporary_since')
+                        .whereNot('hugpong_member.print_temporary_since', '0000-00-00 00:00:00')
+                        .whereNot('hugpong_member.print_temporary_since', '');
 
                 });
 
@@ -327,10 +493,26 @@ exports.pages = function (menu_template, win) {
 
         if (of_body_data.hasOwnProperty("profile_set")) {
 
-            if (of_body_data.profile_set == 1)
-                of_test.whereNull('summit_member.mem_pic');
-            else
-                of_test.whereNotNull('summit_member.mem_pic');
+            // of_test.leftJoin(
+            //     {'mem_img' : "mem_img-x"},
+            //     'hugpong_member.hds_mem_id',
+            //     'mem_img.hds_mem_id'
+            // );
+            //
+            // of_test.select(
+            //     {db_img_id: "mem_img.hds_img_id"},
+            //     {db_image_pic_length: database.raw("length(mem_img.img)")},
+            //     {db_live_img : "hugpong_member.filename"}
+            //  );
+
+
+            if (of_body_data.profile_set == 1) {
+                of_test.whereNull('hugpong_member.filename');
+                of_test.where('hugpong_member.has_img', false);
+            } else {
+                of_test.where('hugpong_member.has_img', true);
+                of_test.whereNotNull('hugpong_member.filename');
+            }
 
         }
 
@@ -346,8 +528,11 @@ exports.pages = function (menu_template, win) {
 
         const pageOffset = (pageIndex - 1) * pageSize;
 
-        const all_data_query = of_test.clone();
-        all_data_query.count({items_count: 'sum_mem_id'});
+        let all_data_query = of_test.clone();
+
+        all_data_query = database
+            .count({items_count: 1})
+            .from({'that_table': all_data_query});
 
         all_data_query.then(function (respond) {
 
@@ -416,6 +601,6 @@ exports.pages = function (menu_template, win) {
 
 const init = function (win) {
 
-    win.loadURL(`http://localhost:${pjson.server.port}/hive`);
+    win.loadURL(`http://localhost:${env.LOCAL_PORT}/hive`);
 
 }

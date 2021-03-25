@@ -1,0 +1,152 @@
+<div id="update_member_info" class="modal hide fade modal-lg step1" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header bg-green">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+        </button>
+        <h3 id="myModalLabel">Members information</h3>
+    </div>
+    <div class="modal-header bg-sky-blue hide" id="success_update_message">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+        </button>
+        <h3><i class="fa fa-check"></i> &nbsp;
+            Successfully update
+        </h3>
+    </div>
+    <form class="form-horizontal row-fluid" id="update_member_info_form">
+        <input type="hidden" name="hds_id" value="<%= hds_id %>">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="row-fluid" style="padding-left: 33px;">
+
+                    <div id="container_update">
+
+                        <div class="span3">
+                            <div class="img_hover_container" style="width: 81%;margin: 0 AUTO;">
+
+                                <% if (img_file) { %>
+
+                                <img class="image"
+                                     src="<%= img_file %>"
+                                     alt="User Pic">
+
+                                <% } else { %>
+
+                                <img class="image"
+                                     src="/images/default_no_image.png"
+                                     alt="User Pic">
+
+                                <% } %>
+
+                                <div class="overlay">
+                                    <div class="text">Click to change photo</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span8">
+                            <h3><%= voter_name %></h3>
+                            <table class="table table-condensed table-responsive table-user-information">
+                                <tbody>
+                                <tr>
+                                    <td><b>GENDER</b></td>
+                                    <td>
+                                        <select class="form-control" name="gender" required>
+                                            <% if(gender==0) { %>
+
+                                            <option></option>
+                                            <option value="0" selected>MALE</option>
+                                            <option value="1">FEMALE</option>
+
+                                            <% } else if(gender==1) { %>
+
+                                            <option></option>
+                                            <option value="0">MALE</option>
+                                            <option value="1" selected>FEMALE</option>
+
+                                            <% } else { %>
+
+                                            <option selected></option>
+                                            <option value="0">MALE</option>
+                                            <option value="1">FEMALE</option>
+
+                                            <% } %>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>BIRTHDAY</b></td>
+                                    <td><input type="date" name="birthday" required class="form-control" value="<%=db_dbo_alias1%>"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>MUNICIPALITY</b></td>
+                                    <td><input class="form-control" value="<%= mun_city %>" disabled readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><b>BARANGAY</b></td>
+                                    <td><input class="form-control" value="<%= barangay %>" disabled readonly></td>
+                                </tr>
+                                <tr>
+                                    <td><b>PUROK</b></td>
+                                    <td><input class="form-control" value=" <%= address %>"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>CONTACT NO.</b></td>
+                                    <td><input class="form-control" value=" <%= contact %>"></td>
+                                </tr>
+                                <tr>
+                                    <td><b>VOTER ID</b></td>
+                                    <td><%= voter_id %></td>
+                                </tr>
+                                <tr>
+                                    <td><b>PRECINT NO.</b></td>
+                                    <td><%= prec_no %></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>PRINT OFFICIAL SINCE</b></td>
+                                    <td><%= print_official_since %></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>PRINT TEMPORARY SINCE</b></td>
+                                    <td><%= print_temporary_since %></td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div  id="container_image_cropper" style="left: -27px;">
+                        <div class="span12">
+                            <div style="width:300px;height: 300px; margin: 0 auto">
+                                <img id="container_croppie"
+                                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100">
+                            </div>
+
+                            <br/>
+
+                            <div class="text-center col" id="cropper_action">
+                                <button type="button" class="btn btn-info save">Save</button>
+                                <button type="button" class="btn btn-warning cancel">Cancel</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary" id="modal_save" >Save changes</button>
+        </div>
+
+
+    </form>
+</div>

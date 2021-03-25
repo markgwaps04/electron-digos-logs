@@ -58,6 +58,7 @@ module.exports.generate_id_front = function (params) {
                         context.fillText(params.middlename, 240, 280);
                         context.fillText(params.gender, 240, 326);
                         context.fillText(params.birthdate, 240, 375);
+
                         let of_address = text_newline_generator(params.address, 24);
 
                         if (params.address && String(params.address).length < 24) {
@@ -77,7 +78,11 @@ module.exports.generate_id_front = function (params) {
 
                         context.fillText(params.barangay, 240, 522);
 
-
+                        if(!params.qr_code)
+                        {
+                            alert(`Not valid data to proccess at name:  ${params.surname}, ${params.firstname}` );
+                            throw new Error("ERROR PROCESSING");
+                        }
                         var qr_img_string = qr.imageSync(params.qr_code,
                             {
                                 type: 'png',

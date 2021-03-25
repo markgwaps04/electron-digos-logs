@@ -1,6 +1,9 @@
 var pjson = require('../../package.json');
 const { port } = require("../../main.js");
 const electron = require("electron");
+const dotenv = require('dotenv').config();
+const process = require("process");
+const env = process.env;
 
 const app = electron.app;
 
@@ -26,6 +29,6 @@ exports.pages = function(menu_template, win) {
 
 const init = function(win) {
 
-	win.loadURL(`http://localhost:${pjson.server.port}/cswdo`);
+	win.loadURL(`http://localhost:${env.LOCAL_PORT}/cswdo`);
 
 }

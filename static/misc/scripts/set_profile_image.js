@@ -1,285 +1,392 @@
 const path = require("path");
 const misc = require("electron-dir-solved-ict-portal");
+
 const blackTheme = require(path.join
-	(
-		misc.parent_dir,
-		"/static/plugins/tui-image-editor/black-theme.js"
-	)
+    (
+        misc.parent_dir,
+        "/static/plugins/tui-image-editor/black-theme.js"
+    )
 );
 
 
-
-const { generate_id_front } = require(path.join
-	(
-		misc.parent_dir,
-		"/static/misc/scripts/hive_global.js"
-	)
+const {generate_id_front} = require(path.join
+    (
+        misc.parent_dir,
+        "/static/misc/scripts/hive_global.js"
+    )
 );
 
+const hasImageOf =  function(item) {
+
+    if (!item.db_has_image)
+        return false;
+
+    if (!item.db_img_file_name)
+        return false;
+
+    return true;
+
+};
 
 function delay(callback, ms) {
-	var timer = 0;
-	return function() {
-		var context = this, args = arguments;
-		clearTimeout(timer);
-		timer = setTimeout(function() {
-			callback.apply(context, args);
-		}, ms || 0
-		);
-	};
+    var timer = 0;
+    return function () {
+        var context = this, args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            callback.apply(context, args);
+        }, ms || 0
+        );
+    };
 }
 
+function dataURLtoFile(dataurl, filename) {
 
-(function(jq) {
-	
-	const main_table = $("#jsGrid")
+	var arr = dataurl.split(','),
+		mime = arr[0].match(/:(.*?);/)[1],
+		bstr = atob(arr[1]),
+		n = bstr.length,
+		u8arr = new Uint8Array(n);
 
-	var originalFilterTemplate = jsGrid.fields.text.prototype.filterTemplate;
-	jsGrid.fields.text.prototype.filterTemplate = function() {
-
-		var grid = this._grid;
-		var $result = originalFilterTemplate.call(this);
-
-		$result.on("keyup", delay
-			(function(e) {
-				grid.search();
-			}, 500
-			)
-		);
-
-		return $result;
-
+	while(n--){
+		u8arr[n] = bstr.charCodeAt(n);
 	}
 
-	const on_submit_view_id = function(items, param_form) {
+	return new File([u8arr], filename, {type:mime});
+}
 
-		const that_form = param_form.serialize_form();
+(function (jq) {
 
-		if (!that_form.hasOwnProperty("gender") && !that_form.gender)
-			return alert('Please select gender');
+        const main_table = $("#jsGrid")
 
-		const form = document.getElementById("view_id_form");
-		const form_data = new FormData(form);
+        var originalFilterTemplate = jsGrid.fields.text.prototype.filterTemplate;
+        jsGrid.fields.text.prototype.filterTemplate = function () {
 
-		form_data.append("id", items.db_id);
+            var grid = this._grid;
+            var $result = originalFilterTemplate.call(this);
 
-		const misc = jq.ajax({
-			url: "/hive/profile_img/set",
-			contentType: false,
-			processData: false,
-			cache: false,
-			method: "POST",
-			data: form_data
-		});
+            $result.on("keyup", delay
+                (function (e) {
+                        grid.search();
+                    }, 500
+                )
+            );
 
-		misc.then(function() {
-			alert('Update Successfully!!');
-			main_table.jsGrid("loadData");
-		});
+            return $result;
 
-		misc.error(function() {
-			alert('Error occured!!!');
-			debugger;
-		});
+        }
+
+        const misc = jq.ajax({
+            url: "/hive/misc",
+            method: "POST",
+            dataType: "json",
+            error : function(e) {
+                alert("Error: No Internet Connection");
+            }
+        });
+
+        misc.then(function (misc_desc) {
+
+            const jsgrid_no_data = jq("#jsgrid_no_data").html()
+
+            main_table.jsGrid(
+                {
+                    width: "100%",
+                    height: "auto",
+                    pageSize: 10,
+                    pageCount: 5,
+                    pageButtonCount: 5,
+                    filtering: true,
+                    sorting: true,
+                    paging: true,
+                    inserting: false,
+                    editing: false,
+                    autoload: true,
+                    pageLoading: true,
+                    loadIndication: true,
+                    loadIndicationDelay: 500,
+                    loadMessage: "Getting members list ...",
+                    noDataContent: jsgrid_no_data,
+                    data: [],
+                    fields: [
+                        {
+                            title: "NAME",
+                            name: "db_voter_name",
+                            type: "text",
+                            width: 200
+                        },
+                        {
+                            title: "PREC NO",
+                            name: "db_prec_no",
+                            align: "right",
+                            type: "text",
+                            width: 50
+                        },
+                        {
+                            title: "BARANGAY",
+                            name: "db_barangay",
+                            type: "select",
+                            valueField: "db_name",
+                            textField: "db_name",
+                            align: "left",
+                            items: [{db_name: ""}].concat(misc_desc.list_brgy),
+                            width: 100,
+                            itemTemplate: function (value, item) {
+                                return item[this.name];
+                            }
+                        },
+                        {
+                            title: "POSITION",
+                            name: "db_position",
+                            type: "select",
+                            valueField: "db_name",
+                            textField: "db_name",
+                            align: "left",
+                            items: [{db_name: ""}].concat(misc_desc.lis_post),
+                            width: 100,
+                            itemTemplate: function (value, item) {
+                                return item[this.name];
+                            }
+                        },
+                        {
+                            title: "Is profile set ?",
+                            name: "profile_set",
+                            type: "select",
+                            valueField: "value",
+                            textField: "name",
+                            items: [
+                                {name: ""},
+                                {name: "NOT SET", value: 1},
+                                {name: "ALREADY SET", value: 2}
+                            ],
+                            width: 100,
+                            itemTemplate: function (value, item) {
+
+                                const hasImage =  hasImageOf(item);
+                                if(!hasImage) return;
+
+                                const badge = jq("<b>");
+                                badge.addClass("label bg-success");
+                                badge.text("ALREADY SET");
+                                return badge;
+
+                            }
+                        },
+                        {
+                            type: "control",
+                            editButton: false,
+                            deleteButton: false,
+                            width: 100,
+                            itemTemplate: function (value, item) {
+
+                                const button = jq("<button>");
+                                button.addClass("btn btn-success");
+                                button.text("View");
+                                button.click(function () {
+                                    on_click_view_id(item);
+                                });
+
+                                return button;
+
+                            }
+                        }
+                    ],
+
+                    controller: {
+                        loadData: function (filter) {
+
+                            const load = jq.ajax(
+                                {
+                                    url: "/hive/summit_members",
+                                    method: "POST",
+                                    data: filter,
+                                    error : function(e) {
+                                        return alert("Error: No Internet Connection");
+                                    }
+                                }
+                            );
+
+                            return load;
+
+                        }
+                    }
+
+                }
+            );
+
+        });
+
+        const overlay_main = jq(".overlay-spinner");
+
+        function on_click_view_id(item) {
+
+            const send = jq.ajax({
+                url: "/hive/view/members_info",
+                method: "POST",
+                data: {id: item.db_id},
+                beforeSend: e => overlay_main.addClass("show"),
+                complete: e => overlay_main.removeClass("show"),
+                error : function(e) {
+                    alert("Error: could not load resource");
+                    this.complete(e);
+                }
+            });
 
 
-	}
+            send.done(function (result) {
 
-	jQuery("#profile_img").on("change", async function() {
-		const index = this.files[0];
-		var reader = new FileReader();
-		reader.onload = function() {
-			const arrayBuffer = this.result;
-			const base64value = Buffer.from(arrayBuffer).toString("base64");
-			const of_obj = { data: base64value, mimitype: index.type }
-			view_id(of_obj);
-		}
-		reader.readAsArrayBuffer(index);
+                const modal = jQuery.parseHTML(result);
+                const open_modal = jq(modal)
+                    .modal("show")
+                    .on('hidden.bs.modal', function () {
+                        jq(modal).remove();
+                        jq(".modal-backdrop").remove();
+                    });
 
-		jq("#modal_save").removeAttr("disabled");
-
-	});
-
-	const view_id = function(item, callback = new Function) {
-
-		const params = {
-			surname: item.db_lname,
-			firstname: item.db_fname,
-			middlename: item.db_mname,
-			gender: item.db_gender == 0 ? "M" : "F",
-			birthdate: item.db_dbo,
-			address: item.db_address,
-			barangay: item.db_barangay,
-			precinct_no: item.db_prec_no,
-			qr_code: item.db_qr_code,
-			img_pic: item.db_mem_pic
-		};
-
-		const front = generate_id_front(params);
-
-		front.then(function(front_data) {
-			jQuery("#id_card").attr("src", front_data);
-			return callback();
-		});
-
-	}
+                let cropperImg = null;
 
 
-	const on_click_view_id = function(item) {
+                open_modal
+					.find("form")
+					.off("submit")
+					.on("submit", function(e) {
+						e.preventDefault();
 
-		jq("#modal_save").attr("disabled", "true");
-		document.getElementById('view_id_form').reset();
+						const data = jq(this).serialize_form();
+						const formData = new FormData();
 
-		view_id(item, function() {
-			jQuery("#update_id_modal").modal("show");
-		});
-
-		jq("form#view_id_form").off("submit").on("submit", function(e) {
-			e.preventDefault();
-			return on_submit_view_id(item, jQuery(this));
-		})
+						const image = open_modal
+							.find(".img_hover_container .image");
 
 
-
-	}
-
-
-	const misc = jq.ajax(
-		{
-			url: "/hive/misc",
-			method: "POST"
-		}
-	);
-
-	misc.then(function(misc_desc) {
-
-		const jsgrid_no_data = jq("#jsgrid_no_data").html()
-
-		main_table.jsGrid(
-			{
-				width: "100%",
-				height: "auto",
-				pageSize: 10,
-				pageCount: 5,
-				pageButtonCount: 5,
-				filtering: true,
-				sorting: true,
-				paging: true,
-				inserting: false,
-				editing: false,
-				autoload: true,
-				pageLoading: true,
-				loadIndication: true,
-				loadIndicationDelay: 500,
-				loadMessage: "Getting members list ...",
-				noDataContent: jsgrid_no_data,
-				data: [],
-				fields: [
-					{
-						title: "NAME",
-						name: "db_voter_name",
-						type: "text",
-						width: 200
-					},
-					{
-						title: "PREC NO",
-						name: "db_prec_no",
-						align: "right",
-						type: "text",
-						width: 50
-					},
-					{
-						title: "BARANGAY",
-						name: "db_barangay",
-						type: "select",
-						valueField: "db_name",
-						textField: "db_name",
-						align: "left",
-						items: [{ db_name: "" }].concat(misc_desc.list_brgy),
-						width: 100,
-						itemTemplate: function(value, item) {
-							return item[this.name];
+						if(image.is("[changed]"))
+						{
+							const file_image = dataURLtoFile(image.attr("src"));
+							formData.append('image', file_image);
 						}
-					},
-					{
-						title: "POSITION",
-						name: "db_position",
-						type: "select",
-						valueField: "db_name",
-						textField: "db_name",
-						align: "left",
-						items: [{ db_name: "" }].concat(misc_desc.lis_post),
-						width: 100,
-						itemTemplate: function(value, item) {
-							return item[this.name];
-						}
-					},
-					{
-						title: "Is profile set ?",
-						name: "profile_set",
-						type: "select",
-						valueField: "value",
-						textField: "name",
-						items: [
-							{ name: "" },
-							{ name: "NOT SET", value: 1 },
-							{ name: "ALREADY SET", value: 2 }
-						],
-						width: 100,
-						itemTemplate: function(value, item) {
-							if (!item.db_mem_pic)
-								return;
-							const badge = jq("<b>");
-							badge.addClass("label orange");
-							badge.text("ALREADY SET");
-							return badge;
-						}
-					},
-					{
-						type: "control",
-						editButton: false,
-						deleteButton: false,
-						width: 100,
-						itemTemplate: function(value, item) {
 
-							const button = jq("<button>");
-							button.addClass("btn btn-success");
-							button.text("View");
-							button.click(function() {
-								on_click_view_id(item);
+						Object
+							.keys(data)
+							.forEach(function(item) {
+								formData.append(item, data[item]);
 							});
 
-							return button;
+						const send = jq.ajax({
+							url: '/hive/profile_img/set',
+							data: formData,
+							type: 'POST',
+							contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+							processData: false, // NEEDED, DON'T OMIT THIS
+							beforeSend: e => overlay_main.addClass("show"),
+							complete: e => overlay_main.removeClass("show")
+						});
 
-						}
-					}
-				],
+						send.done(function () {
 
-				controller: {
-					loadData: function(filter) {
+						    main_table.jsGrid("loadData");
+                            open_modal.find("#success_update_message").removeClass("hide");
 
-						const load = jq.ajax(
-							{
-								url: "/hive/summit_members",
-								method: "POST",
-								data: filter
-							}
-						);
+                            setTimeout(function() {
+                                open_modal.find("#success_update_message").addClass("hide");
+                            },5000);
 
-						return load;
+                        });
 
-					}
-				}
+						send.error(function (error) {
+						    alert('Error occured: ' + error.statusText);
+						    throw new Error(error.statusText);
+                        })
 
-			}
-		);
+					});
 
-	}
-	);
+                open_modal.find(".img_hover_container")
+                    .off("click")
+                    .on("click", function () {
+
+                        let input = document.createElement('input');
+                        input.type = 'file';
+                        input.accept = "image/*";
+                        input.onchange = async function () {
+
+                            const files = this.files;
+                            if (!files.length) return;
+
+                            const base64image = await new Promise((res, rej) => {
+                                const reader = new FileReader();
+                                reader.onload = e => res(e.target.result);
+                                reader.onerror = e => rej(e);
+                                reader.readAsDataURL(files[0]);
+                            });
+
+                            const cropper_container = open_modal.find("#container_croppie");
+                            cropper_container.attr("src", base64image);
+                            const of_container_image = cropper_container[0];
+
+                            if (cropperImg) {
+                                cropperImg.destroy();
+                                cropperImg = "";
+                            }
+
+                            const cropper = new Cropper(of_container_image, {
+                                minContainerWidth: 200,
+                                minContainerHeight: 200,
+                                aspectRatio: 2 / 2,
+                                minCropBoxWidth: 100,
+                                minCropBoxHeight: 100,
+                            });
+
+                            cropperImg = cropper;
+
+							open_modal.addClass("step2");
+							open_modal.removeClass("step1");
+
+                            open_modal
+                                .find("#cropper_action .save")
+                                .off("click")
+                                .on("click", function () {
+
+                                    const canvas = cropper.getCroppedCanvas();
+                                    const base64image_canvas = canvas.toDataURL();
+                                    open_modal
+										.find(".img_hover_container .image")
+										.attr("src", base64image_canvas)
+										.attr("changed", true);
+
+                                    jq("#container_update").removeClass("hide");
+                                    jq("#container_image_cropper").addClass("hide");
+
+									open_modal.addClass("step1");
+									open_modal.removeClass("step2");
+
+                                })
+
+                            open_modal
+                                .find("#cropper_action .cancel")
+                                .off("click")
+                                .on("click", function () {
+
+									open_modal.addClass("step1");
+									open_modal.removeClass("step2");
+
+                                })
+
+
+                        };
+
+                        input.click();
+
+
+                    });
 
 
 
-}
+
+            });
+
+        }
+
+
+    }
 )(jQuery)
 
 

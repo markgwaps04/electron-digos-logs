@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <%- include('../include/style.html'); %>
+    <link type="text/css" href="/plugins/jquery.steps/jquery.steps.css" rel="stylesheet">
+    <link type="text/css" href="/plugins/fSelect/fSelect.css" rel="stylesheet">
+    <style>
+        .jsgrid-control-field input {
+            display: inline-block !important;
+        }
+        .fs-wrap
+        {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="content-ui">
+
+    <%- include('../include/navbar.html'); %>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="span3">
+                    <%- include('../include/sidebar/sidebar_hive.html'); %>
+                    <!--/.sidebar-->
+                </div>
+
+                <div class="span9">
+
+                    <div class="content">
+
+                        <div class="module fullscreen-container">
+
+                            <div class="module-head bg-green">
+                                <h3>SEND SMS</h3>
+                                <div class="right-action hide_mobile">
+                                    <button type="submit" class="btn btn-large btn-zoom-in">
+                                        <b>Zoom In</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-zoom-reset">
+                                        <b>Reset Zoom</b>
+                                    </button>
+                                    <button type="submit" class="btn btn-large btn-fullscreen">
+                                        <b>Full screen</b>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="module-body fullscreen-content">
+
+                                <div class="actions">
+                                </div>
+
+
+                                <div id="jsGrid"></div>
+
+                            </div>
+
+                            <!-- Modal -->
+                            <div id="add_group" class="modal hide fade modal-lg" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-header bg-green">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                    </button>
+                                    <h3 id="myModalLabel">Add Group</h3>
+                                </div>
+                                <div class="modal-body" style="max-height: max-content;">
+
+                                    <div id="example-basic">
+                                        <h3>Group description</h3>
+                                        <section style="position: relative; padding: 0%; width: 100%">
+                                            <div class="module">
+                                                <div class="module-body">
+                                                    <form class="form-horizontal row-fluid" data-parsley-validate id="group_description">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="birthday_range">
+                                                                Group name
+                                                            </label>
+                                                            <div class="controls">
+                                                                <input type="text" name="name"
+                                                                       placeholder="Input name of group" required
+                                                                       class="span8">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                Send SMS start from
+                                                            </label>
+                                                            <div class="controls">
+
+                                                                <input type="date" name="date_start"
+                                                                       placeholder="Input name of group" required
+                                                                       class="span8">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                Message
+                                                            </label>
+                                                            <div class="controls">
+                                                                <textarea required cols="7" rows="5" class="span8"></textarea>
+                                                            </div>
+                                                            <span class="help-inline">
+                                                            </span>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <h3>Filter/Search</h3>
+                                        <section style="position: relative; padding: 0%; width: 100%">
+                                            <div class="module">
+                                                <div class="module-body">
+                                                    <form class="form-horizontal row-fluid" id="filter_search">
+                                                        <div class="control-group">
+                                                            <label class="control-label" for="birthday_range">
+                                                                Birth date
+                                                            </label>
+                                                            <div class="controls">
+                                                                <input type="text" name="birthday_range" id="birthday_range"
+                                                                       placeholder="Select range of date"
+                                                                       class="span8">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                Exclude group
+                                                            </label>
+                                                            <div class="controls">
+
+                                                                <select style="display: none" class="multiple_select span8" multiple="multiple">
+                                                                    <option value="cp">
+                                                                        <small>
+                                                                            Members that has groups
+                                                                        </small>
+                                                                    </option>
+                                                                    <option value="cs">C#</option>
+                                                                    <option value="oc">Object C</option>
+                                                                    <option value="c">C</option>
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                Limit
+                                                            </label>
+                                                            <div class="controls">
+                                                                <input type="number"
+                                                                       name="page_limit"
+                                                                       placeholder="Input number"
+                                                                       data-original-title="" class="span8 tip"
+                                                                       value="10">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="control-group">
+                                                            <label class="control-label">
+                                                                Select type
+                                                            </label>
+                                                            <div class="controls">
+                                                                <label class="btn btn-default">
+                                                                    <span>Select all</span>
+                                                                    <input name="select_all" type="checkbox" class="badgebox">
+                                                                    <span class="badge">✓</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <h3>Members</h3>
+                                        <section style="position: relative; padding: 0%; width: 100%">
+                                            <div id="jsGrid-add-members"></div>
+                                        </section>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div><!--/.content-->
+                </div><!--/.span9-->
+            </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <%- include('../include/footer.html'); %>
+
+</div>
+
+<%- include('../include/scripts.html'); %>
+
+
+<script id="jsgrid_no_data_main_table" type="text/template">
+
+    <div style="padding:20px">
+        <h4 style="margin-bottom:2px">Nothing to show</h4>
+    </div>
+
+</script>
+
+
+<script type="text/template">
+
+    jq.fn.barangays = [];
+
+</script>
+<script src="/plugins/fSelect/fSelect.js" type="text/javascript"></script>
+<script src="/plugins/jquery.steps/jquery.steps.js" type="text/javascript"></script>
+<script src="/misc/hive/sms/sms.js" type="text/javascript"></script>
+<script src="/misc/hive/sms/add_group.js" type="text/javascript"></script>
+
+</body>

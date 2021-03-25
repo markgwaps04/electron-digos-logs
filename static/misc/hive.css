@@ -1,7 +1,11 @@
-.overlay-spinner.overlay-fixed
-{
+.overlay-spinner.overlay-fixed {
     position: fixed !important;
 }
+
+.overlay-spinner {
+    z-index: 99999999999999999 !important;
+}
+
 .dropdown-menu button {
 
     display: block;
@@ -11,174 +15,327 @@
     background: inherit;
 
 }
-.widget-menu>li ul li 
-{
-	background-color: white;
+
+.widget-menu > li ul li {
+    background-color: white;
 }
 
-.daterangepicker
-{
+.daterangepicker {
     min-width: 47%;
 }
-.daterangepicker .drp-calendar.right
-{
+
+ul.dropdown-menu.custom button {
+    color: #000000b5;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.daterangepicker .drp-calendar.right {
     margin-left: 41px;
 }
-.ui-datepicker-current-day .ui-state-active { background: #000000; }
+
+.ui-datepicker-current-day .ui-state-active {
+    background: #000000;
+}
 
 .add-on.cus {
-	text-shadow : none !important;
+    text-shadow: none !important;
 }
 
 .dropdown-menu button:hover {
     background: #3cbc8d52;
 }
-.label.bg-success
-{
-	background: #36a97f;
+
+.label.bg-success {
+    background: #36a97f;
 }
+
 .widget-menu li.active a {
-        background-color: #28262c;
-        color: #fafafa;
-    }
-    .widget-menu li.active {
-        border-left: 10px solid #3ac47d;
-    }
-    .center {
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    background-color: #28262c;
+    color: #fafafa;
+}
 
-    input[type='file'] {
-        height: 44px;
+.widget-menu li.active {
+    border-left: 10px solid #3ac47d;
+}
+
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type='file'] {
+    height: 44px;
+}
+
+.bg-green, .bg-success {
+    background-color: #3ac47d !important;
+}
+
+.bg-success {
+    color: #fff
+}
+
+.module-head:not(.cus) {
+    padding: 22px 15px
+}
+
+.module-head h3 {
+    font-size: 22px;
+    display: inline-block;
+}
+
+.right-action {
+    float: right
+}
+
+.control-label, .controls input {
+    font-size: 16px
+}
+
+.docs-example:after {
+    display: none
+}
+
+.docs-example {
+    padding: 19px 19px 14px;
+    margin-bottom: 18px;
+}
+
+select {
+    color: #777 !important;
+    font-size: 16px;
+}
+
+select option:not([disabled]) {
+    color: black !important;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 995px) {
+    .hide_mobile {
+        display: none;
     }
-
-    .bg-green, .bg-success {
-        background-color: #3ac47d !important;
-    }
-
-    .bg-success {
-        color: #fff
-    }
-
-    .module-head:not(.cus) {
-        padding: 22px 15px
-    }
-
-    .module-head h3 {
-        font-size: 22px;
-        display: inline-block;
-    }
-
-    .right-action {
-        float: right
-    }
-
-    .control-label, .controls input {
-        font-size: 16px
-    }
-
-    .docs-example:after {
-        display: none
-    }
-
-    .docs-example {
-        padding: 19px 19px 14px;
-        margin-bottom: 18px;
-    }
-
-    select {
-        color: #777 !important;
-        font-size: 16px;
-    }
-
-        select option:not([disabled]) {
-            color: black !important;
-            font-size: 18px;
-        }
-
-    @media only screen and (max-width: 995px) {
-        .hide_mobile {
-            display: none;
-        }
-    }
-
-
-    .fullscreen .module-body {
-        height: 629px;
-        overflow-y: scroll;
-    }
-
-    .module-login input {
-        height: 40px
-    }
-
-    .nav_action.nav > li > a {
-        text-decoration: none;
-        text-shadow: none;
-        font-weight: 900;
-        color: black;
-    }
-
-    .main_container {
-        position: relative;
-    }
+}
 
 
-    .modal-lg {
-        width: 80%;
-        margin: 0 auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-    .no-width {
-        width: 0% !important;
-    }
-    .info_label
-    {
-        width: 100px;
-        display: inline-block;
-    }
-    .actions
-    {
-        margin-bottom : 5px;
-    }
-    form.cus .input-prepend .add-on
-    {
-        text-shadow: none;
-    }
+.fullscreen .module-body {
+    height: 629px;
+    overflow-y: scroll;
+}
 
-    /* Hiding the checkbox, but allowing it to be focused */
-    .badgebox {
-        opacity: 0;
-    }
+.module-login input {
+    height: 40px
+}
 
-    .pdfobject-container {
-        width: 100%;
-        height: 70vh;
-    }
+.nav_action.nav > li > a {
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 900;
+    color: black;
+}
 
-        .badgebox + .badge {
-            /* Move the check mark away when unchecked */
-            text-indent: -999999px;
-            /* Makes the badge's width stay the same checked and unchecked */
-            width: 27px;
-            top: 0px;
-        }
+.main_container {
+    position: relative;
+}
 
-        .badgebox:focus + .badge {
-            /* Set something to make the badge looks focused */
-            /* This really depends on the application, in my case it was: */
-            /* Adding a light border */
-            box-shadow: inset 0px 0px 5px;
-            /* Taking the difference out of the padding */
-        }
 
-        .badgebox:checked + .badge {
-            /* Move the check mark back when checked */
-            text-indent: 0;
-        }
+.modal-lg {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 
-@font-face { font-family: "OCR A EXTENDED"; src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot"); /* IE9*/ src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff2") format("woff2"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff") format("woff"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.svg#OCR A Extended") format("svg"); /* iOS 4.1- */ }
+.no-width {
+    width: 0% !important;
+}
+
+.hide {
+    display: none;
+}
+
+.info_label {
+    width: 100px;
+    display: inline-block;
+}
+
+.actions {
+    margin-bottom: 5px;
+}
+
+form.cus .input-prepend .add-on {
+    text-shadow: none;
+}
+
+/* Hiding the checkbox, but allowing it to be focused */
+.badgebox {
+    opacity: 0;
+}
+
+.pdfobject-container {
+    width: 100%;
+    height: 70vh;
+}
+
+.badgebox + .badge {
+    /* Move the check mark away when unchecked */
+    text-indent: -999999px;
+    /* Makes the badge's width stay the same checked and unchecked */
+    width: 27px;
+    top: 0px;
+}
+
+.badgebox:focus + .badge {
+    /* Set something to make the badge looks focused */
+    /* This really depends on the application, in my case it was: */
+    /* Adding a light border */
+    box-shadow: inset 0px 0px 5px;
+    /* Taking the difference out of the padding */
+}
+
+.badgebox:checked + .badge {
+    /* Move the check mark back when checked */
+    text-indent: 0;
+}
+
+@font-face {
+    font-family: "OCR A EXTENDED";
+    src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot"); /* IE9*/
+    src: url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff2") format("woff2"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.woff") format("woff"), /* chrome、firefox */ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url("fonts/OCR/fd6fa80f1e3345834599de891cca3f4c.svg#OCR A Extended") format("svg"); /* iOS 4.1- */
+}
+
+
+//Reusing bootstrap 3 panel CSS
+                      .panel {
+                          background-color: #FFFFFF;
+                          border: 1px solid rgba(0, 0, 0, 0);
+                          border-radius: 4px 4px 4px 4px;
+                          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+                          margin-bottom: 20px;
+                      }
+
+.panel-primary {
+    border-color: #428BCA;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #428BCA;
+    border-color: #428BCA;
+    color: #FFFFFF;
+}
+
+.panel-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+}
+
+.panel-title {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.panel-body:before, .panel-body:after {
+    content: " ";
+    display: table;
+}
+
+.panel-body:before, .panel-body:after {
+    content: " ";
+    display: table;
+}
+
+.panel-body:after {
+    clear: both;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-footer {
+    background-color: #F5F5F5;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #DDDDDD;
+    padding: 10px 15px;
+}
+
+
+  .user-row {
+      margin-bottom: 14px;
+  }
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+
+.img_hover_container {
+    position: relative;
+    width: 50%;
+    cursor: pointer;
+}
+
+.img_hover_container .image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.img_hover_container .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+
+}
+
+.img_hover_container:hover .overlay {
+    opacity: 0.8;
+}
+
+.img_hover_container .text {
+    color: white;
+    font-size: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

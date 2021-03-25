@@ -3,3 +3,6 @@
 /nbproject/private/
 /nbproject
 /node_modules
+.env
+dev-app-update.yml
+dev-app-update__.yml

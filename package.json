@@ -1,6 +1,6 @@
 {
   "name": "ICT_PORTAL",
-  "version": "1.1.4",
+  "version": "1.2.4",
   "main": "main.js",
   "author": "marklibres345@gmail.com",
   "description": "ICT PORTAL OF CITY GOVERNMENT OF DIGOS",
@@ -8,27 +8,35 @@
     "port": 11337
   },
   "dependencies": {
+    "@linways/table-to-excel": "^1.0.4",
     "body-parser": "^1.19.0",
     "consolidate": "^0.16.0",
+    "croppie": "^2.6.5",
     "daterangepicker": "^3.1.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "electron-dir-solved-ict-portal": "^1.0.7",
     "electron-log": "^4.3.0",
+    "electron-store": "^7.0.2",
     "electron-updater": "^4.3.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
+    "file-saver": "^2.0.5",
     "html-pdf": "^2.2.0",
     "html2canvas": "^1.0.0-rc.7",
+    "is-port-reachable": "^3.0.0",
     "jquery": "^3.5.1",
     "knex": "^0.21.12",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "mysql2": "^2.2.5",
+    "parsleyjs": "^2.9.2",
     "pdfjs-dist": "^2.5.207",
     "pdfobject": "^2.2.4",
     "puppeteer": "^5.5.0",
-    "qr-image": "^3.2.0"
+    "qr-image": "^3.2.0",
+    "xlsx": "^0.16.9"
   },
   "repository": {
     "type": "git",
@@ -41,8 +49,9 @@
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
     "release": "build",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "build": "electron-builder build --win --publish always",
+    "deploy": "electron-builder build --win --publish always",
+    "production": "NODE_ENV=local electron index.js"
   },
   "devDependencies": {
     "electron": "^11.0.3",
@@ -52,7 +61,7 @@
     "publish": [
       {
         "provider": "github",
-        "token": "17e050725081f8ebf9d2406a49c1924581ffd8e0"
+        "token": "1710f5a53ec1fbf1bc06c9d3d5f7e883b4412d0b"
       }
     ],
     "win": {

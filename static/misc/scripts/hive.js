@@ -17,6 +17,8 @@ const { generate_id_front } = require(path.join(
     "/static/misc/scripts/hive_global.js"
 ));
 
+const OfCache = {};
+
 function delay(callback, ms) {
     var timer = 0;
     return function () {
@@ -27,6 +29,18 @@ function delay(callback, ms) {
         }, ms || 0);
     };
 }
+
+const hasImageOf =  function(item) {
+
+    if (!item.db_has_image)
+        return false;
+
+    if (!item.db_img_file_name)
+        return false;
+
+    return true;
+
+};
 
 
 (function (jq) {
@@ -47,7 +61,10 @@ function delay(callback, ms) {
 
     const misc = jq.ajax({
         url: "/hive/misc",
-        method: "POST"
+        method: "POST",
+        error : function(e) {
+            alert("Error: No Internet Connection");
+        }
     });
 
     misc.then(function (misc_desc) {
@@ -75,7 +92,6 @@ function delay(callback, ms) {
         const main_table = $("#jsGrid").jsGrid({
             width: "100%",
             height: "auto",
-
             filtering: false,
             pageCount : 5, pageCount : 5,
             sorting: false,
@@ -83,15 +99,13 @@ function delay(callback, ms) {
             inserting: false,
             editing: false,
             noDataContent: jsgrid_no_data_main_table,
-
             data: [],
             onItemInserting: function (args, data) {
-				
+
                 const already_added_data = args.grid.data;
                 const group_by_db_id = _.groupBy(already_added_data, "db_id");
                 const is_already_exists = group_by_db_id.hasOwnProperty(args.item.db_id);
 
-				
                 if (is_already_exists) {
                     args.cancel = true;
                     return alert('The selected row is already exists');
@@ -104,20 +118,64 @@ function delay(callback, ms) {
 				const badge = jq("<b>");
 				badge.addClass("label bg-success");
 				badge.text("ALREADY SET");
+
+				const item = args.item;
+
+                const hasImage =  hasImageOf(item);
+                const has_image_cache = OfCache.hasOwnProperty(item.db_id);
+
+                if(has_image_cache)
+                {
+                    const cache_properties = OfCache[item.db_id];
+
+                    if(cache_properties.is_base64)
+                    {
+                        args.item.db_mem_pic = cache_properties.data;
+                        args.item.is_ready = true;
+                        args.item.pending_element.replaceWith(badge);
+                    }
+
+                    const base64image = new Buffer(cache_properties.data).toString();
+                    item.db_mem_pic = cache_properties.data;
+                    item.is_ready = true;
+
+                }
+
+                if(hasImage && !has_image_cache)
+                {
+                    const load_misc = jQuery.ajax({
+                        url : "/hive/get_image",
+                        method : "POST",
+                        data: { "db_hds_id" : item.db_id},
+                        dataType : "json"
+                    });
+
+                    load_misc.done(function(misc) {
+
+                        item.db_mem_pic = misc[0].db_mem_pic;
+                        item.is_img_base64 = Boolean(misc[0].is_img_base64);
+
+                        OfCache[item.db_id] = {
+                            data : item.db_mem_pic,
+                            is_base64 : item.is_img_base64
+                        }
+
+                        item.is_ready = true;
+
+                        args.item.pending_element.replaceWith(badge);
+
+                        if(item.is_img_base64) return;
+
+                        const base64image = new Buffer(misc[0].db_mem_pic.data).toString();
+
+                        args.item.db_mem_pic = base64image;
+                        args.item.is_ready = true;
+
+                    });
+
+                }
 				
-				const load_misc = jQuery.ajax({
-					url : "/hive/get_image",
-					method : "POST",
-					data: { "db_id" : args.item.db_id},
-						dataType : "json"
-				});
-								
-				load_misc.done(function(misc) {
-					args.item.db_mem_pic = misc[0].db_mem_pic;
-					args.item.is_ready = true;			
-					args.item.pending_element.replaceWith(badge);
-				});
-				
+
 			},
             fields: [
                 {
@@ -150,6 +208,9 @@ function delay(callback, ms) {
                     name: "db_position",
                     type: "text",
                     width: 100,
+                    itemTemplate : function() {
+                        return "<td>Hello</td>"
+                    }
                 },
 				
 				{
@@ -157,18 +218,8 @@ function delay(callback, ms) {
                     type: "text",
                     width: 100,
 					itemTemplate: function (value, item) {
-						         
-						const hasImage =  (function() {
-							
-								if (!item.db_image_pic_length)
-									return false;
-							
-								if (Number(item.db_image_pic_length) <= 0)
-									return false;
-							
-								return true;
-							
-						})();
+
+                        const hasImage =  hasImageOf(item);
 						
 						const badge = jq("<b>");
 						badge.addClass("label bg-success");
@@ -258,11 +309,21 @@ function delay(callback, ms) {
                     type: "text",
                     width: "100%",
                     cellRenderer : function(value, item) {
+
+                        const filter_data = filter_val.details;
+
+                        const table_data = jQuery("<td>");
+                        table_data.text(value);
+
+                        if (!filter_data.hasOwnProperty("is_show_info"))
+                            return table_data;
+
                         const template = jQuery("#filter_item_template").html();
                         const container = jQuery("<item>").html(template);
-                        console.log(item);
-                        console.log( container.find("#item_name"));
-                        container.find("#item_name").text(item.db_voter_name);
+
+                        container
+                            .find("#item_name")
+                            .text(item.db_voter_name);
 
                         if(item.db_barangay)
                             container.find("#item_barangay").text(item.db_barangay);
@@ -279,37 +340,58 @@ function delay(callback, ms) {
                         if(item.db_dbo)
                             container.find("#item_birth_date").text(item.db_dbo);
 
-                        const hasImage =  (function() {
+                        const hasImage =  hasImageOf(item);
 
-                            if (!item.db_image_pic_length)
-                                return false;
+                        const has_image_cache = OfCache.hasOwnProperty(item.db_id);
 
-                            if (Number(item.db_image_pic_length) <= 0)
-                                return false;
+                        const Ofimage = container.find("#db_pic");
+                        Ofimage.attr("src","/images/loading.gif");
 
-                            return true;
-
-                        })();
-
-
-                        if(hasImage)
+                        if(has_image_cache)
                         {
+                            const cache_properties = OfCache[item.db_id];
 
-                            const Ofimage = container.find("#db_pic");
-                            Ofimage.attr("src","/images/loading.gif")
+                            if(cache_properties.is_base64)
+                            {
+                                Ofimage.attr("src", cache_properties.data);
+                                return container;
+                            }
 
+                            const base64image = new Buffer(cache_properties.data).toString();
+                            Ofimage.attr("src",base64image);
+                            item.db_mem_pic = OfCache[item.db_id];
+                            item.is_ready = true;
+
+                        }
+
+                        if(hasImage && !has_image_cache)
+                        {
+                            Ofimage.attr("src","/images/loading.gif");
                             const load_misc = jQuery.ajax({
                                 url : "/hive/get_image",
                                 method : "POST",
-                                data: { "db_id" : item.db_id},
+                                data: { "db_hds_id" : item.db_id},
                                 dataType : "json"
                             });
 
                             load_misc.done(function(misc) {
+
                                 item.db_mem_pic = misc[0].db_mem_pic;
+                                item.is_img_base64 = Boolean(misc[0].is_img_base64);
+
+                                OfCache[item.db_id] = {
+                                    data : item.db_mem_pic,
+                                    is_base64 : item.is_img_base64
+                                }
+
                                 item.is_ready = true;
+
+                                if(item.is_img_base64)
+                                    return Ofimage.attr("src", item.db_mem_pic);
+
                                 const base64image = new Buffer(misc[0].db_mem_pic.data).toString();
                                 Ofimage.attr("src",base64image);
+
                             });
 
                         }
@@ -322,10 +404,21 @@ function delay(callback, ms) {
                     name: "db_prec_no",
                     align: "right",
                     type: "text",
-                    cellRenderer : function() {
+                    cellRenderer : function(value, item) {
+
+                        const filter_data = filter_val.details;
+
                         const table_data = jQuery("<td>");
                         table_data.addClass("no-width");
+
+                        if (filter_data.hasOwnProperty("is_show_info"))
+                            return table_data;
+
+                        table_data.text(value);
+                        table_data.removeClass("no-width");
+
                         return table_data;
+
                     },
                     width: 100
                 },
@@ -338,40 +431,62 @@ function delay(callback, ms) {
                     align: "left",
                     items: [{ db_name: "" }].concat(misc_desc.list_brgy),
                     width: 100,
-                    cellRenderer : function() {
+                    cellRenderer : function(value, item) {
+
+                        const filter_data = filter_val.details;
+
                         const table_data = jQuery("<td>");
                         table_data.addClass("no-width");
+
+                        if (filter_data.hasOwnProperty("is_show_info"))
+                            return table_data;
+
+                        table_data.text(value);
+                        table_data.removeClass("no-width");
+
                         return table_data;
+
                     },
                     __itemTemplate: function (value, item) {
                         return item[this.name];
                     }
                 },
                 {
-                    title: "CONTACT",
-                    name: "db_contact",
-                    type: "text",
-                    width: 100,
-                    cellRenderer : function() {
-                        const table_data = jQuery("<td>");
-                        table_data.addClass("no-width");
-                        return table_data;
-                    },
-                    itemTemplate : () => "",
-                },
-                {
                     title: "POSITION",
                     name: "db_position",
                     type: "select",
-                    valueField: "db_name",
+                    valueField: "db_id",
                     textField: "db_name",
                     align: "left",
                     items: [{ db_name: "" }].concat(misc_desc.lis_post),
                     width: 100,
-                    cellRenderer : function() {
+                    cellRenderer : function(value, item) {
+                        const position_items = {};
+                        this.items.forEach(function(perItem, index) {
+                            position_items[perItem.db_id] = index;
+                        });
+
+                        const filter_data = filter_val.details;
+
                         const table_data = jQuery("<td>");
                         table_data.addClass("no-width");
+
+                        if (filter_data.hasOwnProperty("is_show_info"))
+                            return table_data;
+
+                        table_data.removeClass("no-width");
+
+                        if(!value)
+                        {
+                            const li = jQuery("<li class='label label-warning'>NO POSITION</li>");
+                            table_data.append(li);
+                            return table_data;
+                        }
+
+                        value = this.items[position_items[value]]["db_name"];
+                        table_data.text(value);
                         return table_data;
+
                     },
                     __itemTemplate: function (value, item) {
                         return item[this.name];
@@ -390,12 +505,9 @@ function delay(callback, ms) {
 						],
 						width: 150,
 						itemTemplate: function(value, item) {
-							
-							if (!item.db_image_pic_length)
-								return;
-							
-							if (Number(item.db_image_pic_length) <= 0)
-								return;
+
+                            const hasImage =  hasImageOf(item);
+                            if(!hasImage) return;
 							
 							const badge = jq("<b>");
 							badge.addClass("label orange");
@@ -425,24 +537,24 @@ function delay(callback, ms) {
 						}
 					},
 					
-					{
-						title: "Last PTL",
-						name: "last_ptl",
-						type: "select",
-						valueField: "value",
-						textField: "name",
-						items: [
-							{ name: "" },
-							{ name: "NOT PRINTED SINCE", value: 1 },
-							{ name: "ALREADY PRINTED", value: 2 }
-						],
-						width: 100,
-						itemTemplate: function(value, item) {
-							if(!item.db_last_temporary_printed)
-								return;
-							return moment(item.db_last_temporary_printed).format('MM/DD/YYYY');
-						}
-					},
+					// {
+					// 	title: "Last PTL",
+					// 	name: "last_ptl",
+					// 	type: "select",
+					// 	valueField: "value",
+					// 	textField: "name",
+					// 	items: [
+					// 		{ name: "" },
+					// 		{ name: "NOT PRINTED SINCE", value: 1 },
+					// 		{ name: "ALREADY PRINTED", value: 2 }
+					// 	],
+					// 	width: 100,
+					// 	itemTemplate: function(value, item) {
+					// 		if(!item.db_last_temporary_printed)
+					// 			return;
+					// 		return moment(item.db_last_temporary_printed).format('MM/DD/YYYY');
+					// 	}
+					// },
 					
 					
                 {
@@ -450,22 +562,6 @@ function delay(callback, ms) {
                     editButton: false,
                     deleteButton: false,
                     width: 150,
-                    filterTemplate: function (value, item) {
-
-                        const template = jsGrid
-                            .fields
-                            .control
-                            .prototype
-                            .filterTemplate();
-
-                        const page_limit = jq("<input>");
-                        page_limit.attr("type", "number");
-                        page_limit.attr("value","10")
-                        page_limit.attr("placeholder", "Page limit")
-
-                        return page_limit;
-
-                    },
                     itemTemplate: function (value, item) {
 
                         const filter_data = filter_val.details;
@@ -473,6 +569,23 @@ function delay(callback, ms) {
 
                         const grid = this._grid;
                         const main_table_data = grid.main_table_data;
+
+                        const label = jQuery("<label>")
+                        const content = jQuery("<span>");
+                        const ul = jQuery("<ul>");
+
+                        if(!item.db_qr_code)
+                        {
+                            const li = jQuery("<li class='label label-warning'>NO QR CODE</li>");
+                            ul.append(li);
+                        }
+
+                        if(!item.db_dbo_alias)
+                        {
+                            const li = jQuery("<li class='label label-warning'>NO BIRTHDAY</li>");
+                            ul.append(li);
+                            return ul;
+                        }
 
                         const is_already_exists = main_table_data.hasOwnProperty(item.db_id);
 
@@ -483,12 +596,9 @@ function delay(callback, ms) {
 
                         if (filter_data.hasOwnProperty("is_multiple_selections")) {
 
-                            const label = jQuery("<label>")
-                            label.addClass("btn btn-info");
-
                             item.is_selected = false;
 
-                            const content = jQuery("<span>");
+                            label.addClass("btn btn-info");
                             content.html("Select");
 
                             label.append(content);
@@ -617,7 +727,7 @@ function delay(callback, ms) {
 		const mark_as_printed = function(str_value) {
 			
 			const data_set = main_table.jsGrid("option", "data");
-			const data_set_id = data_set.map(e => e.db_id);
+			const data_set_id = data_set.map(e => e.db_hds_id);
 			const overlay = modal_to_print.find(".overlay-spinner");
 			
 			const update = jQuery.ajax({
