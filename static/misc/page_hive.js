@@ -6,7 +6,7 @@ const moment_tz = require('moment-timezone');
 const dotenv = require('dotenv').config();
 const process = require("process");
 const env = process.env;
-var request = require('request');
+const axios = require('axios');
 
 const database = require('knex')({
     client: 'mysql2',
@@ -268,26 +268,10 @@ exports.pages = function (menu_template, win) {
 
         const id = req.body.db_id;
 
-        const query = database.select(
-            {db_id: "mem_img.hds_img_id"},
-            {db_mem_pic: "mem_img.img"},
-
-            //can be none
-            {db_img_new: "hugpong_member.filename"},
-            {db_has_img: "hugpong_member.has_img"},
-            {db_lname: "hugpong_member.mem_lname"},
-            {db_fname: "hugpong_member.mem_fname"}
-        );
+        const query = database.select({db_img_new: "hugpong_member.filename"});
 
         query.from("hugpong_member");
-        query.leftJoin(
-            {'mem_img': "mem_img-x"},
-            "hugpong_member.hds_mem_id",
-            "mem_img.hds_mem_id"
-        );
-
         query.where({'hugpong_member.hds_mem_id': String(req.body.db_hds_id)});
-
         query.limit(1);
 
         const old_base = await query;
@@ -295,39 +279,28 @@ exports.pages = function (menu_template, win) {
 
         if (has_result > 0) {
 
-            if (old_base[0]['db_img_new'] && !old_base[0]['db_mem_pic']) {
+            const uri = [
+                env.SITE_LIVE_URL,
+                'rest/getImage/',
+                old_base[0]['db_img_new']
+            ].join("");
 
-                const uri = [
-                    env.SITE_LIVE_URL,
-                    'rest/getImage/',
-                    old_base[0]['db_img_new']
-                ].join("");
+            const response = await axios({
+                method : "POST",
+                responseType: 'json',
+                url : uri
+            });
 
-                const options = {url: uri, json: true};
+            old_base[0].db_mem_pic = body.data;
+            old_base[0].is_img_base64 = true;
 
-                return request
-                    .post(options, function (error, response, body) {
-
-                        if (error || response.statusCode != 200) {
-                            console.log(error);
-                            return res.json([]);
-
-                        }
-
-                        old_base[0].db_mem_pic = body.data;
-                        old_base[0].is_img_base64 = true;
-
-                        console.log(old_base);
-                        return res.json(old_base);
-
-                    })
-
-            }
+            return res.json(old_base);
 
         }
 
-
-        res.json(old_base);
+        var err = new Error("Error could not found image");
+        err.status = 101;
+        return next(err);
 
 
     });

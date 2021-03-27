@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@linways/table-to-excel": "^1.0.4",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "consolidate": "^0.16.0",
     "croppie": "^2.6.5",

@@ -33,12 +33,11 @@
     function settings_not_found()
 	{
 		const confirmation = dialog.showMessageBox({
-			message : "Welcome to ICT PORTAL, unfortunately the application could not found" +
-				"some files in order to fully run, to help you with this please import a missing files " +
-				"and restart the application.",
+			message : "Welcome to ICT PORTAL, unfortunately the application could not found " +
+				"some files in order to fully run, please restart the application.",
 			title : "ICT PORTAL (Could not load resource file)",
 			detail : "ICT PORTAL is a private application made of City Government of Digos " +
-				"along with the ICT Developers team. if you found some errors or mistake please send a regard to"+
+				"along with the ICT Developers team. if you found some errors or mistake please send a regard to "+
 				"ICT office. Thank you",
 			type  : "question",
 			noLink  : false
@@ -97,7 +96,6 @@
             app.exit();
 
 		});
-
 
 		return;
 	}
