@@ -16,7 +16,7 @@ const {generate_id_front} = require(path.join
     )
 );
 
-const hasImageOf =  function(item) {
+const hasImageOf = function (item) {
 
     if (!item.db_has_image)
         return false;
@@ -42,17 +42,17 @@ function delay(callback, ms) {
 
 function dataURLtoFile(dataurl, filename) {
 
-	var arr = dataurl.split(','),
-		mime = arr[0].match(/:(.*?);/)[1],
-		bstr = atob(arr[1]),
-		n = bstr.length,
-		u8arr = new Uint8Array(n);
+    var arr = dataurl.split(','),
+        mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n);
 
-	while(n--){
-		u8arr[n] = bstr.charCodeAt(n);
-	}
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
 
-	return new File([u8arr], filename, {type:mime});
+    return new File([u8arr], filename, {type: mime});
 }
 
 (function (jq) {
@@ -80,7 +80,7 @@ function dataURLtoFile(dataurl, filename) {
             url: "/hive/misc",
             method: "POST",
             dataType: "json",
-            error : function(e) {
+            error: function (e) {
                 alert("Error: No Internet Connection");
             }
         });
@@ -162,8 +162,8 @@ function dataURLtoFile(dataurl, filename) {
                             width: 100,
                             itemTemplate: function (value, item) {
 
-                                const hasImage =  hasImageOf(item);
-                                if(!hasImage) return;
+                                const hasImage = hasImageOf(item);
+                                if (!hasImage) return;
 
                                 const badge = jq("<b>");
                                 badge.addClass("label bg-success");
@@ -200,7 +200,7 @@ function dataURLtoFile(dataurl, filename) {
                                     url: "/hive/summit_members",
                                     method: "POST",
                                     data: filter,
-                                    error : function(e) {
+                                    error: function (e) {
                                         return alert("Error: No Internet Connection");
                                     }
                                 }
@@ -226,7 +226,7 @@ function dataURLtoFile(dataurl, filename) {
                 data: {id: item.db_id},
                 beforeSend: e => overlay_main.addClass("show"),
                 complete: e => overlay_main.removeClass("show"),
-                error : function(e) {
+                error: function (e) {
                     alert("Error: could not load resource");
                     this.complete(e);
                 }
@@ -246,138 +246,176 @@ function dataURLtoFile(dataurl, filename) {
                 let cropperImg = null;
 
 
+                const show_image = open_modal.find("#show_image");
+
+                const change_image = function () {
+
+                    let input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = "image/*";
+                    input.onchange = async function () {
+
+                        const files = this.files;
+                        if (!files.length) return;
+
+                        const base64image = await new Promise((res, rej) => {
+                            const reader = new FileReader();
+                            reader.onload = e => res(e.target.result);
+                            reader.onerror = e => rej(e);
+                            reader.readAsDataURL(files[0]);
+                        });
+
+                        const cropper_container = open_modal.find("#container_croppie");
+                        cropper_container.attr("src", base64image);
+                        const of_container_image = cropper_container[0];
+
+                        if (cropperImg) {
+                            cropperImg.destroy();
+                            cropperImg = "";
+                        }
+
+                        const cropper = new Cropper(of_container_image, {
+                            minContainerWidth: 200,
+                            minContainerHeight: 200,
+                            aspectRatio: 2 / 2,
+                            minCropBoxWidth: 100,
+                            minCropBoxHeight: 100,
+                        });
+
+                        cropperImg = cropper;
+
+                        open_modal.addClass("step2");
+                        open_modal.removeClass("step1");
+
+                        open_modal
+                            .find("#cropper_action .save")
+                            .off("click")
+                            .on("click", function () {
+
+                                const canvas = cropper.getCroppedCanvas();
+                                const base64image_canvas = canvas.toDataURL();
+                                open_modal
+                                    .find(".img_hover_container .image")
+                                    .attr("src", base64image_canvas)
+                                    .attr("changed", true);
+
+                                jq("#container_update").removeClass("hide");
+                                jq("#container_image_cropper").addClass("hide");
+
+                                open_modal.addClass("step1");
+                                open_modal.removeClass("step2");
+
+                            })
+
+                        open_modal
+                            .find("#cropper_action .cancel")
+                            .off("click")
+                            .on("click", function () {
+
+                                open_modal.addClass("step1");
+                                open_modal.removeClass("step2");
+
+                            })
+
+
+                    };
+
+                    input.click();
+
+
+                };
+
+                const image_container = open_modal
+                    .find(".img_hover_container")
+                    .off("click")
+                    .on("click", change_image);
+
+
+                show_image.click(function () {
+                    const image_file = jq(this).attr("img_file");
+                    const image = open_modal.find(".img_hover_container .image");
+
+                    const send = jQuery.ajax({
+                        beforeSend : function() {
+
+                            image.attr("src", `/images/loading2.gif`);
+                            image_container.off("click").click(function () {
+                                return alert('Please wait the image to load!');
+                            });
+
+                        },
+                        method : "POST",
+                        url : "/hive/get_images",
+                        data : { value : [image_file] },
+                        dataType: "json"
+                    });
+
+                    send.then(function (result) {
+                        const image_file_base64 = result.data[image_file];
+                        image.attr("src", image_file_base64);
+                        image_container.off("click").on("click", change_image);
+                    });
+
+                    send.error(function (e) {
+                        image.attr("src", "/images/error-image.png");
+                        console.log("Error >> ", e);
+                        alert('Error occured!');
+                        image_container.off("click").on("click", change_image);
+                    });
+
+
+                });
+
                 open_modal
-					.find("form")
-					.off("submit")
-					.on("submit", function(e) {
-						e.preventDefault();
+                    .find("form")
+                    .off("submit")
+                    .on("submit", function (e) {
+                        e.preventDefault();
 
-						const data = jq(this).serialize_form();
-						const formData = new FormData();
+                        const data = jq(this).serialize_form();
+                        const formData = new FormData();
 
-						const image = open_modal
-							.find(".img_hover_container .image");
+                        const image = open_modal
+                            .find(".img_hover_container .image");
 
+                        if (image.is("[changed]")) {
+                            const file_image = dataURLtoFile(image.attr("src"));
+                            formData.append('image', file_image);
+                        }
 
-						if(image.is("[changed]"))
-						{
-							const file_image = dataURLtoFile(image.attr("src"));
-							formData.append('image', file_image);
-						}
+                        Object
+                            .keys(data)
+                            .forEach(function (item) {
+                                formData.append(item, data[item]);
+                            });
 
-						Object
-							.keys(data)
-							.forEach(function(item) {
-								formData.append(item, data[item]);
-							});
+                        const send = jq.ajax({
+                            url: '/hive/profile_img/set',
+                            data: formData,
+                            type: 'POST',
+                            contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                            processData: false, // NEEDED, DON'T OMIT THIS
+                            beforeSend: e => overlay_main.addClass("show"),
+                            complete: e => overlay_main.removeClass("show")
+                        });
 
-						const send = jq.ajax({
-							url: '/hive/profile_img/set',
-							data: formData,
-							type: 'POST',
-							contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
-							processData: false, // NEEDED, DON'T OMIT THIS
-							beforeSend: e => overlay_main.addClass("show"),
-							complete: e => overlay_main.removeClass("show")
-						});
+                        send.done(function () {
 
-						send.done(function () {
-
-						    main_table.jsGrid("loadData");
+                            main_table.jsGrid("loadData");
                             open_modal.find("#success_update_message").removeClass("hide");
 
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 open_modal.find("#success_update_message").addClass("hide");
-                            },5000);
+                            }, 5000);
 
                         });
 
-						send.error(function (error) {
-						    alert('Error occured: ' + error.statusText);
-						    throw new Error(error.statusText);
+                        send.error(function (error) {
+                            alert('Error occured: ' + error.statusText);
+                            throw new Error(error.statusText);
                         })
 
-					});
-
-                open_modal.find(".img_hover_container")
-                    .off("click")
-                    .on("click", function () {
-
-                        let input = document.createElement('input');
-                        input.type = 'file';
-                        input.accept = "image/*";
-                        input.onchange = async function () {
-
-                            const files = this.files;
-                            if (!files.length) return;
-
-                            const base64image = await new Promise((res, rej) => {
-                                const reader = new FileReader();
-                                reader.onload = e => res(e.target.result);
-                                reader.onerror = e => rej(e);
-                                reader.readAsDataURL(files[0]);
-                            });
-
-                            const cropper_container = open_modal.find("#container_croppie");
-                            cropper_container.attr("src", base64image);
-                            const of_container_image = cropper_container[0];
-
-                            if (cropperImg) {
-                                cropperImg.destroy();
-                                cropperImg = "";
-                            }
-
-                            const cropper = new Cropper(of_container_image, {
-                                minContainerWidth: 200,
-                                minContainerHeight: 200,
-                                aspectRatio: 2 / 2,
-                                minCropBoxWidth: 100,
-                                minCropBoxHeight: 100,
-                            });
-
-                            cropperImg = cropper;
-
-							open_modal.addClass("step2");
-							open_modal.removeClass("step1");
-
-                            open_modal
-                                .find("#cropper_action .save")
-                                .off("click")
-                                .on("click", function () {
-
-                                    const canvas = cropper.getCroppedCanvas();
-                                    const base64image_canvas = canvas.toDataURL();
-                                    open_modal
-										.find(".img_hover_container .image")
-										.attr("src", base64image_canvas)
-										.attr("changed", true);
-
-                                    jq("#container_update").removeClass("hide");
-                                    jq("#container_image_cropper").addClass("hide");
-
-									open_modal.addClass("step1");
-									open_modal.removeClass("step2");
-
-                                })
-
-                            open_modal
-                                .find("#cropper_action .cancel")
-                                .off("click")
-                                .on("click", function () {
-
-									open_modal.addClass("step1");
-									open_modal.removeClass("step2");
-
-                                })
-
-
-                        };
-
-                        input.click();
-
-
                     });
-
 
 
 

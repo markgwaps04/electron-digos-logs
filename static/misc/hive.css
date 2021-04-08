@@ -308,6 +308,7 @@ form.cus .input-prepend .add-on {
     display: block;
     width: 100%;
     height: auto;
+    border: 1px solid #e4e4e4;
 }
 
 .img_hover_container .overlay {

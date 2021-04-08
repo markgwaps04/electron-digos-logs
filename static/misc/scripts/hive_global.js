@@ -105,8 +105,12 @@ module.exports.generate_id_front = function (params) {
 
                                 if (params.img_pic.hasOwnProperty("mimitype")) {
                                     profile_pic.src = `data:${params.img_pic.mimitype};base64,${params.img_pic.data}`;
-                                } else {
+                                } else if (params.img_pic.hasOwnProperty("data")) {
                                     const img_profile = Buffer.from(params.img_pic.data).toString();
+                                    profile_pic.src = img_profile;
+                                }
+                                else {
+                                    const img_profile = Buffer.from(params.img_pic).toString();
                                     profile_pic.src = img_profile;
                                 }
                             }

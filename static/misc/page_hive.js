@@ -7,10 +7,11 @@ const dotenv = require('dotenv').config();
 const process = require("process");
 const env = process.env;
 const axios = require('axios');
+const form_data = require("form-data");
 
 const database = require('knex')({
     client: 'mysql2',
-    acquireConnectionTimeout: 10000,
+    acquireConnectionTimeout: 5000,
     connection: {
         host: env.DB_HOST_LIVE,
         user: env.DB_USER_LIVE,
@@ -60,7 +61,7 @@ exports.pages = function (menu_template, win) {
     });
 
 
-    win.express.post('/hive/view/members_info', async (req, res) => {
+    win.express.post('/hive/view/members_info', async (req, res, next) => {
 
         const data = req.body.id;
 
@@ -94,31 +95,6 @@ exports.pages = function (menu_template, win) {
             .limit(1);
 
         const details = query[0];
-
-        if (details.img_file) {
-
-            const uri = [
-                env.SITE_LIVE_URL,
-                'rest/getImage/',
-                details.img_file
-            ].join("");
-
-            const options = {url: uri, json: true};
-
-            return request.post(options, function (error, response, body) {
-
-                if (error || response.statusCode != 200) {
-                    console.log(error);
-                    details.img_file = null;
-                    return res.render('include/modal_update_info.html', details);
-                }
-
-                details.img_file = body.data;
-                return res.render('include/modal_update_info.html', details);
-
-            })
-
-        }
 
         res.render('include/modal_update_info.html', details);
 
@@ -172,7 +148,7 @@ exports.pages = function (menu_template, win) {
                 return next(err);
             }
 
-            const image_selected = req.files.image;
+            //const image_selected =   .image;
 
             const uploaded_base64_value = Buffer
                 .from(image_selected.data)
@@ -187,6 +163,24 @@ exports.pages = function (menu_template, win) {
                     .update({img: data_base64});
 
             } else {
+
+                const uri = [
+                    env.SITE_LIVE_URL,
+                    'rest/uploadImg/'
+                ].join("");
+
+                const form = new form_data();
+                form.append("image", )
+
+                const response = axios({
+                    method : "POST",
+                    responseType: 'json',
+                    headers: { 'Content-Type': 'application/json' },
+                    url : uri,
+                    data : {}
+                });
+
+                return;
 
                 const image_insert = await database("mem_img-x")
                     .insert({
@@ -203,6 +197,8 @@ exports.pages = function (menu_template, win) {
         const birthday = moment(req.body.birthday)
             .format("YYYY-MM-DD")
             .toString();
+
+        return;
 
         const of_update = await database("hugpong_member")
             .where('hds_mem_id', req.body.hds_id)
@@ -279,22 +275,45 @@ exports.pages = function (menu_template, win) {
 
         if (has_result > 0) {
 
+            const image_file = old_base[0]['db_img_new'];
+
             const uri = [
                 env.SITE_LIVE_URL,
                 'rest/getImage/',
-                old_base[0]['db_img_new']
+                image_file
             ].join("");
 
-            const response = await axios({
+            const response = axios({
                 method : "POST",
                 responseType: 'json',
+                headers: { 'Content-Type': 'application/json' },
                 url : uri
             });
 
-            old_base[0].db_mem_pic = body.data;
-            old_base[0].is_img_base64 = true;
+            response.then(function (response) {
+                const details = response.data.data;
 
-            return res.json(old_base);
+                if(!details.hasOwnProperty(image_file))
+                {
+                    var err = new Error(`No image found!`);
+                    err.status = 509;
+                    return next(err);
+                }
+
+                const ofBuffer = Buffer.from(details[image_file]);
+                old_base[0].db_mem_pic = ofBuffer;
+                old_base[0].is_img_base64 = true;
+                return res.json(old_base);
+            });
+
+            response.catch(function (error){
+                var err = new Error(`${error.response.status}, ${error.message} `);
+                err.status = error.response.status;
+                return next(err);
+            });
+
+            return;
+
 
         }
 
@@ -302,6 +321,40 @@ exports.pages = function (menu_template, win) {
         err.status = 101;
         return next(err);
 
+
+    });
+
+    win.express.post("/hive/get_images", async function (req, res, next) {
+
+        if (!req.body.hasOwnProperty("value")) {
+            var err = new Error("No value specified");
+            err.status = 101;
+            return next(err);
+        }
+
+        const uri = [
+            env.SITE_LIVE_URL,
+            'rest/getImage'
+        ].join("");
+
+        const response = axios({
+            method : "POST",
+            responseType: 'json',
+            headers: { 'Content-Type': 'application/json' },
+            url : uri,
+            data : { value : req.body.value }
+        });
+
+        response.then(function (response) {
+            const details = response.data;
+            return res.json(details);
+        });
+
+        response.catch(function (error){
+            var err = new Error(`${error.response.status}, ${error.message} `);
+            err.status = error.response.status;
+            return next(err);
+        });
 
     });
 
@@ -481,9 +534,9 @@ exports.pages = function (menu_template, win) {
 
             if (of_body_data.profile_set == 1) {
                 of_test.whereNull('hugpong_member.filename');
-                of_test.where('hugpong_member.has_img', false);
+               // of_test.where('hugpong_member.has_img', false);
             } else {
-                of_test.where('hugpong_member.has_img', true);
+                //of_test.where('hugpong_member.has_img', true);
                 of_test.whereNotNull('hugpong_member.filename');
             }
 

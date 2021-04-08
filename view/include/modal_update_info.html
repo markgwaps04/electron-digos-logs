@@ -19,29 +19,46 @@
                 <div class="row-fluid" style="padding-left: 33px;">
 
                     <div id="container_update">
+                        <% if (img_file) { %>
 
                         <div class="span3">
                             <div class="img_hover_container" style="width: 81%;margin: 0 AUTO;">
 
-                                <% if (img_file) { %>
-
                                 <img class="image"
-                                     src="<%= img_file %>"
+                                     src="/images/hugpong.png"
                                      alt="User Pic">
 
-                                <% } else { %>
+                                <div class="overlay">
+                                    <div class="text">Click to change photo</div>
+                                </div>
+                            </div>
+                            <center>
+                                <button type="button" class="btn btn-default"
+                                        img_file="<%= img_file %>"
+                                        id="show_image" style="margin-top: 10px">
+                                    Show image
+                                </button>
+                            </center>
+                        </div>
+
+                        <% } else { %>
+
+                        <div class="span3">
+                            <div class="img_hover_container" style="width: 81%;margin: 0 AUTO;">
 
                                 <img class="image"
                                      src="/images/default_no_image.png"
                                      alt="User Pic">
-
-                                <% } %>
 
                                 <div class="overlay">
                                     <div class="text">Click to change photo</div>
                                 </div>
                             </div>
                         </div>
+
+                        <% } %>
+
+
                         <div class="span8">
                             <h3><%= voter_name %></h3>
                             <table class="table table-condensed table-responsive table-user-information">

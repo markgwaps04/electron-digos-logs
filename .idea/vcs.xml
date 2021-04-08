@@ -2,5 +2,19 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/Attendance/app_ict" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/CCTS-DIGOS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/CCTS-DIGOS/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/CovidTrack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/CovidTrack/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/Covid_trace2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/Covid_trace2/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/ICT_PORTAL" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/digos-logs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/philiri" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/philiri - Copy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/philiri - Copy (2)" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/philiri - Copy (2)/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/static/images/PythonProjects/PycharmProjects/philiri/app" vcs="Git" />
   </component>
 </project>

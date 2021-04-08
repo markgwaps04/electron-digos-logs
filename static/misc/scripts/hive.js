@@ -11,8 +11,9 @@ const puppeteer = require("puppeteer");
 const html2canvas = require('html2canvas');
 const moment = require('moment')
 const moment_tz = require('moment-timezone');
+const lodash = require("lodash");
 const daterangepicker = require("daterangepicker")
-const { generate_id_front } = require(path.join(
+const {generate_id_front} = require(path.join(
     misc.parent_dir,
     "/static/misc/scripts/hive_global.js"
 ));
@@ -30,10 +31,7 @@ function delay(callback, ms) {
     };
 }
 
-const hasImageOf =  function(item) {
-
-    if (!item.db_has_image)
-        return false;
+const hasImageOf = function (item) {
 
     if (!item.db_img_file_name)
         return false;
@@ -42,8 +40,31 @@ const hasImageOf =  function(item) {
 
 };
 
+const get_image = function (id) {
+
+    return new Promise(function (resolve, reject) {
+
+        const load_misc = jQuery.ajax({
+            url: "/hive/get_image",
+            method: "POST",
+            data: {"db_hds_id": id},
+            dataType: "json",
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        load_misc.then(resolve);
+        load_misc.error(reject);
+
+    });
+
+};
+
 
 (function (jq) {
+
+    const g_overlay = jQuery(".overlay-spinner");
 
     var originalFilterTemplate = jsGrid.fields.text.prototype.filterTemplate;
     jsGrid.fields.text.prototype.filterTemplate = function () {
@@ -62,7 +83,7 @@ const hasImageOf =  function(item) {
     const misc = jq.ajax({
         url: "/hive/misc",
         method: "POST",
-        error : function(e) {
+        error: function (e) {
             alert("Error: No Internet Connection");
         }
     });
@@ -93,7 +114,7 @@ const hasImageOf =  function(item) {
             width: "100%",
             height: "auto",
             filtering: false,
-            pageCount : 5, pageCount : 5,
+            pageCount: 5, pageCount: 5,
             sorting: false,
             paging: false,
             inserting: false,
@@ -101,7 +122,6 @@ const hasImageOf =  function(item) {
             noDataContent: jsgrid_no_data_main_table,
             data: [],
             onItemInserting: function (args, data) {
-
                 const already_added_data = args.grid.data;
                 const group_by_db_id = _.groupBy(already_added_data, "db_id");
                 const is_already_exists = group_by_db_id.hasOwnProperty(args.item.db_id);
@@ -111,25 +131,23 @@ const hasImageOf =  function(item) {
                     return alert('The selected row is already exists');
                 }
             },
-			onItemInserted : function(args, data) {
-				
-				if(args.item.is_ready) return;
-				
-				const badge = jq("<b>");
-				badge.addClass("label bg-success");
-				badge.text("ALREADY SET");
+            onItemInserted: function (args, data) {
 
-				const item = args.item;
+                if (args.item.is_ready) return;
 
-                const hasImage =  hasImageOf(item);
+                const badge = jq("<b>");
+                badge.addClass("label bg-success");
+                badge.text("ALREADY SET");
+
+                const item = args.item;
+
+                const hasImage = hasImageOf(item);
                 const has_image_cache = OfCache.hasOwnProperty(item.db_id);
 
-                if(has_image_cache)
-                {
+                if (has_image_cache) {
                     const cache_properties = OfCache[item.db_id];
 
-                    if(cache_properties.is_base64)
-                    {
+                    if (cache_properties.is_base64) {
                         args.item.db_mem_pic = cache_properties.data;
                         args.item.is_ready = true;
                         args.item.pending_element.replaceWith(badge);
@@ -141,30 +159,29 @@ const hasImageOf =  function(item) {
 
                 }
 
-                if(hasImage && !has_image_cache)
-                {
+                if (hasImage && !has_image_cache) {
                     const load_misc = jQuery.ajax({
-                        url : "/hive/get_image",
-                        method : "POST",
-                        data: { "db_hds_id" : item.db_id},
-                        dataType : "json"
+                        url: "/hive/get_image",
+                        method: "POST",
+                        data: {"db_hds_id": item.db_id},
+                        dataType: "json"
                     });
 
-                    load_misc.done(function(misc) {
+                    load_misc.done(function (misc) {
 
                         item.db_mem_pic = misc[0].db_mem_pic;
                         item.is_img_base64 = Boolean(misc[0].is_img_base64);
 
                         OfCache[item.db_id] = {
-                            data : item.db_mem_pic,
-                            is_base64 : item.is_img_base64
+                            data: item.db_mem_pic,
+                            is_base64: item.is_img_base64
                         }
 
                         item.is_ready = true;
 
                         args.item.pending_element.replaceWith(badge);
 
-                        if(item.is_img_base64) return;
+                        if (item.is_img_base64) return;
 
                         const base64image = new Buffer(misc[0].db_mem_pic.data).toString();
 
@@ -174,9 +191,9 @@ const hasImageOf =  function(item) {
                     });
 
                 }
-				
 
-			},
+
+            },
             fields: [
                 {
                     title: "NAME",
@@ -203,49 +220,35 @@ const hasImageOf =  function(item) {
                     type: "text",
                     width: 100
                 },
+
                 {
-                    title: "POSITION",
-                    name: "db_position",
-                    type: "text",
-                    width: 100,
-                    itemTemplate : function() {
-                        return "<td>Hello</td>"
-                    }
-                },
-				
-				{
                     title: "STATE",
                     type: "text",
                     width: 100,
-					itemTemplate: function (value, item) {
+                    itemTemplate: function (value, item) {
 
-                        const hasImage =  hasImageOf(item);
-						
-						const badge = jq("<b>");
-						badge.addClass("label bg-success");
-						badge.text("ALREADY SET");
-						
-						if(item.is_ready) return badge;
-						item.is_ready = true;
-						
-						if(hasImage)
-						{
-							item.is_ready = false;
-							const inner_badge = jq("<b>");
-							inner_badge.addClass("label orange");
-							inner_badge.html('<i class="fas fa-spinner fa-spin"></i> &nbsp; PENDING ');
-							
-							item.pending_element = inner_badge;
-							
-							return inner_badge;
-							
-						}
-						
+                        const hasImage = hasImageOf(item);
 
-						return badge;
-						
-						
-							
+                        const badge = jq("<b>");
+                        badge.addClass("label bg-success");
+                        badge.text("ALREADY SET");
+
+                        if (item.is_ready) return badge;
+                        item.is_ready = true;
+
+                        if (hasImage) {
+                            item.is_ready = false;
+                            const inner_badge = jq("<b>");
+                            inner_badge.addClass("label orange");
+                            inner_badge.html('<i class="fas fa-spinner fa-spin"></i> &nbsp; PENDING ');
+                            item.pending_element = inner_badge;
+                            return inner_badge;
+                        }
+
+
+                        return badge;
+
+
                     }
                 },
                 {
@@ -281,7 +284,7 @@ const hasImageOf =  function(item) {
             width: "100%",
             height: "auto",
             pageSize: 10,
-            pageCount : 5,
+            pageCount: 5,
 
             filtering: true,
             sorting: true,
@@ -308,7 +311,7 @@ const hasImageOf =  function(item) {
                     name: "db_voter_name",
                     type: "text",
                     width: "100%",
-                    cellRenderer : function(value, item) {
+                    cellRenderer: function (value, item) {
 
                         const filter_data = filter_val.details;
 
@@ -325,72 +328,76 @@ const hasImageOf =  function(item) {
                             .find("#item_name")
                             .text(item.db_voter_name);
 
-                        if(item.db_barangay)
+                        if (item.db_barangay)
                             container.find("#item_barangay").text(item.db_barangay);
 
-                        if(item.db_prec_no)
+                        if (item.db_prec_no)
                             container.find("#item_prec_no").text(item.db_prec_no);
 
-                        if(item.db_contact)
+                        if (item.db_contact)
                             container.find("#item_contact_no").text(item.db_contact);
 
-                        if(item.db_contact)
+                        if (item.db_contact)
                             container.find("#item_position").text(item.db_position);
 
-                        if(item.db_dbo)
+                        if (item.db_dbo)
                             container.find("#item_birth_date").text(item.db_dbo);
 
-                        const hasImage =  hasImageOf(item);
+                        const hasImage = hasImageOf(item);
 
                         const has_image_cache = OfCache.hasOwnProperty(item.db_id);
 
+                        item.is_ready = false;
+
+                        if (!hasImage) return container;
+
                         const Ofimage = container.find("#db_pic");
-                        Ofimage.attr("src","/images/loading.gif");
+                        Ofimage.attr("src", "/images/loading.gif");
 
-                        if(has_image_cache)
-                        {
+                        if (has_image_cache) {
                             const cache_properties = OfCache[item.db_id];
-
-                            if(cache_properties.is_base64)
-                            {
-                                Ofimage.attr("src", cache_properties.data);
-                                return container;
-                            }
-
                             const base64image = new Buffer(cache_properties.data).toString();
-                            Ofimage.attr("src",base64image);
+                            Ofimage.attr("src", base64image);
                             item.db_mem_pic = OfCache[item.db_id];
                             item.is_ready = true;
 
                         }
 
-                        if(hasImage && !has_image_cache)
-                        {
-                            Ofimage.attr("src","/images/loading.gif");
-                            const load_misc = jQuery.ajax({
-                                url : "/hive/get_image",
-                                method : "POST",
-                                data: { "db_hds_id" : item.db_id},
-                                dataType : "json"
-                            });
+                        if (!has_image_cache) {
 
-                            load_misc.done(function(misc) {
+                            Ofimage.attr("src", "/images/hugpong.png");
+                            Ofimage.attr("title", "Click the image to show");
 
-                                item.db_mem_pic = misc[0].db_mem_pic;
-                                item.is_img_base64 = Boolean(misc[0].is_img_base64);
+                            item.has_image = true;
+                            Ofimage.click(function () {
 
-                                OfCache[item.db_id] = {
-                                    data : item.db_mem_pic,
-                                    is_base64 : item.is_img_base64
-                                }
+                                Ofimage.attr("src", "/images/loading.gif");
+                                Ofimage.off("click");
+                                Ofimage.attr("title", "");
+                                const show_image_request = get_image(item.db_id);
 
-                                item.is_ready = true;
+                                show_image_request.then(function (misc) {
 
-                                if(item.is_img_base64)
-                                    return Ofimage.attr("src", item.db_mem_pic);
+                                    item.is_ready = true;
+                                    item.db_mem_pic = misc[0].db_mem_pic;
+                                    item.is_img_base64 = Boolean(misc[0].is_img_base64);
 
-                                const base64image = new Buffer(misc[0].db_mem_pic.data).toString();
-                                Ofimage.attr("src",base64image);
+                                    OfCache[item.db_id] = {
+                                        data: item.db_mem_pic,
+                                        is_base64: item.is_img_base64
+                                    }
+
+                                    const buffer = new Buffer(item.db_mem_pic);
+                                    item.db_mem_pic = buffer;
+                                    const base64image = buffer.toString();
+                                    Ofimage.attr("src", base64image);
+
+                                });
+
+                                show_image_request.catch(function(error) {
+                                    item.error_load = true;
+                                    Ofimage.attr("src","/images/error-image.png");
+                                });
 
                             });
 
@@ -404,7 +411,7 @@ const hasImageOf =  function(item) {
                     name: "db_prec_no",
                     align: "right",
                     type: "text",
-                    cellRenderer : function(value, item) {
+                    cellRenderer: function (value, item) {
 
                         const filter_data = filter_val.details;
 
@@ -429,9 +436,9 @@ const hasImageOf =  function(item) {
                     valueField: "db_name",
                     textField: "db_name",
                     align: "left",
-                    items: [{ db_name: "" }].concat(misc_desc.list_brgy),
+                    items: [{db_name: ""}].concat(misc_desc.list_brgy),
                     width: 100,
-                    cellRenderer : function(value, item) {
+                    cellRenderer: function (value, item) {
 
                         const filter_data = filter_val.details;
 
@@ -458,11 +465,11 @@ const hasImageOf =  function(item) {
                     valueField: "db_id",
                     textField: "db_name",
                     align: "left",
-                    items: [{ db_name: "" }].concat(misc_desc.lis_post),
+                    items: [{db_name: ""}].concat(misc_desc.lis_post),
                     width: 100,
-                    cellRenderer : function(value, item) {
+                    cellRenderer: function (value, item) {
                         const position_items = {};
-                        this.items.forEach(function(perItem, index) {
+                        this.items.forEach(function (perItem, index) {
                             position_items[perItem.db_id] = index;
                         });
 
@@ -476,8 +483,7 @@ const hasImageOf =  function(item) {
 
                         table_data.removeClass("no-width");
 
-                        if(!value)
-                        {
+                        if (!value) {
                             const li = jQuery("<li class='label label-warning'>NO POSITION</li>");
                             table_data.append(li);
                             return table_data;
@@ -492,71 +498,71 @@ const hasImageOf =  function(item) {
                         return item[this.name];
                     }
                 },
-				{
-						title: "Is profile set ?",
-						name: "profile_set",
-						type: "select",
-						valueField: "value",
-						textField: "name",
-						items: [
-							{ name: "" },
-							{ name: "NOT SET", value: 1 },
-							{ name: "ALREADY SET", value: 2 }
-						],
-						width: 150,
-						itemTemplate: function(value, item) {
+                {
+                    title: "Is profile set ?",
+                    name: "profile_set",
+                    type: "select",
+                    valueField: "value",
+                    textField: "name",
+                    items: [
+                        {name: ""},
+                        {name: "NOT SET", value: 1},
+                        {name: "ALREADY SET", value: 2}
+                    ],
+                    width: 150,
+                    itemTemplate: function (value, item) {
 
-                            const hasImage =  hasImageOf(item);
-                            if(!hasImage) return;
-							
-							const badge = jq("<b>");
-							badge.addClass("label orange");
-							badge.text("ALREADY SET");
-							return badge;
-							
+                        const hasImage = hasImageOf(item);
+                        if (!hasImage) return;
 
-						}
-					},
-					
-					{
-						title: "Last POL",
-						name: "last_pol",
-						type: "select",
-						valueField: "value",
-						textField: "name",
-						items: [
-							{ name: "" },
-							{ name: "NOT PRINTED SINCE", value: 1 },
-							{ name: "ALREADY PRINTED", value: 2 }
-						],
-						width: 150,
-						itemTemplate: function(value, item) {
-							if(!item.db_last_official_printed)
-								return;
-							return moment(item.db_last_official_printed).format('MM/DD/YYYY');
-						}
-					},
-					
-					// {
-					// 	title: "Last PTL",
-					// 	name: "last_ptl",
-					// 	type: "select",
-					// 	valueField: "value",
-					// 	textField: "name",
-					// 	items: [
-					// 		{ name: "" },
-					// 		{ name: "NOT PRINTED SINCE", value: 1 },
-					// 		{ name: "ALREADY PRINTED", value: 2 }
-					// 	],
-					// 	width: 100,
-					// 	itemTemplate: function(value, item) {
-					// 		if(!item.db_last_temporary_printed)
-					// 			return;
-					// 		return moment(item.db_last_temporary_printed).format('MM/DD/YYYY');
-					// 	}
-					// },
-					
-					
+                        const badge = jq("<b>");
+                        badge.addClass("label orange");
+                        badge.text("ALREADY SET");
+                        return badge;
+
+
+                    }
+                },
+
+                {
+                    title: "Last POL",
+                    name: "last_pol",
+                    type: "select",
+                    valueField: "value",
+                    textField: "name",
+                    items: [
+                        {name: ""},
+                        {name: "NOT PRINTED SINCE", value: 1},
+                        {name: "ALREADY PRINTED", value: 2}
+                    ],
+                    width: 150,
+                    itemTemplate: function (value, item) {
+                        if (!item.db_last_official_printed)
+                            return;
+                        return moment(item.db_last_official_printed).format('MM/DD/YYYY');
+                    }
+                },
+
+                // {
+                // 	title: "Last PTL",
+                // 	name: "last_ptl",
+                // 	type: "select",
+                // 	valueField: "value",
+                // 	textField: "name",
+                // 	items: [
+                // 		{ name: "" },
+                // 		{ name: "NOT PRINTED SINCE", value: 1 },
+                // 		{ name: "ALREADY PRINTED", value: 2 }
+                // 	],
+                // 	width: 100,
+                // 	itemTemplate: function(value, item) {
+                // 		if(!item.db_last_temporary_printed)
+                // 			return;
+                // 		return moment(item.db_last_temporary_printed).format('MM/DD/YYYY');
+                // 	}
+                // },
+
+
                 {
                     type: "control",
                     editButton: false,
@@ -574,14 +580,12 @@ const hasImageOf =  function(item) {
                         const content = jQuery("<span>");
                         const ul = jQuery("<ul>");
 
-                        if(!item.db_qr_code)
-                        {
+                        if (!item.db_qr_code) {
                             const li = jQuery("<li class='label label-warning'>NO QR CODE</li>");
                             ul.append(li);
                         }
 
-                        if(!item.db_dbo_alias)
-                        {
+                        if (!item.db_dbo_alias) {
                             const li = jQuery("<li class='label label-warning'>NO BIRTHDAY</li>");
                             ul.append(li);
                             return ul;
@@ -711,50 +715,106 @@ const hasImageOf =  function(item) {
         });
 
         jq("#modal_save").click(function () {
-            const que_data = add_que_list.jsGrid("option", "data");
-            const selected_items = que_data.filter(e => e.is_selected);
-            selected_items.forEach(function (items) {
-                main_table.jsGrid("insertItem", items);
-            });
-            jq(".modal").modal("hide");
+
+            (async function () {
+
+                const que_data = add_que_list.jsGrid("option", "data");
+                const selected_items = que_data.filter(e => e.is_selected);
+                let those_items = selected_items.filter(function (e) {
+                    return e.is_ready == false || !e.hasOwnProperty("is_ready");
+                });
+
+                if(selected_items.length <= 0)
+                    return alert('No selected items!');
+
+                const filter_items = those_items
+                    .map(e => e.db_img_file_name)
+                    .filter(Boolean);
+
+                if(filter_items.length <= 0)
+                {
+                    selected_items.forEach(e => main_table.jsGrid("insertItem", e));
+                    return;
+                }
+
+                const send = jQuery.ajax({
+                    beforeSend : e =>  g_overlay.addClass("show"),
+                    method : "POST",
+                    url : "/hive/get_images",
+                    data : { value : filter_items },
+                    dataType: "json"
+                });
+
+                send.then(function (result) {
+                    const data = result.data;
+                    those_items.forEach(function(per_item) {
+
+                        const image_file = per_item.db_img_file_name;
+                        per_item.db_img_file_name = null;
+                        console.log(data);
+                        if(data.hasOwnProperty(image_file))
+                        {
+                            per_item.db_img_file_name = data[image_file];
+                            OfCache[per_item.db_id] = {
+                                data: data[image_file],
+                                is_base64: true
+                            }
+                        }
+
+                        main_table.jsGrid("insertItem", per_item);
+
+                    });
+
+                    g_overlay.removeClass("show");
+                    jq(".modal").modal("hide");
+
+                });
+
+            })();
+
+
+            // selected_items.forEach(function (items) {
+            //     main_table.jsGrid("insertItem", items);
+            // });
+            // jq(".modal").modal("hide");
         });
 
         jq("#reset_filter").click(function () {
             add_que_list.jsGrid("clearFilter");
             jQuery("#select_all").addClass("hide");
         });
-		
-		const mark_as_printed = function(str_value) {
-			
-			const data_set = main_table.jsGrid("option", "data");
-			const data_set_id = data_set.map(e => e.db_hds_id);
-			const overlay = modal_to_print.find(".overlay-spinner");
-			
-			const update = jQuery.ajax({
-				url : "/hive/update/" + str_value,
-				method : "POST",
-				data : { value : data_set_id },
-				beforeSend : function() {
-					overlay.addClass("show");
-				}
-			});
-			
-			update.done(function() {
-			    modal_to_print.modal("hide");
-				overlay.removeClass("show");
-			});
-			
-			
-			update.error(function() {
-			    modal_to_print.modal("hide");
-				alert('Error updating details!');
-			});
-			
-		}
+
+        const mark_as_printed = function (str_value) {
+
+            const data_set = main_table.jsGrid("option", "data");
+            const data_set_id = data_set.map(e => e.db_hds_id);
+            const overlay = modal_to_print.find(".overlay-spinner");
+
+            const update = jQuery.ajax({
+                url: "/hive/update/" + str_value,
+                method: "POST",
+                data: {value: data_set_id},
+                beforeSend: function () {
+                    overlay.addClass("show");
+                }
+            });
+
+            update.done(function () {
+                modal_to_print.modal("hide");
+                overlay.removeClass("show");
+            });
+
+
+            update.error(function () {
+                modal_to_print.modal("hide");
+                alert('Error updating details!');
+            });
+
+        }
 
         //__________________________________________
 
-        const print_official = function(data) {
+        const print_official = function (data) {
 
             const callback_generate = function () {
 
@@ -774,7 +834,7 @@ const hasImageOf =  function(item) {
                         barangay: details.db_barangay,
                         precinct_no: details.db_prec_no,
                         qr_code: details.db_qr_code,
-                        img_pic : details.db_mem_pic
+                        img_pic: details.db_mem_pic
                     });
 
                     front.then(function (front_data) {
@@ -799,7 +859,7 @@ const hasImageOf =  function(item) {
 
         };
 
-        const print_back_official = function(data) {
+        const print_back_official = function (data) {
 
             const callback_generate = function () {
 
@@ -835,7 +895,7 @@ const hasImageOf =  function(item) {
 
         };
 
-        const print_temporary = function(data) {
+        const print_temporary = function (data) {
 
             const callback_generate = function () {
 
@@ -846,18 +906,18 @@ const hasImageOf =  function(item) {
                     const details = data[i];
 
                     const front = generate_temporary_id({
-                        id : details.db_id,
+                        id: details.db_id,
                         surname: details.db_lname,
                         firstname: details.db_fname,
                         middlename: details.db_mname,
-                        full_name : details.db_voter_name,
+                        full_name: details.db_voter_name,
                         gender: details.db_gender == 0 ? "M" : "F",
                         birthdate: details.db_dbo,
                         address: details.db_address,
                         barangay: details.db_barangay,
                         precinct_no: details.db_prec_no,
                         qr_code: details.db_qr_code,
-                        img_pic : details.db_mem_pic
+                        img_pic: details.db_mem_pic
                     });
 
 
@@ -885,25 +945,25 @@ const hasImageOf =  function(item) {
 
         }
 
-        const generate_print_format = function(of_set, is_modal_show = true) {
-			
-			const $element_print_options = jQuery("form#print_options");
-			const options = $element_print_options.serialize_form();
+        const generate_print_format = function (of_set, is_modal_show = true) {
+
+            const $element_print_options = jQuery("form#print_options");
+            const options = $element_print_options.serialize_form();
 
             const container = document.createElement("div");
-			
-			set = of_set;
+
+            set = of_set;
             set = set.map(function (item) {
 
-               const front_img = document.createElement("img");
+                const front_img = document.createElement("img");
 
-               front_img.src = item;
-               front_img.style.width = "100%";
-               front_img.style.height = "206px";
+                front_img.src = item;
+                front_img.style.width = "100%";
+                front_img.style.height = "206px";
 
-               front_img.style.border = "2px solid black";
+                front_img.style.border = "2px solid black";
 
-               return front_img;
+                return front_img;
 
             });
 
@@ -911,98 +971,95 @@ const hasImageOf =  function(item) {
             const page_break = _.chunk(set, 3);
             page_break.forEach(function (per_third_row, index) {
 
-                            let is_state = false;
+                let is_state = false;
 
-                            const table = document.createElement("table");
-                            table.style.padding = "0px";
-                            table.style.margin = "0px";
-                            table.style.top = "0px";
-                            table.style.borderCollapse = "separate";
-                            table.style.borderSpacing = "30px 30px";
-                            table.style.width = "100%";
-                            table.style.position = "relative"
-                            table.style.top = (options.content_position || "0") + "px";
+                const table = document.createElement("table");
+                table.style.padding = "0px";
+                table.style.margin = "0px";
+                table.style.top = "0px";
+                table.style.borderCollapse = "separate";
+                table.style.borderSpacing = "30px 30px";
+                table.style.width = "100%";
+                table.style.position = "relative"
+                table.style.top = (options.content_position || "0") + "px";
 
-                            table.style.pageBreakBefore = "always";
+                table.style.pageBreakBefore = "always";
 
-                            per_third_row.forEach(function (per_row) {
+                per_third_row.forEach(function (per_row) {
 
-                                const row = document.createElement("tr");
-                                if((3 - per_row.length) > 0)
-                                {
-                                    const items_null = Array(3 -per_row.length).fill("");
-                                    const row_per_null = per_row.concat(items_null);
-                                    per_row = row_per_null;
-                                }
-
+                    const row = document.createElement("tr");
+                    if ((3 - per_row.length) > 0) {
+                        const items_null = Array(3 - per_row.length).fill("");
+                        const row_per_null = per_row.concat(items_null);
+                        per_row = row_per_null;
+                    }
 
 
-                                per_row.forEach(function (per_data) {
+                    per_row.forEach(function (per_data) {
 
-                                    const front_td = document.createElement("td");
-                                    front_td.style.width = "326px";
+                        const front_td = document.createElement("td");
+                        front_td.style.width = "326px";
 
-                                    front_td.append(per_data);
-                                    row.append(front_td);
-                                });
+                        front_td.append(per_data);
+                        row.append(front_td);
+                    });
 
-                                table.append(row);
+                    table.append(row);
 
-                            });
+                });
 
-                            container.append(table)
+                container.append(table)
 
-                        });
+            });
 
 
-            const of_print_window =  async function() {
+            const of_print_window = async function () {
 
                 // Set the content type so the browser knows how to handle the response.
 
-                const browser = await puppeteer.launch({headless : true});
+                const browser = await puppeteer.launch({headless: true});
 
                 const page = await browser.newPage();
                 await page.setContent(container.outerHTML);
                 const buffer = await page.pdf({
-                      format: "A4",
-                      landscape: true,
-                      debug: true,
-                      printBackground: true,
-                      margin: {
-                         top: "0.5cm",
-                         right: "0.0cm",
-                         bottom: "0.1cm",
-                         left: "0.0cm"
-                      }
+                    format: "A4",
+                    landscape: true,
+                    debug: true,
+                    printBackground: true,
+                    margin: {
+                        top: "0.5cm",
+                        right: "0.0cm",
+                        bottom: "0.1cm",
+                        left: "0.0cm"
+                    }
                 });
 
                 await browser.close();
 
-                var file = new Blob([buffer], { type: 'application/pdf' });
+                var file = new Blob([buffer], {type: 'application/pdf'});
 
                 const fileURL = URL.createObjectURL(file);
                 const viewer = document.getElementById("print_window");
                 pdfjs.embed(fileURL, viewer);
 
             }
-			
-			const print_overlay = jQuery("#print_overlay");
-			
 
-			of_print_window().then(function() {
-            
-				if(is_modal_show) modal_to_print.modal("show");
-                
-				jQuery(".overlay-spinner").removeClass("show");
-            
-			});
+            const print_overlay = jQuery("#print_overlay");
+
+
+            of_print_window().then(function () {
+
+                if (is_modal_show) modal_to_print.modal("show");
+
+                jQuery(".overlay-spinner").removeClass("show");
+
+            });
 
             return;
 
         }
 
-        const generate_temporary_id = function(params)
-        {
+        const generate_temporary_id = function (params) {
 
             const canvas = document.createElement("canvas");
             canvas.width = "1000";
@@ -1023,39 +1080,37 @@ const hasImageOf =  function(item) {
                         canvas.height
                     );
 
-                     var f = new FontFace('coresansar', 'url(fonts/core-sans-ar/CoreSansAR-65Bold.ttf)');
+                    var f = new FontFace('coresansar', 'url(fonts/core-sans-ar/CoreSansAR-65Bold.ttf)');
 
-                     f.load().then(function (font) {
+                    f.load().then(function (font) {
 
                         document.fonts.add(font);
                         context.font = '700 35px "coresansar"';
                         context.fillStyle = "#00000";
                         context.textAlign = "center";
 
-                        if(String(params.id).length < 5)
-                        {
+                        if (String(params.id).length < 5) {
                             let array_of_zero = Array(5 - String(params.id).length);
                             array_of_zero = array_of_zero.fill(0).join("");
-                            array_of_zero += "" +String(params.id);
+                            array_of_zero += "" + String(params.id);
                             array_of_zero.replace(4)
-                            context.fillText("Control No.: " + array_of_zero, 490,235);
-                        }
-                        else
-                            context.fillText("Control No.: " + String(params.id), 490,235);
+                            context.fillText("Control No.: " + array_of_zero, 490, 235);
+                        } else
+                            context.fillText("Control No.: " + String(params.id), 490, 235);
 
                         const full_name_length = String(params.full_name).length;
 
-                        if(full_name_length > 30 && full_name_length <= 35)
+                        if (full_name_length > 30 && full_name_length <= 35)
                             context.font = '700 43px "coresansar"';
-                        else if(full_name_length > 35 && full_name_length <= 40)
+                        else if (full_name_length > 35 && full_name_length <= 40)
                             context.font = '700 35px "coresansar"';
-                        else if(full_name_length > 40)
+                        else if (full_name_length > 40)
                             context.font = '700 30px "coresansar"';
                         else
-                           context.font = '700 50px "coresansar"';
+                            context.font = '700 50px "coresansar"';
 
                         context.fillStyle = "#8B0F1B";
-                        context.fillText(params.full_name, 490,328); //9
+                        context.fillText(params.full_name, 490, 328); //9
                         context.font = '700 40px "coresansar"';
                         context.fillStyle = "#080000";
 
@@ -1063,33 +1118,29 @@ const hasImageOf =  function(item) {
                         full_address = full_address.filter(Boolean);
                         full_address = full_address.join(" ");
 
-                        if(String(full_address).trim().length > 0)
-                        {
-                            
-                            if(String(full_address).trim().length > 25)
-                                context.fillText(params.barangay + ", DIGOS CITY", 490,380); //9
+                        if (String(full_address).trim().length > 0) {
+
+                            if (String(full_address).trim().length > 25)
+                                context.fillText(params.barangay + ", DIGOS CITY", 490, 380); //9
                             else
-                                context.fillText(full_address + ", DIGOS CITY", 490,380); //9
-                        }
-                        else
-                            context.fillText("DIGOS CITY", 490,380); //9
+                                context.fillText(full_address + ", DIGOS CITY", 490, 380); //9
+                        } else
+                            context.fillText("DIGOS CITY", 490, 380); //9
 
 
                         return resolve(canvas.toDataURL("image/jpeg"));
 
-                     });
+                    });
 
                 }
 
             });
 
 
-
         }
 
 
-        const generate_id_back = function ()
-        {
+        const generate_id_back = function () {
             const canvas = document.createElement("canvas");
             canvas.width = "1000";
             canvas.height = "600";
@@ -1116,17 +1167,17 @@ const hasImageOf =  function(item) {
 
         jq("#print").click(function () {
 
-			jQuery("#mark_all_printed").off("click").on("click", e => {
-				return mark_as_printed("official")
-			});
+            jQuery("#mark_all_printed").off("click").on("click", e => {
+                return mark_as_printed("official")
+            });
 
             const main_data = main_table.jsGrid("option", "data");
-			const items_state = main_data.filter(e => !e.is_ready);
-			
-			if(items_state.length > 0)
-				return alert('Please wait until the data is ready!');
+            const items_state = main_data.filter(e => !e.is_ready);
 
-            if(main_data.length <= 0)
+            if (items_state.length > 0)
+                return alert('Please wait until the data is ready!');
+
+            if (main_data.length <= 0)
                 return alert('No data to be printed');
 
             jQuery(".overlay-spinner.main").addClass("show");
@@ -1136,15 +1187,15 @@ const hasImageOf =  function(item) {
 
         });
 
-        jq("#print_temporary").click(function() {
+        jq("#print_temporary").click(function () {
 
-			jQuery("#mark_all_printed").off("click").on("click", e => {
-				return mark_as_printed("temporary")
-			});
+            jQuery("#mark_all_printed").off("click").on("click", e => {
+                return mark_as_printed("temporary")
+            });
 
             const main_data = main_table.jsGrid("option", "data");
 
-            if(main_data.length <= 0)
+            if (main_data.length <= 0)
                 return alert('No data to be printed');
 
             jQuery(".overlay-spinner.main").addClass("show");
@@ -1154,14 +1205,14 @@ const hasImageOf =  function(item) {
 
         });
 
-        jq("#print_back").click(function() {
+        jq("#print_back").click(function () {
 
             jQuery("#mark_all_printed").off("click").on("click", e => {
-				modal_to_print.modal("hide");
-			});
+                modal_to_print.modal("hide");
+            });
 
             const main_data = main_table.jsGrid("option", "data");
-            if(main_data.length <= 0)
+            if (main_data.length <= 0)
                 return alert('No data to be printed');
 
             jQuery(".overlay-spinner.main").addClass("show");
@@ -1170,15 +1221,15 @@ const hasImageOf =  function(item) {
 
         });
 
-        jq("#issue_official_id").click(function() {
+        jq("#issue_official_id").click(function () {
 
             jQuery("#mark_all_printed").off("click").on("click", e => {
-				return mark_as_printed("official")
-			});
+                return mark_as_printed("official")
+            });
 
             const que_data = add_que_list.jsGrid("option", "data");
             const selected_items = que_data.filter(e => e.is_selected);
-            if(selected_items.length <= 0)
+            if (selected_items.length <= 0)
                 return alert('Please select at least one item');
 
             jQuery("#modal_que_list .overlay-spinner").addClass("show");
@@ -1186,15 +1237,15 @@ const hasImageOf =  function(item) {
 
         });
 
-        jq("#issue_temporary_id").click(function() {
+        jq("#issue_temporary_id").click(function () {
 
             jQuery("#mark_all_printed").off("click").on("click", e => {
-				return mark_as_printed("temporary")
-			});
+                return mark_as_printed("temporary")
+            });
 
             const que_data = add_que_list.jsGrid("option", "data");
             const selected_items = que_data.filter(e => e.is_selected);
-            if(selected_items.length <= 0)
+            if (selected_items.length <= 0)
                 return alert('Please select at least one item');
 
             jQuery("#modal_que_list .overlay-spinner").addClass("show");
@@ -1203,7 +1254,6 @@ const hasImageOf =  function(item) {
         });
 
     });
-
 
 
 })(jQuery);
