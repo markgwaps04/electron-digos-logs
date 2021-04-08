@@ -1,6 +1,6 @@
 {
   "name": "ICT_PORTAL",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "main": "main.js",
   "author": "marklibres345@gmail.com",
   "description": "ICT PORTAL OF CITY GOVERNMENT OF DIGOS",
@@ -51,7 +51,7 @@
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
     "release": "build",
-    "build": "electron-builder build --win  --publish always",
+    "build": "electron-builder build --win  --publish never",
     "deploy": "electron-builder build --win --publish always",
     "production": "NODE_ENV=local electron index.js"
   },
