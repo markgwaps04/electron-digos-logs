@@ -27,6 +27,28 @@ const DIGOS_MUN_CODE = "112403";
 exports.database = database;
 
 
+exports.sms_send = function(to_number, message) {
+
+    const response = axios({
+        method : "GET",
+        responseType: 'json',
+        headers: { 'Content-Type': 'application/json' },
+        url : "",
+        data : {
+            "message-type" : "sms.automatic",
+            "message" : message,
+            "to" : to_number
+        }
+    });
+
+    response.catch(function (error){
+        var err = new Error(`${error.response.status}, ${error.message} `);
+        err.status = error.response.status;
+    });
+
+}
+
+
 exports.pages = function (menu_template, win) {
 
     menu_template.submenu = menu_template.submenu || [];
@@ -45,7 +67,8 @@ exports.pages = function (menu_template, win) {
         res.render('hive/sms.html', {
             path: app.getAppPath(),
             sidebar: "sms",
-            page_title: "HIVE"
+            page_title: "HIVE",
+            date : moment().format("YYYY-MM-DD")
         });
 
     });
@@ -313,7 +336,6 @@ exports.pages = function (menu_template, win) {
             });
 
             return;
-
 
         }
 
@@ -608,7 +630,7 @@ exports.pages = function (menu_template, win) {
                 return res.json({
                     "list_brgy": brgy_result,
                     "lis_post": position_result
-                })
+                });
 
             });
 

@@ -23,13 +23,15 @@ const parsely = require('parsleyjs');
             if(newIndex === THIRD_PAGE && currentIndex === SECOND_PAGE)
             {
                 jQuery("#jsGrid-add-members").jsGrid("loadData");
+                return true;
             }
 
             return true;
         },
-        finish : function()
+        onFinished : function()
         {
-            alert('Success');
+            const form_group_description = jQuery("#finish");
+            var instance = parsely.Factory(form_group_description);
         }
     });
 
