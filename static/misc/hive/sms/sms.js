@@ -194,6 +194,7 @@ jQuery(function() {
                     input.addClass("badgebox");
 
                     if (filter_data.hasOwnProperty("select_all")) {
+
                         label.removeClass("btn-info");
                         label.addClass("btn-default");
                         content.html("Unselect");

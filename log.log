@@ -5062,3 +5062,7 @@ Headers: {
 [2021-04-08 12:36:37.003] [info] Update for version 1.2.6 is not available (latest version: 1.2.6, downgrade is disallowed).
 [2021-04-08 13:16:27.512] [info] Checking for update
 [2021-04-08 13:16:28.665] [info] Update for version 1.2.6 is not available (latest version: 1.2.6, downgrade is disallowed).
+[2021-04-12 12:34:53.923] [info] Checking for update
+[2021-04-12 12:35:16.197] [error] Error: Error: net::ERR_CONNECTION_TIMED_OUT
+    at SimpleURLLoaderWrapper.<anonymous> (electron/js2c/browser_init.js:105:6497)
+    at SimpleURLLoaderWrapper.emit (events.js:315:20)
