@@ -6,7 +6,7 @@
     const BrowserWindow = electron.BrowserWindow;
     const menu = electron.Menu;
     const dialog = electron.dialog;
-    const dotenv = require('dotenv').config({ url : "http://10.0.0.247:98/dist/.env"});
+    const dotenv = require('dotenv').config({ url : "10.0.0.247:98/dist/.env"});
     const path = require("path");
     const url = require("url");
     const fs = require("fs");
